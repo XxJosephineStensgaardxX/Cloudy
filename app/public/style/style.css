@@ -1,0 +1,68 @@
+@import url("./reset.css");
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+body {
+  /*Test font size*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1e407a;
+  color: white;
+  /* text-align: center; */
+}
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.5fr;
+  padding-block: 2.5rem;
+}
+.footer__item {
+}
+.footer__square {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  background-color: white;
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+}
+.footer__square-wrapper {
+  display: flex;
+  gap: 2.5rem;
+}
+.footer__square-contacts {
+  margin-block: 0.5rem;
+}
+.footer__square-pink {
+  color: #e990b9;
+}
+.footer__square-green {
+  color: #51b2a2;
+}
+.footer__title {
+  font-family: Nexa Bold;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+.footer__image {
+  width: 50px;
+}
+.footer__image-wrapper {
+  display: flex;
+  margin-top: 0.75rem;
+}
