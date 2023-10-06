@@ -1,0 +1,77 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+body{
+    /*Test font size*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+}
+
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1E407A;
+    color: white;
+    text-align: center;
+    
+ }
+ .footer-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+ }
+ .colum-span-2{
+    grid-column: span 2;
+ }
+ .margin-10{
+    margin: 10px;
+ }
+ .margin-20{
+    margin: 20px;
+ }
+ .display-flex-start{
+    display: flex;
+    justify-content: start;
+ }
+ .display-flex-end{
+    display: flex;
+    justify-content: end;
+ }
+.display-flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.control-image{
+    width: 50px;
+}
+
+.square{
+    font-size: 7px;
+    height: 100px; 
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    text-align: start;
+}
+.text-color-pink{
+    color: #E990B9;
+}
+.text-color-green{
+    color: #51B2A2;
+}
+.inf-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
