@@ -1,0 +1,15 @@
+@font-face {
+  src: url("../fonts/Nexa\ Light.otf") format("truetype");
+  font-family: "Nexa-Light";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../fonts/Nexa\ Bold.otf") format("truetype");
+  font-family: "Nexa-Bold";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

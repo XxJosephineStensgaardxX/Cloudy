@@ -1,4 +1,5 @@
 @import url("./reset.css");
+@import url("./fonts.css");
 
 * {
   padding: 0px;
@@ -11,18 +12,13 @@ li {
 }
 
 body {
-  /*Test font size*/
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Nexa-Light, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer {
   position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background-color: #1e407a;
   color: white;
-  /* text-align: center; */
 }
 .footer__inner {
   display: grid;
@@ -47,6 +43,9 @@ body {
 .footer__square-contacts {
   margin-block: 0.5rem;
 }
+.footer__square-name {
+  font-family: Nexa-Bold;
+}
 .footer__square-pink {
   color: #e990b9;
 }
@@ -54,7 +53,7 @@ body {
   color: #51b2a2;
 }
 .footer__title {
-  font-family: Nexa Bold;
+  font-family: Nexa-Bold;
   font-size: 2rem;
   font-weight: 700;
   line-height: 2rem;
