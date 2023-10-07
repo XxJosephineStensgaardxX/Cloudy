@@ -1,16 +1,10 @@
-<!doctype html>
-<html lang="en">
-<!--This is file is maent to be added on othe websites-->
+<?php
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer</title>
-    <link rel="stylesheet" href="./style/style.css" />
-</head>
 
-<body>
-    <footer class="footer">
+function footer()
+{
+    echo
+    '<footer class="footer">
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__item">
@@ -64,7 +58,5 @@
                 </div>
             </div>
         </div>
-    </footer>
-</body>
-
-</html>
+    </footer>';
+}
