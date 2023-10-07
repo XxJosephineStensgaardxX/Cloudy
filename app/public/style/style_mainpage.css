@@ -68,7 +68,8 @@ body {
 
 
 main{
-  color: #1e407a; 
+  color: #1e407a; /* changed colore of the text*/
+  margin-bottom: 60px; /* add gap between footer and main */
 }
 
 .main__about-us{
@@ -76,13 +77,15 @@ main{
   max-width: 700px; 
   margin: auto;
   text-align: center;
-  display: grid;
-  grid-template-rows: 250px 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   
 }
 .main__about-us-info{
-  display: grid;
-  grid-template-rows: 90px 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
 }
 
 .main__our-vision{
