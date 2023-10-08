@@ -70,8 +70,84 @@ body {
 main{
   color: #1e407a; /* changed colore of the text*/
   margin-bottom: 60px; /* add gap between footer and main */
+  display: flex;
+  flex-direction: column;
+  gap: 100px
+}
+.main__choose-style{
+  font-weight: bold;
+  max-width: 700px; 
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.main__sock-types-display{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 100px;
+}
+.main__sock-display{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.main__socks-form{
+  height: 20px;
+}
+.main__sock-photo{
+  display: flex;
+  justify-content: center;
+  width: 170px; 
+  height: 170px;
+  border-radius: 50%; 
+}
+.main__sock-photo img {
+  width: 100%; 
+  height: auto; 
+}
+.form__colors{
+  display: flex;
+  gap:15px;
+}
+.form__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.form__colors-size{
+  height: 25px;
+  width:  25px;
+  border-radius: 50%;
 }
 
+.form__color-blue{
+  background-color: #1e407a;
+}
+.form__color-green{
+  background-color: #51b2a2;
+}
+.form__color-pink{
+  background-color: #e990b9;
+}
+.form__color-red{
+  background-color: #F15B39;
+}
+.form__color-yellow{
+  background-color: #FECD3E;
+}
+.form__buy-button{
+  background-color: #51b2a2;
+  color: #1e407a;
+  width: 55px;
+  height: 25px;
+  border-radius: 30px;
+  border-width: 0px;
+}
 .main__about-us{
   font-weight: bold;
   max-width: 700px; 
