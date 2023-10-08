@@ -1,0 +1,28 @@
+img{
+    width: 180px;
+}
+button{
+    width: 100px;
+}
+.striped_socks{
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px;
+}
+.uni_socks{
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+}
+.striped_box{
+    background-color: #1e407a;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.uni_box{
+    background-color: #1e407a;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
+}
