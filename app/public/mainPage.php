@@ -27,7 +27,7 @@
 
         </section>
         <section>
-            <!-- This part is gonna be the map part of the maIN PAGE-->
+            <!-- This part is gonna be the map part of the main page-->
         </section>
         <section class="choose">
             <div class="container">
@@ -38,19 +38,23 @@
                         <h1 class="choose__size"> CHOOSE YOUR STYLE</h1>
                     </div>
                     <div class="choose__row choose__row2-1">UNI</div>
-                <div class="choose__row choose__row2-2">STRIPED </div>
-                <div class="choose__row choose__row3-1">
-                    <img src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="Unicolor socks" class="main__unicolor-socks">
+                    <div class="choose__row choose__row2-2">STRIPED </div>
+                    <div class="choose__row choose__row3-1">
+                        <img src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="Unicolor socks"
+                            class="main__unicolor-socks">
+                    </div>
+                    <div class="choose__row choose__row3-2">
+                        <img src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="stripped socks"
+                            class="main__stripped-socks">
+                    </div>
+                    <div class="choose__row choose__row4-1">
+                         
+                    </div>
+                    <div class="choose__row choose__row4-2">Item 7</div>
+                    <div class="choose__row choose__row5-1">Item 8</div>
+                    <div class="choose__row choose__row5-2">Item 9 </div>
                 </div>
-                <div class="choose__row choose__row3-2">
-                    <img src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="stripped socks" class="main__stripped-socks">
-                </div>
-                <div class="choose__row choose__row4-1">Item 6 </div>
-                <div class="choose__row choose__row4-2">Item 7</div>
-                <div class="choose__row choose__row5-1">Item 8</div>
-                <div class="choose__row choose__row5-2">Item 9 </div>
             </div>
-        </div>
         </section>
         <!--Timofei: This is my version of Choose style socks-->
         <section class="main__choose-style">
