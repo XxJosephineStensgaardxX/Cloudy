@@ -13,6 +13,7 @@ li {
 
 body {
   font-family: Nexa-Light, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e407a;
 }
 
 .footer {
@@ -20,13 +21,15 @@ body {
   background-color: #1e407a;
   color: white;
 }
+
 .footer__inner {
   display: grid;
   grid-template-columns: repeat(3, 1fr) 1.5fr;
   padding-block: 2.5rem;
 }
-.footer__item {
-}
+
+.footer__item {}
+
 .footer__square {
   display: flex;
   flex-direction: column;
@@ -36,31 +39,39 @@ body {
   border-radius: 0.625rem;
   padding: 1.5rem;
 }
+
 .footer__square-wrapper {
   display: flex;
   gap: 2.5rem;
 }
+
 .footer__square-contacts {
   margin-block: 0.5rem;
 }
+
 .footer__square-name {
   font-family: Nexa-Bold;
 }
+
 .footer__square-pink {
   color: #e990b9;
 }
+
 .footer__square-green {
   color: #51b2a2;
 }
+
 .footer__title {
   font-family: Nexa-Bold;
   font-size: 2rem;
   font-weight: 700;
   line-height: 2rem;
 }
+
 .footer__image {
   width: 50px;
 }
+
 .footer__image-wrapper {
   display: flex;
   margin-top: 0.75rem;

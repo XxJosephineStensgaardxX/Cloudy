@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/productPage.css">
 </head>
 <header>
@@ -16,17 +16,37 @@
     <div class="maincontainer-flex container">
         <div>
             <div>
-                <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_uni_red.jpg" alt="Red colored sock">
+                <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_uni_red.jpg" alt="classic orange sock">
             </div>
             <div class="info-container-flex">
 
             </div>
         </div>
         <div class="othersocks-flex">
-            <div>TITLE OF SOCK</div>
-            <div>SIZES</div>
-            <div>COLORS</div>
-            <div>DESCRIPTION OF PRODUCT</div>
+            <h3 class="font-bold product-name-header"><b>CLASSIC UNI SOCK - ORANGE</b></h3>
+            <div>
+                <ul class="container-sizes-flex">
+                    <li>25-31</li>
+                    <li>32-36</li>
+                    <li>36-40</li>
+                    <li>40-45</li>
+                    <li>45-47</li>
+                    <li>47+</li>
+                </ul>
+            </div>
+            <hr class="horizontal-line">
+            <div class="color-picker-flex">
+                <div class="color-picker" id="green-button"></div>
+                <div class="color-picker" id="blue-button"></div>
+                <div class="color-picker" id="yellow-button"></div>
+                <div class="color-picker" id="pink-button"></div>
+                <div class="color-picker" id="orange-button"></div>
+            </div>
+            <hr class="horizontal-line">
+            <div>
+                <p>Made from 100% organic cotton <br> Produced in Portugal</p>
+            </div>
+            <hr class="horizontal-line">
             <div>PUT IN CART - BUTTON</div>
         </div>
     </div>
