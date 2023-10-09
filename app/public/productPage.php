@@ -67,5 +67,8 @@
         </div>
     </div>
 </body>
+<footer>
+    <?php footer() ?>
+</footer>
 
 </html>
