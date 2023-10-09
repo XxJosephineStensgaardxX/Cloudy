@@ -1,0 +1,10 @@
+.maincontainer-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+}
+
+.chosenPicture {
+    width: 400px;
+    height: 300px;
+}
