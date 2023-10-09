@@ -1,0 +1,12 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.success{
+    text-align: center;
+}
+.success>h1{
+    font-family: Nexa-Bold;
+    font-size: 96px;
+}

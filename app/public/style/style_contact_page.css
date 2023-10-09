@@ -1,0 +1,90 @@
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+.content>h1{
+    margin-bottom: 30px;
+    font-size: 96px;
+    font-family: Nexa-Light;
+}
+.content>form{
+    font-family: Nexa-Bold;
+}
+#Fname{
+    width: 646px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    margin-block: 10px;
+}
+#Lname{
+    width: 646px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    margin-block: 10px;
+}
+#street{
+    width: 321px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding-block: 5px;
+    margin-block: 10px;
+}
+#postcode{
+    width: 321px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding-block: 5px;
+    margin-block: 10px;
+}
+#email{
+    width: 646px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    margin-block: 10px;
+}
+#phone{
+    width: 321px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding-block: 5px;
+    margin-block: 10px;
+}
+#country{
+    width: 321px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding-block: 5px;
+    margin-block: 10px;
+}
+#comment{
+    width: 646px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    margin-block: 10px;
+}
+#submit{
+    width: 646px;
+    text-align: center;
+    background-color: #51B2A2;
+    font-family: Nexa-Bold;
+    padding-block: 5px;
+    border: 1px solid black;
+    border-radius: 15px;
+    color: #1E407A;
+    margin-block: 10px;
+}
