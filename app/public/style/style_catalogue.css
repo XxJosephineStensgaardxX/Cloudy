@@ -1,18 +1,33 @@
-img{
+.striped_box img, .uni_box img{
     width: 180px;
+    display: inline-block;
 }
 button{
-    width: 100px;
+    width: 150px;
+    height: 45px;
+    font-size: 20px;
+    padding: 10px;
+    font-family: Nexa-Bold;
+    background-color: #51B2A2;
+    color: #1e407a;
+    border: none;
+    border-radius: 20px;
 }
 .striped_socks{
     display: flex;
-    justify-content: flex-start;
     padding: 30px;
+    align-items: center;
+    flex-direction: column;
+    margin-right: auto;
+    width: fit-content;
 }
 .uni_socks{
     display: flex;
-    justify-content: flex-end;
     padding: 30px;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    width: fit-content;
 }
 .striped_box{
     background-color: #1e407a;
@@ -24,5 +39,6 @@ button{
     background-color: #1e407a;
     border-radius: 15px;
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 20px;
 }
