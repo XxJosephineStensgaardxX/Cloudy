@@ -26,23 +26,27 @@
 
         </section>
         <section> 
+            <!-- This part is gonna be the map part of the maIN PAGE-->
+        </section>
+        <section class="choose"> 
             <!--Deri: This is my piece of code. It's not totally done yet.-->
-        <div class="container">
-        <div class="row row1">
+        <div class="choose__wrapper">
+        <div class="choose__row choose__row1">
             <h1> CHOOSE YOUR STYLE</h1>
         </div>
-        <div class="row row2-1">UNI</div>
-        <div class="row row2-2">STRIPED </div>
-        <div class="row row3-1"> 
+        <div class="choose__row choose__row2-1">UNI</div>
+        <div class="choose__row choose__row2-2">STRIPED </div>
+        <div class="choose__row choose__row3-1"> 
             <img src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="Unicolor socks" class="main__unicolor-socks">
         </div>
-        <div class="row row3-2">Item 5</div>
-        <div class="row row4-1">Item 6 </div>
-        <div class="row row4-2">Item 7</div>
-        <div class="row row5-1">Item 8</div>
-        <div class="row row5-2">Item 9 </div>
+        <div class="choose__row choose__row3-2">Item 5</div>
+        <div class="choose__row choose__row4-1">Item 6 </div>
+        <div class="choose__row choose__row4-2">Item 7</div>
+        <div class="choose__row choose__row5-1">Item 8</div>
+        <div class="choose__row choose__row5-2">Item 9 </div>
     </div>
         </section>
+        <!--Timofei: This is my version of Choose style socks-->
         <section class="main__choose-style">
             <h1 style="font-size: 50px;">CHOOSE YOUR STYLE</h1>
             <div class="main__sock-types-display">

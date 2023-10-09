@@ -1,72 +1,6 @@
 @import url("./reset.css");
 @import url("./fonts.css");
 
-* {
-  padding: 0px;
-  margin: 0px;
-}
-
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
-
-body {
-  font-family: Nexa-Light, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.footer {
-  position: relative;
-  background-color: #1e407a;
-  color: white;
-}
-.footer__inner {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) 1.5fr;
-  padding-block: 2.5rem;
-}
-.footer__item {
-}
-.footer__square {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  font-size: 0.75rem;
-  background-color: white;
-  border-radius: 0.625rem;
-  padding: 1.5rem;
-}
-.footer__square-wrapper {
-  display: flex;
-  gap: 2.5rem;
-}
-.footer__square-contacts {
-  margin-block: 0.5rem;
-}
-.footer__square-name {
-  font-family: Nexa-Bold;
-}
-.footer__square-pink {
-  color: #e990b9;
-}
-.footer__square-green {
-  color: #51b2a2;
-}
-.footer__title {
-  font-family: Nexa-Bold;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 2rem;
-}
-.footer__image {
-  width: 50px;
-}
-.footer__image-wrapper {
-  display: flex;
-  margin-top: 0.75rem;
-}
-
-
 main{
   color: #1e407a; /* changed colore of the text*/
   margin-bottom: 60px; /* add gap between footer and main */
@@ -171,7 +105,7 @@ main{
   margin-left: auto;
 }
 /* Deri: this piece of code belongs to me. It is not complete yet.*/
-.container{
+.choose__wrapper{
   background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -179,48 +113,49 @@ main{
   grid-column-gap: 0px;
   grid-row-gap: 20px;
   }
-  .row{
+  .choose__row{
       background-color: white;
       text-align: center;
       color: rgb(30, 64, 122)
   }
 
-  .row1{
+  .choose__row1{
       grid-area: 1 / 1 / 2 / 3;  
   }
-  .row2-1{
+  .choose__row2-1{
       grid-area: 2 / 1 / 3 / 2;
       width: 470px;
       text-align: end;
   }
-  .row2-2{
+  .choose__row2-2{
       grid-area: 2 / 2 / 3 / 3;
       width: 290px;
   }
-  .row3-1{
+  .choose__row3-1{
       grid-area: 3 / 1 / 4 / 2;
       width: 550px;
-      align-items: start;
-      background-color: #e990b9;
+      align-items: start; 
   }
-  .row3-2{
+  .choose__row3-2{
       grid-area: 3 / 2 / 4 / 3;
   }
-  .row4-1{
+  .choose__row4-1{
       grid-area: 4 / 1 / 5 / 2;
   }
-  .row4-2{
+  .choose__row4-2{
       grid-area: 4 / 2 / 5 / 3;
   }
-  .row5-1{
+  .choose__row5-1{
       grid-area: 5 / 1 / 6 / 2;
   }
-  .row5-2{
+  .choose__row5-2{
       grid-area: 5 / 2 / 6 / 3;
   }
   .main__unicolor-socks{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-
+    object-fit: cover;
+    float: right;
+    
   }
