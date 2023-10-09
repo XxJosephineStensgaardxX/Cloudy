@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php include('templates.php') ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/productPage.css">
+
 </head>
 <header>
     <h1>INSERT NAV BAR</h1>
