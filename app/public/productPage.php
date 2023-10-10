@@ -17,7 +17,7 @@
 
 <body>
     <div class="maincontainer-flex container">
-        <div>
+        <div class="container-layout">
             <div>
                 <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_uni_red.jpg" alt="classic orange sock">
             </div>
@@ -66,7 +66,9 @@
                 <p>Made from 100% organic cotton <br> Produced in Portugal</p>
             </div>
             <hr class="horizontal-line">
-            <div>PUT IN CART - BUTTON</div>
+            <div>
+                <input id="cart-button" type="button" value="Put in cart" onclick="#"></input>
+            </div>
         </div>
     </div>
 </body>
