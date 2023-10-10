@@ -26,8 +26,16 @@
             <!--Timofei: This is slider we decided that we will work on it later-->
 
         </section>
-        <section>
-            <!-- This part is gonna be the map part of the main page-->
+        <section class="Map">
+            <div class="container">
+                <div class="map__row map__row1">
+                    <h1 style="font-weight:lighter;">NEWS</h1>
+                </div>
+                <div class="map__row map__row2">WE ARE NOW INTERNATIONAL</div>
+                <div class="map__row map__row3">
+                    <img src=".\img\worldSVG.svg" alt="The world" class="world-map">
+                </div>
+            </div>
         </section>
         <section class="choose">
             <div class="container">
@@ -47,9 +55,7 @@
                         <img src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="stripped socks"
                             class="main__stripped-socks">
                     </div>
-                    <div class="choose__row choose__row4-1">
-                         
-                    </div>
+                    <div class="choose__row choose__row4-1">Item 6</div>
                     <div class="choose__row choose__row4-2">Item 7</div>
                     <div class="choose__row choose__row5-1">Item 8</div>
                     <div class="choose__row choose__row5-2">Item 9 </div>
@@ -64,7 +70,7 @@
                     <h3>UNI</h3>
                     <img class="main__sock-photo" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg"
                         alt="Blue unicolor socks">
-                    <form action="productPage.html">
+                    <form action="productPage.php">
                         <div class="form__container">
                             <div class="form__colors">
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
