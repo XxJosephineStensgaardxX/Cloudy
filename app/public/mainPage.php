@@ -29,9 +29,11 @@
         <section class="Map">
             <div class="container">
                 <div class="map__row map__row1">
-                    <h1 style="font-weight:lighter;">NEWS</h1>
+                    <h1>NEWS</h1>
                 </div>
-                <div class="map__row map__row2">WE ARE NOW INTERNATIONAL</div>
+                <div class="map__row map__row2">
+                    <h3>WE ARE NOW INTERNATIONAL</h3>
+                    </div>
                 <div class="map__row map__row3">
                     <img src=".\img\worldSVG.svg" alt="The world" class="world-map">
                 </div>
@@ -40,7 +42,7 @@
         <section class="choose">
             <div class="container">
 
-                <!--Deri: This is my piece of code. It's not totally done yet.-->
+                <!--Deri: This is my piece of code. I only need to work on very detailed items if there are some comments on it.-->
                 <div class="choose__wrapper">
                     <div class="choose__row choose__row1">
                         <h1 class="choose__size"> CHOOSE YOUR STYLE</h1>
@@ -55,10 +57,30 @@
                         <img src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="stripped socks"
                             class="main__stripped-socks">
                     </div>
-                    <div class="choose__row choose__row4-1">Item 6</div>
-                    <div class="choose__row choose__row4-2">Item 7</div>
-                    <div class="choose__row choose__row5-1">Item 8</div>
-                    <div class="choose__row choose__row5-2">Item 9 </div>
+                    <div class="choose__row choose__row4-1">
+                        <?php
+                        $colors = array
+                        ("#1e407a", "#51b2a2", "#e990b9", "#f15b39", "#fecd3e");
+                        foreach ($colors as $color) {
+                            echo '<div class="circle" style="background-color: ' . $color . ';"></div>';
+                        }
+                        ?>
+                    </div>
+                    <div class="choose__row choose__row4-2">
+                    <?php
+                        $colors = array
+                        ("#1e407a", "#51b2a2", "#e990b9", "#f15b39", "#fecd3e");
+                        foreach ($colors as $color) {
+                            echo '<div class="circle" style="background-color: ' . $color . ';"></div>';
+                        }
+                        ?>
+                    </div>
+                    <div class="choose__row choose__row5-1">
+                    <button type="button"> BUY</button>
+                    </div>
+                    <div class="choose__row choose__row5-2">
+                    <button type="button"> BUY</button> 
+                    </div>
                 </div>
             </div>
         </section>

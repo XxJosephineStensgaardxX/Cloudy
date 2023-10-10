@@ -100,7 +100,7 @@ main{
   margin-right: auto;
   margin-left: auto;
 }
-/* Deri: this piece of code belongs to me. It is not complete yet.*/
+/* Deri: this piece of code belongs to me. I only need to work on very detailed items if there are some comments on it.*/
 .choose__wrapper{
   background-color: white;
   display: grid;
@@ -144,7 +144,7 @@ main{
       grid-area: 4 / 2 / 5 / 3;
   }
   .choose__row5-1{
-      grid-area: 5 / 1 / 6 / 2;
+      grid-area: 5 / 1 / 6 / 2; 
   }
   .choose__row5-2{
       grid-area: 5 / 2 / 6 / 3;
@@ -197,4 +197,19 @@ main{
       height: 440px;
       object-fit: cover;
      align-items: center;
+    }
+    button{
+      background-color: #51b2a2;
+      padding: 10px 30px;
+      border:none;
+      border-radius: 20px;
+      color: #1e407a;
+      cursor: pointer;
+    }
+    .circle {
+      width: 25px; 
+      height: 25px; 
+      border-radius: 50%; 
+      margin: 7px; 
+      display: inline-block; 
     }
