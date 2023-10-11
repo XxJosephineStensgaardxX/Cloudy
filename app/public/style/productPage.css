@@ -23,9 +23,11 @@
 }
 
 .othersocks-flex {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: #1E407A 1px solid;
     display: flex;
     flex-direction: row;
-    border-radius: 5px;
     justify-content: space-between;
     gap: 10px;
 }
@@ -44,6 +46,7 @@ img.othersock-item {
     width: 110px;
     height: 120px;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 
@@ -61,7 +64,6 @@ img.othersock-item {
 
 .font-bold {
     font-family: "Nexa-Bold";
-
 
 }
 
@@ -110,29 +112,7 @@ img.othersock-item {
 }
 
 
-#blue-button {
-    background-color: #1E407A;
-    border-radius: 100%;
-    height: 30px;
-    width: 30px;
-}
-
-#yellow-button {
-    background-color: #FECD3E;
-    border-radius: 100%;
-    height: 30px;
-    width: 30px;
-}
-
-#pink-button {
-    background-color: #E990B9;
-    border-radius: 100%;
-    height: 30px;
-    width: 30px;
-}
-
-#orange-button {
-    background-color: #F15B39;
+.button-design {
     border-radius: 100%;
     height: 30px;
     width: 30px;

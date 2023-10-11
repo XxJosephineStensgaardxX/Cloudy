@@ -21,24 +21,22 @@
             <div>
                 <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_uni_red.jpg" alt="classic orange sock">
             </div>
-            <hr class="horizontal-line">
             <div class="othersocks-flex">
-                <div>
-                    <img class="othersock-item" src="./img/socksPhotos/Sunny_socks_uni_blue.jpg"
-                        alt="Classic blue sock">
-                </div>
-                <div>
-                    <img class="othersock-item" src="./img/socksPhotos/Sunny_socks_uni_pink.jpg"
-                        alt="Classic pink sock">
-                </div>
-                <div>
-                    <img class="othersock-item" src="./img/socksPhotos/Sunny_socks_uni_green.jpg"
-                        alt="Classic Green sock">
-                </div>
-                <div>
-                    <img class="othersock-item" src="./img/socksPhotos/Sunny_socks_uni_yellow.jpg"
-                        alt="Classic Yellow sock">
-                </div>
+
+                <?php
+                $images = [
+                    "./img/socksPhotos/Sunny_socks_uni_pink.jpg",
+                    "./img/socksPhotos/Sunny_socks_uni_yellow.jpg",
+                    "./img/socksPhotos/Sunny_socks_uni_green.jpg",
+                    "./img/socksPhotos/Sunny_socks_uni_blue.jpg",
+                ];
+                foreach ($images as $image) {
+                    echo "<div>
+                    <img class='othersock-item' src='$image'
+                        alt='Classic pink sock'>
+                </div>";
+                }
+                ?>
             </div>
         </div>
         <div class="information-container-flex">
@@ -55,11 +53,20 @@
             </div>
             <hr class="horizontal-line">
             <div class="color-picker-flex">
-                <div class="color-picker" id="green-button"></div>
-                <div class="color-picker" id="blue-button"></div>
-                <div class="color-picker" id="yellow-button"></div>
-                <div class="color-picker" id="pink-button"></div>
-                <div class="color-picker" id="orange-button"></div>
+
+                <?php
+                $colors = [
+                    "#1e407a",
+                    "#51b2a2",
+                    "#e990b9",
+                    "#f15b39",
+                    "#fecd3e"
+                ];
+                foreach ($colors as $value) {
+                    echo "<div class='button-design' style='background-color: $value;'></div>";
+                }
+                ?>
+
             </div>
             <hr class="horizontal-line">
             <div>
