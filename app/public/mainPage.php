@@ -8,6 +8,14 @@
     <title>Sunny socks Main page</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/style_mainpage.css">
+    
+    <!--
+        Timofei:  I linked css for silder. There is a chance that it might affect our page just because it uses some css tags.
+        if you notice any problems with our code remove this part of code. 
+    -->
+    <link rel="stylesheet" href="./style/slider.css">
+
+    <script src="./js/slider.js"></script>
 </head>
 
 <body>
@@ -16,15 +24,37 @@
 
     </head>
     <main>
-        <!--Timofei: This is coments if you want to write important information please write it here(just if you dont know about this).-->
-        <!--
-            Message for Victor: Right now I(Timofei) am just trying to recreate my part of the desing 
-            and I am not working on the outline of the design specifically for that reason.
-            I know that it might couse some problems in the future, but we need to work on overall outline in team.  
-        -->
-        <section>
-            <!--Timofei: This is slider we decided that we will work on it later-->
-
+        <section id="slider">
+            <input type="radio" name="slider" id="s1" data-slide="1" checked>
+            <input type="radio" name="slider" id="s2" data-slide="2">
+            <input type="radio" name="slider" id="s3" data-slide="3">
+            <input type="radio" name="slider" id="s4" data-slide="4">
+            <input type="radio" name="slider" id="s5" data-slide="5">
+            <label for="s1" id="slide1">
+            <div class="zoom-container" data-slide="1">
+                <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 1">
+            </div>
+            </label>
+            <label for="s2" id="slide2">
+            <div class="zoom-container" data-slide="2">
+                <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 2">
+            </div>
+            </label>
+            <label for="s3" id="slide3">
+            <div class="zoom-container" data-slide="3">
+                <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 3">
+            </div>
+            </label>
+            <label for="s4" id="slide4">
+            <div class="zoom-container" data-slide="4">
+                <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 4">
+            </div>
+            </label>
+            <label for="s5" id="slide5">
+            <div class="zoom-container" data-slide="5">
+                <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 5">
+            </div>
+            </label>
         </section>
         <section class="Map">
             <div class="container">
