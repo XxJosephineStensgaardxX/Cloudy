@@ -63,7 +63,7 @@
             </div>
             <hr class="horizontal-line">
             <div>
-                <p>Made from 100% organic cotton <br> Produced in Portugal</p>
+                <p class="product-description">Made from 100% organic cotton <br> Produced in Portugal</p>
             </div>
             <hr class="horizontal-line">
             <div>

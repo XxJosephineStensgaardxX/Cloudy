@@ -10,7 +10,7 @@
 }
 
 .chosenPicture {
-    width: 543px;
+    width: 475px;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 5px;
@@ -44,7 +44,8 @@ img.othersock-item {
 }
 
 .product-name-header {
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+    margin-left: 10px;
 }
 
 
@@ -56,6 +57,7 @@ img.othersock-item {
 
 .container-sizes-flex li {
     white-space: nowrap;
+    margin-left: 10px;
 }
 
 
@@ -63,7 +65,7 @@ img.othersock-item {
     display: flex;
     flex-direction: row;
     gap: 30px;
-
+    margin-left: 10px;
 }
 
 
@@ -80,8 +82,12 @@ img.othersock-item {
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 1vw;
+    gap: 5px;
+    font-size: 20px;
+}
 
+.product-description {
+    margin-left: 10px;
 }
 
 
