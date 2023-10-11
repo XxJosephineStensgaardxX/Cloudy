@@ -51,9 +51,7 @@
                     <li>47+</li>
                 </ul>
             </div>
-            <hr class="horizontal-line">
-            <div class="color-picker-flex">
-
+            <div class="color-picker-flex border-container">
                 <?php
                 $colors = [
                     "#1e407a",
@@ -66,14 +64,11 @@
                     echo "<div class='button-design' style='background-color: $value;'></div>";
                 }
                 ?>
-
             </div>
-            <hr class="horizontal-line">
-            <div>
-                <p class="product-description">Made from 100% organic cotton <br> Produced in Portugal</p>
+            <div class="border-container">
+                <p>Made from 100% organic cotton <br> Produced in Portugal</p>
             </div>
-            <hr class="horizontal-line">
-            <div>
+            <div class="border-container">
                 <input id="cart-button" type="button" value="Put in cart" onclick="#"></input>
             </div>
         </div>
