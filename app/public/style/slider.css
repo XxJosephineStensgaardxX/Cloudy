@@ -59,7 +59,7 @@
   }
   
   
-  /* Existing transition rules */
+ /* Existing transition rules */
   #s1:checked ~ #slide1, 
   #s2:checked ~ #slide2, 
   #s3:checked ~ #slide3, 

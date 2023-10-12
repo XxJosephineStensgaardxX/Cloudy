@@ -1,4 +1,4 @@
-let currentSlide = 1;
+let currentSlide = 2;
 let isPaused = false; // Variable to check if the slideshow is paused
 
 // Function to change the slide
@@ -21,7 +21,7 @@ const changeSlide = () => {
 
     // Move to the next slide
     currentSlide++;
-    if (currentSlide > 5) {
+    if (currentSlide > 3) {
       currentSlide = 1;
     }
   }
