@@ -8,7 +8,7 @@
     <title>Sunny socks Main page</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/style_mainpage.css">
-    
+
     <!--
         Timofei:  I linked css for silder. There is a chance that it might affect our page just because it uses some css tags.
         if you notice any problems with our code remove this part of code. 
@@ -19,10 +19,6 @@
 </head>
 
 <body>
-
-    <head>
-
-    </head>
     <main>
         <section id="slider">
             <input type="radio" name="slider" id="s1" data-slide="1" checked>
@@ -31,29 +27,29 @@
             <input type="radio" name="slider" id="s4" data-slide="4">
             <input type="radio" name="slider" id="s5" data-slide="5">
             <label for="s1" id="slide1">
-            <div class="zoom-container" data-slide="1">
-                <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 1">
-            </div>
+                <div class="zoom-container" data-slide="1">
+                    <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 1">
+                </div>
             </label>
             <label for="s2" id="slide2">
-            <div class="zoom-container" data-slide="2">
-                <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 2">
-            </div>
+                <div class="zoom-container" data-slide="2">
+                    <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 2">
+                </div>
             </label>
             <label for="s3" id="slide3">
-            <div class="zoom-container" data-slide="3">
-                <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 3">
-            </div>
+                <div class="zoom-container" data-slide="3">
+                    <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 3">
+                </div>
             </label>
             <label for="s4" id="slide4">
-            <div class="zoom-container" data-slide="4">
-                <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 4">
-            </div>
+                <div class="zoom-container" data-slide="4">
+                    <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 4">
+                </div>
             </label>
             <label for="s5" id="slide5">
-            <div class="zoom-container" data-slide="5">
-                <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 5">
-            </div>
+                <div class="zoom-container" data-slide="5">
+                    <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 5">
+                </div>
             </label>
         </section>
         <section class="Map">
@@ -63,7 +59,7 @@
                 </div>
                 <div class="map__row map__row2">
                     <h3>WE ARE NOW INTERNATIONAL</h3>
-                    </div>
+                </div>
                 <div class="map__row map__row3">
                     <img src=".\img\worldSVG.svg" alt="The world" class="world-map">
                 </div>
@@ -80,36 +76,32 @@
                     <div class="choose__row choose__row2-1">UNI</div>
                     <div class="choose__row choose__row2-2">STRIPED </div>
                     <div class="choose__row choose__row3-1">
-                        <img src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="Unicolor socks"
-                            class="main__unicolor-socks">
+                        <img src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="Unicolor socks" class="main__unicolor-socks">
                     </div>
                     <div class="choose__row choose__row3-2">
-                        <img src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="stripped socks"
-                            class="main__stripped-socks">
+                        <img src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="stripped socks" class="main__stripped-socks">
                     </div>
                     <div class="choose__row choose__row4-1">
                         <?php
-                        $colors = array
-                        ("#1e407a", "#51b2a2", "#e990b9", "#f15b39", "#fecd3e");
+                        $colors = array("#1e407a", "#51b2a2", "#e990b9", "#f15b39", "#fecd3e");
                         foreach ($colors as $color) {
                             echo '<div class="circle" style="background-color: ' . $color . ';"></div>';
                         }
                         ?>
                     </div>
                     <div class="choose__row choose__row4-2">
-                    <?php
-                        $colors = array
-                        ("#1e407a", "#51b2a2", "#e990b9", "#f15b39", "#fecd3e");
+                        <?php
+                        $colors = array("#1e407a", "#51b2a2", "#e990b9", "#f15b39", "#fecd3e");
                         foreach ($colors as $color) {
                             echo '<div class="circle" style="background-color: ' . $color . ';"></div>';
                         }
                         ?>
                     </div>
                     <div class="choose__row choose__row5-1">
-                    <button type="button"> BUY</button>
+                        <button type="button"> BUY</button>
                     </div>
                     <div class="choose__row choose__row5-2">
-                    <button type="button"> BUY</button> 
+                        <button type="button"> BUY</button>
                     </div>
                 </div>
             </div>
@@ -120,8 +112,7 @@
             <div class="main__sock-types-display">
                 <div class="main__sock-display">
                     <h3>UNI</h3>
-                    <img class="main__sock-photo" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg"
-                        alt="Blue unicolor socks">
+                    <img class="main__sock-photo" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="Blue unicolor socks">
                     <form action="productPage.php">
                         <div class="form__container">
                             <div class="form__colors">
@@ -138,8 +129,7 @@
                 </div>
                 <div class="main__sock-display">
                     <h3>STRIPED</h3>
-                    <img class="main__sock-photo" src=".\img\socksPhotos\Sunny_socks_blue.jpg"
-                        alt="Blue unicolor socks">
+                    <img class="main__sock-photo" src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="Blue unicolor socks">
                     <form action="productPage.html">
                         <div class="form__container">
                             <div class="form__colors">

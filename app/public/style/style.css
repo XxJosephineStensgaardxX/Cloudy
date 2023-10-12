@@ -1,77 +1,117 @@
-@import url("./reset.css");
-@import url("./fonts.css");
+@import url('./reset.css');
+@import url('./fonts.css');
 
 * {
-  padding: 0px;
-  margin: 0px;
+	padding: 0px;
+	margin: 0px;
 }
 
 li {
-  display: list-item;
-  text-align: -webkit-match-parent;
+	display: list-item;
+	text-align: -webkit-match-parent;
 }
 
 body {
-  font-family: Nexa-Light, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #1e407a;
+	font-family: Nexa-Light, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #1e407a;
 }
 
 .footer {
-  position: relative;
-  background-color: #1e407a;
-  color: white;
+	position: relative;
+	background-color: #1e407a;
+	color: white;
+}
+
+.footer .container {
+	max-width: 1500px;
 }
 
 .footer__inner {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) 1.5fr;
-  padding-block: 2.5rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 1.5fr;
+	padding-block: 2.5rem;
 }
 
-
 .footer__square {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  font-size: 0.75rem;
-  background-color: white;
-  border-radius: 0.625rem;
-  padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	font-size: 0.75rem;
+	background-color: white;
+	border-radius: 0.625rem;
+	padding: 1.5rem;
 }
 
 .footer__square-wrapper {
-  display: flex;
-  gap: 2.5rem;
+	display: flex;
+	gap: 2.5rem;
 }
 
 .footer__square-contacts {
-  margin-block: 0.5rem;
+	margin-block: 0.5rem;
 }
 
 .footer__square-name {
-  font-family: Nexa-Bold;
+	font-family: Nexa-Bold;
 }
 
 .footer__square-pink {
-  color: #e990b9;
+	color: #e990b9;
 }
 
 .footer__square-green {
-  color: #51b2a2;
+	color: #51b2a2;
 }
 
 .footer__title {
-  font-family: Nexa-Bold;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 2rem;
+	font-family: Nexa-Bold;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 2rem;
 }
 
 .footer__image {
-  width: 50px;
+	width: 50px;
 }
 
 .footer__image-wrapper {
-  display: flex;
-  margin-top: 0.75rem;
+	display: flex;
+	margin-top: 0.75rem;
+}
+
+.button {
+	padding: 0.75rem 1.5rem;
+	background: #51b2a2;
+	border: 0;
+	color: #1e407a;
+	font-family: Nexa-Bold;
+	border-radius: 3rem;
+}
+
+.input {
+	border: 1px solid #1e407a;
+	border-radius: 0.625rem;
+	padding: 0.625rem;
+	font-size: 1.25rem;
+	width: 100%;
+}
+.input::placeholder {
+	text-align: center;
+	font-family: Nexa-Bold;
+	color: #0000005c;
+}
+.input__wrapper {
+	display: grid;
+	margin-bottom: 0.875rem;
+}
+.input__wrapper-double {
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.625rem;
+}
+.input__wrapper-double .input {
+	font-size: 1rem;
+	padding: 0.5rem;
+}
+.input__wrapper-spaced {
+	margin-top: 2.75rem;
 }

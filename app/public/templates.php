@@ -1,5 +1,10 @@
 <?php
 
+function header_template()
+{
+    echo '';
+}
+
 
 function footer()
 {
