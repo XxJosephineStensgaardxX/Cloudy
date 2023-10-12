@@ -18,6 +18,7 @@
 
 .checkout__button-wrapper .checkout__button {
 	width: unset;
+	background: none;
 }
 .checkout__button-wrapper img {
 	object-fit: contain;
@@ -26,7 +27,6 @@
 
 .checkout__button {
 	border: 0;
-	background: none;
 	width: 100%;
 	margin-top: 5rem;
 }
