@@ -21,11 +21,9 @@
 <body>
     <main>
         <section id="slider">
-            <input type="radio" name="slider" id="s1" data-slide="1" checked>
-            <input type="radio" name="slider" id="s2" data-slide="2">
+            <input type="radio" name="slider" id="s1" data-slide="1">
+            <input type="radio" name="slider" id="s2" data-slide="2"checked>
             <input type="radio" name="slider" id="s3" data-slide="3">
-            <input type="radio" name="slider" id="s4" data-slide="4">
-            <input type="radio" name="slider" id="s5" data-slide="5">
             <label for="s1" id="slide1">
                 <div class="zoom-container" data-slide="1">
                     <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 1">
@@ -33,24 +31,15 @@
             </label>
             <label for="s2" id="slide2">
                 <div class="zoom-container" data-slide="2">
-                    <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 2">
+                    <img src="./img/socksPhotos/Sunny_socks_yellow.jpg" alt="Image 2">
                 </div>
             </label>
             <label for="s3" id="slide3">
                 <div class="zoom-container" data-slide="3">
-                    <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 3">
+                    <img src="./img/socksPhotos/Sunny_socks_red.jpg" alt="Image 3">
                 </div>
             </label>
-            <label for="s4" id="slide4">
-                <div class="zoom-container" data-slide="4">
-                    <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 4">
-                </div>
-            </label>
-            <label for="s5" id="slide5">
-                <div class="zoom-container" data-slide="5">
-                    <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 5">
-                </div>
-            </label>
+
         </section>
         <section class="Map">
             <div class="container">
