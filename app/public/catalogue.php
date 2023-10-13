@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <?php header_template() ?>
+    <?php echo header_template() ?>
     <section>
         <div class="container">
             <div class="striped_socks">
@@ -36,7 +36,7 @@
             </div>
         </div>
     </section>
-    <?php footer_temple() ?>
+    <?php echo footer_temple() ?>
 </body>
 
 </html>
