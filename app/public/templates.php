@@ -2,10 +2,28 @@
 
 function header_template()
 {
-    return '';
+    
+    return '     <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="mainPage.php" class="socksLogo">
+                <img class="header__image-logo" src="./img\Sunny\Logo\'s\png\sunny_logos_slogan_blue.png" alt="socksLogo">
+            </a>
+            <ul class="header__list">
+                <li class="header__list-item"><a href="catalogue.php">Catalogue</a></li>
+                <li class="header__list-item"><a href="">About us</a></li>
+                <li class="header__list-item"><a href="contact_page.php">Contact us</a></li>
+                <li class="header__list-item"><a href=""><img class="header__image header__image-flag" src="./img\englishflag.png" alt="ENFlag"></a></li>
+                <li class="header__list-item"><a href=""><img class="header__image header__image-flag" src="./img\vlag-nederland.png" alt="NLFlag"></a></li>
+                <li class="header__list-item"><a href="checkoutPage.php"><img class="header__image" src="./img\Shopcart.jpg" alt="ShopCard"></a></li>
+            </ul>
+        </div>
+    </div>
+</header> ';
+   
+   
 }
-
-
+    
 function footer_temple()
 {
     return

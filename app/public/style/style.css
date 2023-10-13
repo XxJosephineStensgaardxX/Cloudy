@@ -41,7 +41,7 @@ body {
 	align-items: center;	
 }
 .header__list a {
-	font-family:Nexa-Bold ;
+	font-family: "Nexa-Bold" ;
 	color: #1e407a;
 	text-transform: uppercase;
 	font-size: 24px;
@@ -82,7 +82,7 @@ body {
 }
 
 .footer__square-name {
-	font-family: Nexa-Bold;
+	font-family: "Nexa-Bold";
 }
 
 .footer__square-pink {
@@ -94,7 +94,7 @@ body {
 }
 
 .footer__title {
-	font-family: Nexa-Bold;
+	font-family: "Nexa-Bold";
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 2rem;
@@ -114,7 +114,7 @@ body {
 	background: #51b2a2;
 	border: 0;
 	color: #1e407a;
-	font-family: Nexa-Bold;
+	font-family: "Nexa-Bold";
 	border-radius: 3rem;
 }
 
@@ -127,7 +127,7 @@ body {
 }
 .input::placeholder {
 	text-align: center;
-	font-family: Nexa-Bold;
+	font-family: "Nexa-Bold";
 	color: #0000005c;
 }
 .input__wrapper {

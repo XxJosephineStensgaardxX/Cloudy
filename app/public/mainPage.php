@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <?php echo header_template() ?>
+   <?php  echo header_template()?>
     <main>
         <section id="slider">
             <input type="radio" name="slider" id="s1" data-slide="1">
