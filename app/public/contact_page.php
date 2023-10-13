@@ -7,47 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_checkout.css">
     <link rel="stylesheet" href="style/style_contact_page.css">
 
 </head>
 
 <body>
     <?php echo header_template() ?>
-    <main>
+    <main class="main">
         <section class="content">
-            <h1>CONTACT US</h1>
-            <form action="submit.php" method="POST">
-                <label for="Fname"></label>
-                <input type="text" id="Fname" placeholder="INSERT NAME" name="Fname">
-                <br>
+            <div class="container">
 
-                <label for="Lname"></label>
-                <input type="text" id="Lname" placeholder="INSERT SURNAME" name="Lname">
-                <br>
-
-                <label for="street"></label>
-                <input type="text" id="street" placeholder="STREET NAME" name="street">
-
-                <label for="postcode"></label>
-                <input type="text" id="postcode" placeholder="Postal code" name="postcode">
-                <br>
-                <label for="email"></label>
-                <input type="email" id="email" placeholder="E-MAIL" name="email">
-                <br>
-
-                <label for="phone"></label>
-                <input type="tel" id="phone" placeholder="Phone-number" name="phone">
-
-                <label for="country"></label>
-                <input type="text" id="country" placeholder="Country" name="country">
-                <br>
-
-                <label for="comment"></label>
-                <textarea name="comment" id="comment" cols="40" rows="15" placeholder="Insert text" name="comment"></textarea>
-                <br>
-
-                <input type="submit" id="submit">
-            </form>
+                <h1>CONTACT US</h1>
+                <form action="submit.php" method="POST">
+                    <div class="input__wrapper">
+							<input type="text" class="input" placeholder="INSERT NAME" id="Fname"/>
+						</div>
+						<div class="input__wrapper">
+							<input type="text" class="input" placeholder="INSERT SURNAME" id="Lname"/>
+						</div>
+						<div class="input__wrapper input__wrapper-double input__wrapper">
+							<input type="text" class="input" placeholder="STREET NAME" id="street"/>
+							<input type="text" class="input" placeholder="POSTAL CODE" id="postcode"/>
+						</div>
+						<div class="input__wrapper">
+							<input type="email" class="input" placeholder="E-MAIL" id="email"/>
+						</div>
+						<div class="input__wrapper input__wrapper-double input__wrapper">
+							<input type="tel" class="input" placeholder="PHONE-NUMBER" id="phone"/>
+                            <input type="text" class="input" placeholder="COUNTRY" id="country"/>
+						</div>
+                        <div class="input_wrapper">
+                            <textarea name="comment" id="comment" cols="40" rows="15" placeholder="INSERT TEXT" name="comment" class="input"></textarea>
+                        </div>
+						<button type="submit" class="contact__button button">
+							SUBMIT
+						</button>
+					</form>
+                </div>
         </section>
     </main>
     <?php echo footer_temple() ?>
