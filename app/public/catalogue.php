@@ -12,7 +12,7 @@
 
 <body>
     <?php echo header_template() ?>
-    <section>
+    <section class="space">
         <div class="container">
             <div class="striped_socks">
                 <div class="striped_box">

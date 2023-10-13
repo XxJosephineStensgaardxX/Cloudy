@@ -13,6 +13,9 @@ button{
     border: none;
     border-radius: 20px;
 }
+.space{
+    padding-bottom: 60px;
+}
 .striped_socks{
     display: flex;
     padding: 30px;
