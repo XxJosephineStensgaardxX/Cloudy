@@ -19,10 +19,11 @@
 </head>
 
 <body>
+    <?php echo header_template() ?>
     <main>
         <section id="slider">
             <input type="radio" name="slider" id="s1" data-slide="1">
-            <input type="radio" name="slider" id="s2" data-slide="2"checked>
+            <input type="radio" name="slider" id="s2" data-slide="2" checked>
             <input type="radio" name="slider" id="s3" data-slide="3">
             <label for="s1" id="slide1">
                 <div class="zoom-container" data-slide="1">
@@ -160,7 +161,7 @@
             </div>
         </section>
     </main>
-    <?php footer() ?>
+    <?php echo footer_temple() ?>
 </body>
 
 </html>

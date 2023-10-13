@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'templates.php' ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,11 @@
     <link rel="stylesheet" href="style/style_contact_page.css">
 
 </head>
-<?php
-    footer();
-?>
+
 <body>
-    <div>
-        <div class="content">
+    <?php echo header_template() ?>
+    <main>
+        <section class="content">
             <h1>CONTACT US</h1>
             <form action="submit.php" method="POST">
                 <label for="Fname"></label>
@@ -48,10 +48,9 @@
 
                 <input type="submit" id="submit">
             </form>
-        </div>
-    </div>
-    <?php
-    footer();
-    ?>
+        </section>
+    </main>
+    <?php echo footer_temple() ?>
 </body>
+
 </html>

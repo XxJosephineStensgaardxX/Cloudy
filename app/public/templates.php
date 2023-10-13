@@ -2,14 +2,14 @@
 
 function header_template()
 {
-    echo '';
+    return '';
 }
 
 
-function footer()
+function footer_temple()
 {
-    echo
-    '<footer class="footer">
+    return
+        '<footer class="footer">
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__item">

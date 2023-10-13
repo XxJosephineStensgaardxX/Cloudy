@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style_catalogue.css">
 </head>
-<?php
-footer();
-?>
 
 <body>
+    <?php header_template() ?>
     <section>
         <div class="container">
             <div class="striped_socks">
@@ -38,9 +36,7 @@ footer();
             </div>
         </div>
     </section>
-    <?php
-    footer();
-    ?>
+    <?php footer_temple() ?>
 </body>
 
 </html>
