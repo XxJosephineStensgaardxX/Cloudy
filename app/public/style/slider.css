@@ -2,8 +2,8 @@
   /* Slider container */
   #slider {
     position: relative;
-    width: 50%;
-    height: 32vw;
+    width: 710px;
+    height: 650px;
     margin: 150px auto;
     perspective: 1400px;
     transform-style: preserve-3d;
@@ -14,7 +14,7 @@
   input[type=radio] {
     position: relative;
     top: 108%;
-    left: 50%;
+    left: 55%;
     width: 20px;  /* Slightly larger */
     height: 20px;  /* Slightly larger */
     margin: 0 15px 0 0;
@@ -42,7 +42,17 @@
     border-radius: 12px;  /* Rounded corners */
     transition: transform 400ms ease, opacity 400ms ease;  /* Added opacity transition */
   }
+
+  .main__slider-image{
+      width: 90%;
+      object-fit: cover;
+  }
   
+  .main__radio{
+    display: flex;
+    justify-content: center;
+  }
+
   /* New addition for Zoom Effect */
   .zoom-container {
     overflow: hidden; /* Hide the part of the image that extends outside the div */

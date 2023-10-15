@@ -22,22 +22,23 @@
    <?php  echo header_template()?>
     <main>
         <section id="slider">
-            <input type="radio" name="slider" id="s1" data-slide="1">
-            <input type="radio" name="slider" id="s2" data-slide="2" checked>
+            
+            <input type="radio" name="slider" id="s1" data-slide="1" checked>
+            <input type="radio" name="slider" id="s2" data-slide="2">
             <input type="radio" name="slider" id="s3" data-slide="3">
             <label for="s1" id="slide1">
                 <div class="zoom-container" data-slide="1">
-                    <img src="./img/socksPhotos/Sunny_socks_green.jpg" alt="Image 1">
+                    <img class="main__slider-image"  src=".\img\socksPhotos\Sunny_socks_green.jpg" alt="Image 1">
                 </div>
             </label>
             <label for="s2" id="slide2">
                 <div class="zoom-container" data-slide="2">
-                    <img src="./img/socksPhotos/Sunny_socks_yellow.jpg" alt="Image 2">
+                    <img class="main__slider-image" src=".\img\Soocks shoes.png" alt="Image 2">
                 </div>
             </label>
             <label for="s3" id="slide3">
                 <div class="zoom-container" data-slide="3">
-                    <img src="./img/socksPhotos/Sunny_socks_red.jpg" alt="Image 3">
+                    <img class="main__slider-image"  src=".\img\socksPhotos\Sunny_socks_red.jpg" alt="Image 3">
                 </div>
             </label>
 
