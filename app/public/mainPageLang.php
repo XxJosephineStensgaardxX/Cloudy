@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'templates.php' ?>
+<?php require_once 'language.php' ?>
 
+
+
+<!--This is a test example of change language -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunny socks Main page</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/styleLang.css">
     <link rel="stylesheet" href="./style/style_mainpage.css">
-
-    <!--
-        Timofei:  I linked css for silder. There is a chance that it might affect our page just because it uses some css tags.
-        if you notice any problems with our code remove this part of code. 
-    -->
     <link rel="stylesheet" href="./style/slider.css">
 
     <script src="./js/slider.js"></script>
+    <?php
+        $lang = "EN";
+        
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $lang = filter_input(INPUT_POST, "submit");
+            echo "Language: ".$lang;
+        }   
+    ?>   
 </head>
 
 <body>
-   <?php  echo header_template()?>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="mainPage.php" class="socksLogo">
+                    <img class="header__image-logo" src="./img\Sunny\Logo's\png\sunny_logos_slogan_blue.png" alt="socksLogo">
+                </a>
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a href="catalogue.php">
+                            <?php
+                                echo $language["Catalogue"][$lang]
+                            ?>
+                        </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">
+                            <?php
+                                echo $language["About us"][$lang]
+                            ?>
+                        </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="contact_page.php">
+                            <?php
+                                echo $language["Contact us"][$lang]
+                            ?>
+                        </a>
+                    </li>
+                    <form class="header__form" action="mainPageLang.php" method="POST">
+                        <label for="submitButtonEN">
+                            <img class="header__image header__image-flag" src=".\img\englishflag.png" alt="ENFlag">
+                        </label>
+                        <input class="header__submit-lang" type="submit" id="submitButtonEN"  name="submit" value="EN">
+
+
+                        <label for="submitButtonNL">
+                            <img class="header__image header__image-flag" src=".\img\vlag-nederland.png" alt="NLFlag">
+                        </label>
+                        <input class="header__submit-lang" type="submit" id="submitButtonNL" name="submit" value="NL">
+                    </form>
+
+                    <li class="header__list-item">
+                        <a href="checkoutPage.php"><img class="header__image" src="./img\Shopcart.jpg" alt="ShopCard"></a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </header> 
     <main>
         <section id="slider">
-               
+                
             <input type="radio" name="slider" id="s1" data-slide="1" checked>
             <input type="radio" name="slider" id="s2" data-slide="2">
             <input type="radio" name="slider" id="s3" data-slide="3">
@@ -46,10 +101,18 @@
         <section class="Map">
             <div class="container">
                 <div class="map__row map__row1">
-                    <h1>NEWS</h1>
+                    <h1>
+                        <?php
+                            echo $language["NEWS"][$lang]
+                        ?>
+                    </h1>
                 </div>
                 <div class="map__row map__row2">
-                    <h3>WE ARE NOW INTERNATIONAL</h3>
+                    <h3>
+                        <?php
+                            echo $language["WE ARE NOW INTERNATIONAL"][$lang]
+                        ?>
+                    </h3>
                 </div>
                 <div class="map__row map__row3">
                     <img src=".\img\worldSVG.svg" alt="The world" class="world-map">
@@ -62,7 +125,11 @@
                 <!--Deri: This is my piece of code. I only need to work on very detailed items if there are some comments on it.-->
                 <div class="choose__wrapper">
                     <div class="choose__row choose__row1">
-                        <h1 class="choose__size"> CHOOSE YOUR STYLE</h1>
+                        <h1 class="choose__size"> 
+                            <?php
+                               echo $language["CHOOSE YOUR STYLE"][$lang]
+                            ?>
+                        </h1>
                     </div>
                     <div class="choose__row choose__row2-1">UNI</div>
                     <div class="choose__row choose__row2-2">STRIPED </div>
@@ -89,17 +156,28 @@
                         ?>
                     </div>
                     <div class="choose__row choose__row5-1">
-                        <button type="button"> BUY</button>
+                        <button type="button"> 
+                            <?php
+                                echo $language["BUY"][$lang]
+                            ?>
+                        </button>
                     </div>
                     <div class="choose__row choose__row5-2">
-                        <button type="button"> BUY</button>
+                        <button type="button">                             
+                            <?php
+                                echo $language["BUY"][$lang]
+                            ?></button>
                     </div>
                 </div>
             </div>
         </section>
         <!--Timofei: This is my version of Choose style socks-->
         <section class="main__choose-style">
-            <h1 style="font-size: 50px;">CHOOSE YOUR STYLE</h1>
+            <h1 style="font-size: 50px;">
+                <?php
+                    echo $language["CHOOSE YOUR STYLE"][$lang]
+                ?>
+            </h1>
             <div class="main__sock-types-display">
                 <div class="main__sock-display">
                     <h3>UNI</h3>
@@ -141,24 +219,31 @@
         <section class="main__about-us">
             <!--Timofei: This is my part of main page. this is "about us" page that will talk about the company-->
             <div class="main__about-us-info">
-                <h1 style="font-size: 50px;">ABOUT US</h1>
+                <h1 style="font-size: 50px;">
+                    <?php
+                        echo $language["ABOUT US"][$lang]
+                    ?>
+                </h1>
                 <p>
-                    We like win-win situations. When we produce and sell our socks it is beneficial for everyone
-                    involved.
-                    The sells person has a nice job. The raw materials are gained in such a way it does not harm the
-                    earth. The production is done with the
-                    enivironment in mind and with an honest waige for the people working in the factories. The shops
-                    that sell our sock make a fair provit. And last but not least: the costumer gets high quality socks
-                    for a fair price.
+                    <?php
+                        echo $language["We like..."][$lang]
+                    ?>
                 </p>
 
             </div>
             <div class="main__our-vision">
                 <u>
-                    <h3>OUR VISION</h3>
+                    <h3>
+                        <?php
+                            echo $language["OUR VISION"][$lang]
+                        ?>
+                    </h3>
                 </u>
-                <p>Positivity is part of our DNA. Sunny likes to look on the bright side. Every problem is an
-                    oppurtunity to come up with a solution.</p>
+                <p>
+                    <?php
+                            echo $language["Positivity is..."][$lang]
+                    ?>
+                </p>
             </div>
         </section>
     </main>
