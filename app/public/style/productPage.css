@@ -32,10 +32,11 @@
 @media (max-width: 840px) {
     .othersocks-flex {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         border-radius: 5px;
         justify-content: space-between;
         gap: 10px;
+
     }
 
     .information-container-flex {
@@ -54,11 +55,15 @@
         flex-wrap: wrap;
     }
 
+    .container-sizes-flex li {
+        font-size: 15px;
+    }
+
     .color-picker-flex {
-        display: flex;
         flex-direction: row;
         gap: 30px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        visibility: hidden;
     }
 
     .button-design {
@@ -67,7 +72,15 @@
         width: 10px;
     }
 
+    .product-name-header {
+        font-size: 15px;
+    }
 
+    .border-container {
+        border-top: #1E407A 1px solid;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 }
 
 img.othersock-item {
@@ -85,7 +98,7 @@ img.othersock-item {
 }
 
 .product-name-header {
-    margin-bottom: 100px;
+    margin-bottom: 25px;
 }
 
 
