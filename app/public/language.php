@@ -11,11 +11,8 @@
         ),
         "Contact us" =>  array(
             "EN" => "Contact us",
-            "NL" => "Contact us", 
-            // original translation is "Neem contact met ons op" and it is to big
-            // Lets ask techers how to translate it. 
+            "NL" => "Contact ons", 
         ),
-
         //Main page
         "NEWS" =>  array(
             "EN" => "NEWS",
