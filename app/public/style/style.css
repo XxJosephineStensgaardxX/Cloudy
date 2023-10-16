@@ -6,6 +6,11 @@
 	margin: 0px;
 }
 
+html {
+	scroll-behavior: smooth;
+
+}
+
 li {
 	display: list-item;
 	text-align: -webkit-match-parent;

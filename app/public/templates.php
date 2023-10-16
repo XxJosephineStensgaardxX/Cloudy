@@ -11,11 +11,11 @@ function header_template()
             </a>
             <ul class="header__list">
                 <li class="header__list-item"><a href="catalogue.php">Catalogue</a></li>
-                <li class="header__list-item"><a href="">About us</a></li>
+                <li class="header__list-item"><a href="mainPage.php#aboutUs">About us</a></li>
                 <li class="header__list-item"><a href="contact_page.php">Contact us</a></li>
                 <li class="header__list-item"><a href=""><img class="header__image header__image-flag" src="./img\englishflag.png" alt="ENFlag"></a></li>
                 <li class="header__list-item"><a href=""><img class="header__image header__image-flag" src="./img\vlag-nederland.png" alt="NLFlag"></a></li>
-                <li class="header__list-item"><a href="checkoutPage.php"><img class="header__image" src="./img\Shopcart.jpg" alt="ShopCard"></a></li>
+                <li class="header__list-item"><a href="checkoutPage.php"><img class="header__image" src="./img\shopping-cart-icon-shopping-basket-on-transparent-background-free-png.webp" alt="ShopCard"></a></li>
             </ul>
         </div>
     </div>

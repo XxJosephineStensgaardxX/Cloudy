@@ -141,7 +141,7 @@
         <section class="main__about-us">
             <!--Timofei: This is my part of main page. this is "about us" page that will talk about the company-->
             <div class="main__about-us-info">
-                <h1 style="font-size: 50px;">ABOUT US</h1>
+                <h1 id="aboutUs" style="font-size: 50px;">ABOUT US</h1>
                 <p>
                     We like win-win situations. When we produce and sell our socks it is beneficial for everyone
                     involved.
