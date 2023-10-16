@@ -18,7 +18,8 @@
         <div class="maincontainer-flex container">
             <div class="container-layout">
                 <div>
-                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_uni_red.jpg" alt="classic orange sock">
+                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_uni_red.jpg"
+                        alt="classic orange sock">
                 </div>
                 <div class="othersocks-flex">
 
@@ -73,7 +74,7 @@
             </div>
         </div>
     </main>
-    <?php footer_temple() ?>
+    <?php echo footer_temple() ?>
 </body>
 
 </html>
