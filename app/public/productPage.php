@@ -61,7 +61,10 @@
                         "#fecd3e"
                     ];
                     foreach ($colors as $value) {
-                        echo "<div class='button-design' style='background-color: $value;'></div>";
+                        echo "<div class='button-design' style='background-color: $value;'>
+                               <input type='radio' name='color' id='$value'>
+                              <label for='$value'></label>
+                              </div>";
                     }
                     ?>
                 </div>
