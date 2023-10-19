@@ -10,7 +10,13 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/style_lang.css">
     <link rel="stylesheet" href="./style/style_mainpage.css">
-
+    <?php
+        $lang = "EN";
+        
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $lang = filter_input(INPUT_POST, "submit");
+        }   
+    ?>   
     <!--
         Timofei:  I linked css for silder. There is a chance that it might affect our page just because it uses some css tags.
         if you notice any problems with our code remove this part of code. 
@@ -48,10 +54,18 @@
         <section class="Map">
             <div class="container">
                 <div class="map__row map__row1">
-                    <h1>NEWS</h1>
+                    <h1> 
+                        <?php
+                            echo $language["NEWS"][$lang]
+                        ?>
+                    </h1>
                 </div>
                 <div class="map__row map__row2">
-                    <h3>WE ARE NOW INTERNATIONAL</h3>
+                    <h3>
+                        <?php
+                            echo $language["WE ARE NOW INTERNATIONAL"][$lang]
+                        ?>
+                    </h3>
                 </div>
                 <div class="map__row map__row3">
                     <img src=".\img\worldSVG.svg" alt="The world" class="world-map">
@@ -64,7 +78,11 @@
                 <!--Deri: This is my piece of code. I only need to work on very detailed items if there are some comments on it.-->
                 <div class="choose__wrapper">
                     <div class="choose__row choose__row1">
-                        <h1 class="choose__size"> CHOOSE YOUR STYLE</h1>
+                        <h1 class="choose__size">
+                            <?php
+                               echo $language["CHOOSE YOUR STYLE"][$lang]
+                            ?>
+                        </h1>
                     </div>
                     <div class="choose__row choose__row2-1">UNI</div>
                     <div class="choose__row choose__row2-2">STRIPED </div>
@@ -91,17 +109,21 @@
                         ?>
                     </div>
                     <div class="choose__row choose__row5-1">
-                        <button type="button"> BUY</button>
+                        <button type="button"> <?php echo $language["BUY"][$lang]?></button>
                     </div>
                     <div class="choose__row choose__row5-2">
-                        <button type="button"> BUY</button>
+                        <button type="button"> <?php echo $language["BUY"][$lang]?> </button>
                     </div>
                 </div>
             </div>
         </section>
         <!--Timofei: This is my version of Choose style socks-->
         <section class="main__choose-style">
-            <h1 style="font-size: 50px;">CHOOSE YOUR STYLE</h1>
+            <h1 style="font-size: 50px;">                            
+                <?php
+                    echo $language["CHOOSE YOUR STYLE"][$lang]
+                ?>
+            </h1>
             <div class="main__sock-types-display">
                 <div class="main__sock-display">
                     <h3>UNI</h3>
@@ -116,7 +138,7 @@
                                 <div class="form__colors-size form__color-red"></div>
                                 <div class="form__colors-size form__color-yellow"></div>
                             </div>
-                            <input class="form__buy-button" type="submit" value="BUY">
+                            <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang]?>">
                         </div>
                     </form>
                 </div>
@@ -133,7 +155,7 @@
                                 <div class="form__colors-size form__color-red"></div>
                                 <div class="form__colors-size form__color-yellow"></div>
                             </div>
-                            <input class="form__buy-button" type="submit" value="BUY">
+                            <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang]?>">
                         </div>
                     </form>
                 </div>
@@ -143,24 +165,31 @@
         <section class="main__about-us">
             <!--Timofei: This is my part of main page. this is "about us" page that will talk about the company-->
             <div class="main__about-us-info">
-                <h1 style="font-size: 50px;">ABOUT US</h1>
+                <h1 style="font-size: 50px;">
+                    <?php
+                        echo $language["ABOUT US"][$lang]
+                    ?>
+                </h1>
                 <p>
-                    We like win-win situations. When we produce and sell our socks it is beneficial for everyone
-                    involved.
-                    The sells person has a nice job. The raw materials are gained in such a way it does not harm the
-                    earth. The production is done with the
-                    enivironment in mind and with an honest waige for the people working in the factories. The shops
-                    that sell our sock make a fair provit. And last but not least: the costumer gets high quality socks
-                    for a fair price.
+                    <?php
+                        echo $language["We like..."][$lang]
+                    ?>
                 </p>
 
             </div>
             <div class="main__our-vision">
                 <u>
-                    <h3>OUR VISION</h3>
+                    <h3>
+                        <?php
+                            echo $language["OUR VISION"][$lang]
+                        ?>
+                    </h3>
                 </u>
-                <p>Positivity is part of our DNA. Sunny likes to look on the bright side. Every problem is an
-                    oppurtunity to come up with a solution.</p>
+                <p>
+                    <?php
+                            echo $language["Positivity is..."][$lang]
+                    ?>
+                </p>
             </div>
         </section>
     </main>

@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="./style/style.css">
 	<link rel="stylesheet" href="./style/style_lang.css">
     <link rel="stylesheet" href="./style/productPage.css">
+    <?php
+        $lang = "EN";
+        
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $lang = filter_input(INPUT_POST, "submit");
+        }   
+    ?>   
 </head>
 
 <body>
@@ -43,7 +50,13 @@
                     </div>
                 </div>
                 <div class="information-container-flex">
-                    <h3 class="font-bold product-name-header"><b>CLASSIC UNI SOCK - ORANGE</b></h3>
+                    <h3 class="font-bold product-name-header">
+                        <b>
+                        <?php
+                            echo $language["CLASSIC UNI SOCK - ORANGE"][$lang]
+                        ?>
+                        </b>
+                    </h3>
                     <div class="container-sizes-flex">
 
                         <?php $sizes = [
@@ -81,7 +94,15 @@
                         ?>
                     </div>
                     <div class="border-container">
-                        <p>Made from 100% organic cotton <br> Produced in Portugal</p>
+                        <p>
+                            <?php
+                                echo $language["Made from 100% organic cotton"][$lang]
+                            ?>
+                            <br> 
+                            <?php
+                                echo $language["Produced in Portugal"][$lang]
+                            ?>
+                        </p>
                     </div>
                     <div class="border-container">
                         <input id="cart-button" type="submit" value="Put in cart" onclick="#"></input>

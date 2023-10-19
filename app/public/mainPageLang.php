@@ -165,7 +165,8 @@
                         <button type="button">                             
                             <?php
                                 echo $language["BUY"][$lang]
-                            ?></button>
+                            ?>
+                            </button>
                     </div>
                 </div>
             </div>

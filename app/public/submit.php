@@ -11,13 +11,24 @@
     <link rel="stylesheet" href="style/submit.css">
     <link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="./style/style_lang.css">
+    <?php
+        $lang = "EN";
+        
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $lang = filter_input(INPUT_POST, "submit");
+        }   
+    ?>   
 </head>
 
 <body>
     <?php echo header_template($language, $lang) ?>
     <main class="main">
         <div class="success">
-            <h1>Your message is successfully send</h1>
+            <h1>                    
+                <?php
+                    echo $language["Your message is..."][$lang]
+                ?>
+            </h1>
         </div>
     </main>
     <?php echo footer_temple() ?>
