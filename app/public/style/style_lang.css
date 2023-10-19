@@ -1,0 +1,18 @@
+@import url('./reset.css');
+@import url('./fonts.css');
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+.header__submit-lang {
+    display: none;
+}
+
+.header__form{
+	display: flex;
+	gap: 5px;
+}

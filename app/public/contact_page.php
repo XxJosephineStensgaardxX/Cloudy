@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'templates.php' ?>
+<?php require_once 'language.php' ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
     <link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="./style/styleLang.css">
     <link rel="stylesheet" href="style/style_checkout.css">
     <link rel="stylesheet" href="style/style_contact_page.css">
 
 </head>
 
 <body>
-    <?php echo header_template() ?>
+<?php echo header_template($language, $lang) ?>
     <main class="main">
         <section class="content">
             <div class="container">

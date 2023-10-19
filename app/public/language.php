@@ -1,4 +1,5 @@
 <?php
+    $lang = "EN";
     $language = array(
         //Header
         "Catalogue" =>  array(
@@ -48,6 +49,15 @@
             "EN" => "ABOUT US",
             "NL" => "OVER ONS",
         ),
+        //Payment succesefull page
+        "PAYMENT IS SUCCESFUL" =>  array(
+            "EN" => "PAYMENT IS SUCCESFUL",
+            "NL" => "BETALING IS SUCCESVOL",
+        ),
+        "SHOP MORE" =>  array(
+            "EN" => "SHOP MORE",
+            "NL" => "WINKEL MEER",
+        )
     )
 
 

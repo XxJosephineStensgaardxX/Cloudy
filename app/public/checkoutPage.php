@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'templates.php' ?>
+<?php require_once 'language.php' ?>
 
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Sunny - Checkout</title>
 	<link rel="stylesheet" href="./style/style.css" />
+	<link rel="stylesheet" href="./style/style_lang.css">
 	<link rel="stylesheet" href="./style/style_checkout.css" />
 </head>
 
 <body class="wrapper">
-	<?php echo header_template() ?>
+	<?php echo header_template($language, $lang) ?>
 	<main class="main">
 		<section class="checkout">
 			<div class="container">
