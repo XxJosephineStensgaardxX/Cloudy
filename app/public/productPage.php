@@ -63,9 +63,10 @@
                     foreach ($colors as $value) {
                         echo "<div class='button-design' style='background-color: $value;'>
                                <input type='radio' name='color' id='$value'>
-                              <label for='$value'></label>
+                              <label for='$value'><span class='$value'></span></label>
                               </div>";
                     }
+                    // $_POST['$value']; Not working
                     ?>
                 </div>
                 <div class="border-container">
