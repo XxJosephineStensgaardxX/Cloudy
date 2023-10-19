@@ -1,25 +1,57 @@
 <?php
 
-function header_template()
+
+function header_template($language, $lang)
 {
     
-    return '     <header class="header">
-    <div class="container">
-        <div class="header__inner">
-            <a href="mainPage.php" class="socksLogo">
-                <img class="header__image-logo" src="./img\Sunny\Logo\'s\png\sunny_logos_slogan_blue.png" alt="socksLogo">
-            </a>
-            <ul class="header__list">
-                <li class="header__list-item"><a href="catalogue.php">Catalogue</a></li>
-                <li class="header__list-item"><a href="mainPage.php#aboutUs">About us</a></li>
-                <li class="header__list-item"><a href="contact_page.php">Contact us</a></li>
-                <li class="header__list-item"><a href=""><img class="header__image header__image-flag" src="./img\englishflag.png" alt="ENFlag"></a></li>
-                <li class="header__list-item"><a href=""><img class="header__image header__image-flag" src="./img\vlag-nederland.png" alt="NLFlag"></a></li>
-                <li class="header__list-item"><a href="checkoutPage.php"><img class="header__image" src="./img\shopping-cart-icon-shopping-basket-on-transparent-background-free-png.webp" alt="ShopCard"></a></li>
-            </ul>
+    return '         
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="mainPage.php" class="socksLogo">
+                    <img class="header__image-logo" src=".\img\sunny_logos_slogan_blue.png" alt="socksLogo">
+                </a>
+                <ul class="header__list">
+                <li class="header__list-item">
+                        <a href="catalogue.php">
+                            '.
+                            $language["Catalogue"][$lang]
+                            .'
+                        </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="">
+                            '.
+                            $language["About us"][$lang]
+                            .'
+                        </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="contact_page.php">
+                            '.
+                            $language["Contact us"][$lang]
+                            .'
+                        </a>
+                    </li>
+                    <li>
+                        <form class="header__form" action="'. $_SERVER["PHP_SELF"]. '" method="POST">
+                            <label for="submitButtonEN">
+                                <img class="header__image header__image-flag" src=".\img\englishflag.png" alt="ENFlag">
+                            </label>
+                            <input class="header__submit-lang" type="submit" id="submitButtonEN"  name="submit" value="EN">
+
+
+                            <label for="submitButtonNL">
+                                <img class="header__image header__image-flag" src=".\img\vlag-nederland.png" alt="NLFlag">
+                            </label>
+                            <input class="header__submit-lang" type="submit" id="submitButtonNL" name="submit" value="NL">
+                        </form>
+                    <li>
+                    <li class="header__list-item"><a href="checkoutPage.php"><img class="header__image" src="./img\shopping-cart.png" alt="ShopCard"></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</header> ';
+    </header>  ';
    
    
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php require_once 'templates.php' ?>
+<?php require_once 'language.php' ?>
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +13,7 @@
 </head>
 
 <body>
-    <?php echo header_template() ?>
+    <?php echo header_template($language, $lang) ?>
     <main>
         <form>
             <!-- $_POST['$value']; Not working yet -->

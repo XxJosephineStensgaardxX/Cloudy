@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunny socks Main page</title>
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/styleLang.css">
     <link rel="stylesheet" href="./style/style_mainpage.css">
     <link rel="stylesheet" href="./style/slider.css">
@@ -30,10 +31,10 @@
         <div class="container">
             <div class="header__inner">
                 <a href="mainPage.php" class="socksLogo">
-                    <img class="header__image-logo" src="./img\Sunny\Logo's\png\sunny_logos_slogan_blue.png" alt="socksLogo">
+                    <img class="header__image-logo" src=".\img\sunny_logos_slogan_blue.png" alt="socksLogo">
                 </a>
                 <ul class="header__list">
-                    <li class="header__list-item">
+                <li class="header__list-item">
                         <a href="catalogue.php">
                             <?php
                                 echo $language["Catalogue"][$lang]
@@ -54,23 +55,21 @@
                             ?>
                         </a>
                     </li>
-                    <form class="header__form" action="mainPageLang.php" method="POST">
-                        <label for="submitButtonEN">
-                            <img class="header__image header__image-flag" src=".\img\englishflag.png" alt="ENFlag">
-                        </label>
-                        <input class="header__submit-lang" type="submit" id="submitButtonEN"  name="submit" value="EN">
+                    <li>
+                        <form class="header__form" action="mainPageLang.php" method="POST">
+                            <label for="submitButtonEN">
+                                <img class="header__image header__image-flag" src=".\img\englishflag.png" alt="ENFlag">
+                            </label>
+                            <input class="header__submit-lang" type="submit" id="submitButtonEN"  name="submit" value="EN">
 
 
-                        <label for="submitButtonNL">
-                            <img class="header__image header__image-flag" src=".\img\vlag-nederland.png" alt="NLFlag">
-                        </label>
-                        <input class="header__submit-lang" type="submit" id="submitButtonNL" name="submit" value="NL">
-                    </form>
-
-                    <li class="header__list-item">
-                        <a href="checkoutPage.php"><img class="header__image" src="./img\Shopcart.jpg" alt="ShopCard"></a>
-                    </li>
-                    
+                            <label for="submitButtonNL">
+                                <img class="header__image header__image-flag" src=".\img\vlag-nederland.png" alt="NLFlag">
+                            </label>
+                            <input class="header__submit-lang" type="submit" id="submitButtonNL" name="submit" value="NL">
+                        </form>
+                    <li>
+                    <li class="header__list-item"><a href="checkoutPage.php"><img class="header__image" src="./img\shopping-cart.png" alt="ShopCard"></a></li>
                 </ul>
             </div>
         </div>

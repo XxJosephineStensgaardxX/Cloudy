@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'templates.php' ?>
+<?php require_once 'language.php' ?>
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +12,7 @@
 </head>
 
 <body>
-    <?php echo header_template() ?>
+    <?php echo header_template($language, $lang) ?>
     <section class="space">
         <div class="container">
             <div class="striped_socks">
