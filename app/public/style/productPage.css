@@ -35,7 +35,7 @@
         flex-direction: row;
         border-radius: 5px;
         justify-content: space-between;
-        gap: 10px;
+        gap: 1vw;
 
     }
 
@@ -50,7 +50,7 @@
         display: flex;
         flex-direction: row;
         list-style: none;
-        gap: 10px;
+        gap: 1vw;
         font-size: 10px;
         flex-wrap: wrap;
     }
@@ -61,7 +61,7 @@
 
     .color-picker-flex {
         flex-direction: row;
-        gap: 30px;
+        gap: 1vw;
         flex-wrap: nowrap;
     }
 
@@ -82,7 +82,7 @@
 @media (max-width: 550px) {
     .color-picker-flex {
         flex-direction: row;
-        gap: 30px;
+        gap: 0.5vw;
         flex-wrap: nowrap;
         visibility: hidden;
     }
@@ -125,15 +125,10 @@ img.othersock-item {
 
 }
 
-.container-sizes-flex li {
-    white-space: nowrap;
-}
-
-
 .color-picker-flex {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 2vw;
 }
 
 
@@ -154,6 +149,9 @@ img.othersock-item {
     font-size: 20px;
 }
 
+.container-sizes-flex li {
+    white-space: nowrap;
+}
 
 
 #cart-button {
@@ -168,6 +166,7 @@ img.othersock-item {
     border-radius: 100%;
     height: 30px;
     width: 30px;
+
 }
 
 .border-container {
@@ -179,17 +178,33 @@ img.othersock-item {
 
 
 input[type="radio"] {
-    /* display: none; */
-    appearance: none;
-    cursor: pointer;
+    display: none;
+    /* appearance: none; */
     width: 100%;
     height: 2em;
 
     &:checked+label {
-        border: #1E407A;
+        border: solid 1px #1E407A;
+
     }
 }
 
-input[type="button"] {
+label {
+    display: inline-block;
     cursor: pointer;
 }
+
+span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform .2s;
+}
+
+/* 
+.checked-size {
+
+    &:checked+label {
+        font-weight: bolder;
+    }
+} */
