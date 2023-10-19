@@ -9,37 +9,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="stylesheet" href="./style/style.css">
-	<link rel="stylesheet" href="./style/style_lang.css">
+    <link rel="stylesheet" href="./style/style_lang.css">
     <link rel="stylesheet" href="./style/productPage.css">
 </head>
 
 <body>
     <?php echo header_template($language, $lang) ?>
     <main>
-        <form>
-            <!-- $_POST['$value']; Not working yet -->
+        <form id="form" method="post" action="#">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
                     <div>
-                        <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_uni_red.jpg"
-                            alt="classic orange sock">
+                        <img class="chosenPicture"
+                            src="<?php echo isset($_POST['image']) ? $_POST['selected_image'] : './img/socksPhotos/Sunny_socks_uni_red.jpg'; ?>"
+                            alt="Selected Image">
                     </div>
                     <div class="othersocks-flex">
 
                         <?php
-                        $images = [
+                        $images = array(
                             "./img/socksPhotos/Sunny_socks_uni_pink.jpg",
                             "./img/socksPhotos/Sunny_socks_uni_yellow.jpg",
                             "./img/socksPhotos/Sunny_socks_uni_green.jpg",
                             "./img/socksPhotos/Sunny_socks_uni_blue.jpg",
-                        ];
+                        );
+
                         foreach ($images as $image) {
                             echo "<div>
-                            <input type='radio' name='$image' id='$image' onclick='this.form.submit()'>
-                            <label for='$image'>
-                            <img class='othersock-item' src='$image' alt='Classic pink sock'> 
-                            </label>
-                            </div> ";
+                                <input type='radio' name='selected_image' value='$image' id='$image' onclick='this.form.submit()'>
+                                <label for='$image'>
+                                    <img class='othersock-item' src='$image' alt='Classic sock'>
+                                </label>
+                            </div>";
                         }
                         ?>
                     </div>
@@ -86,7 +87,7 @@
                         <p>Made from 100% organic cotton <br> Produced in Portugal</p>
                     </div>
                     <div class="border-container">
-                        <input id="cart-button" type="submit" value="Put in cart" onclick="./checkoutPage.php"></input>
+                        <input id="cart-button" type="submit" value="Put in cart" onclick="#"></input>
                         <!-- <button id="cart-button" type="submit" value="Put in cart" onclick="#"></button> -->
                     </div>
                 </div>
