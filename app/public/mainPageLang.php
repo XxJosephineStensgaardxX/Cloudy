@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunny socks Main page</title>
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/styleLang.css">
+    <link rel="stylesheet" href="./style/style_lang.css">
     <link rel="stylesheet" href="./style/style_mainpage.css">
     <link rel="stylesheet" href="./style/slider.css">
 

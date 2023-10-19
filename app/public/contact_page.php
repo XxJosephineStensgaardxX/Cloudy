@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
     <link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="./style/styleLang.css">
     <link rel="stylesheet" href="style/style_checkout.css">
     <link rel="stylesheet" href="style/style_contact_page.css">
 

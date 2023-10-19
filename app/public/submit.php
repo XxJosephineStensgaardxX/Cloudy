@@ -10,6 +10,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style/submit.css">
     <link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="./style/style_lang.css">
 </head>
 
 <body>
