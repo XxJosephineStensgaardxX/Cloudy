@@ -21,7 +21,7 @@
                 <div class="container-layout">
                     <div>
                         <img class="chosenPicture"
-                            src="<?php echo isset($_POST['image']) ? $_POST['selected_image'] : './img/socksPhotos/Sunny_socks_uni_red.jpg'; ?>"
+                            src="<?php echo isset($_POST['selected_image']) ? $_POST['selected_image'] : './img/socksPhotos/Sunny_socks_uni_red.jpg'; ?>"
                             alt="Selected Image">
                     </div>
                     <div class="othersocks-flex">
