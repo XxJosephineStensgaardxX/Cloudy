@@ -33,9 +33,11 @@
                         ];
                         foreach ($images as $image) {
                             echo "<div>
-                    <img class='othersock-item' src='$image'
-                        alt='Classic pink sock'>  
-                    </div>";
+                            <input type='radio' name='$image' id='$image' onclick='this.form.submit()'>
+                            <label for='$image'>
+                            <img class='othersock-item' src='$image' alt='Classic pink sock'> 
+                            </label>
+                            </div> ";
                         }
                         ?>
                     </div>
@@ -82,7 +84,7 @@
                         <p>Made from 100% organic cotton <br> Produced in Portugal</p>
                     </div>
                     <div class="border-container">
-                        <input id="cart-button" type="submit" value="Put in cart" onclick="#"></input>
+                        <input id="cart-button" type="submit" value="Put in cart" onclick="./checkoutPage.php"></input>
                         <!-- <button id="cart-button" type="submit" value="Put in cart" onclick="#"></button> -->
                     </div>
                 </div>
