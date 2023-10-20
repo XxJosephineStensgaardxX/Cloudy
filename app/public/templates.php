@@ -34,7 +34,7 @@ function header_template($language, $lang)
                         </a>
                     </li>
                     <li>
-                        <form class="header__form" action="'. $_SERVER["PHP_SELF"]. '" method="POST">
+                        <form name="langForm" class="header__form" action="'. $_SERVER["PHP_SELF"]. '" method="GET">
                             <label for="submitButtonEN">
                                 <img class="header__image header__image-flag" src=".\img\englishflag.png" alt="ENFlag">
                             </label>

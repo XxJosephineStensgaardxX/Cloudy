@@ -12,9 +12,12 @@
 	<link rel="stylesheet" href="./style/style_success.css" />
 	<?php
         $lang = "EN";
-        
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $lang = filter_input(INPUT_POST, "submit");
+
+        if($_SERVER["REQUEST_METHOD"] == "GET"){
+            $lang = filter_input(INPUT_GET, "submit");
+            if($lang == ""){
+                $lang = "EN";
+            }
         }   
     ?>   
 </head>

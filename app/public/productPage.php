@@ -9,13 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/style_lang.css">
+	<link rel="stylesheet" href="./style/style_lang.css">
     <link rel="stylesheet" href="./style/productPage.css">
     <?php
         $lang = "EN";
-        
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $lang = filter_input(INPUT_POST, "submit");
+
+        if($_SERVER["REQUEST_METHOD"] == "GET"){
+            $lang = filter_input(INPUT_GET, "submit");
+            if($lang == ""){
+                $lang = "EN";
+            }
         }   
     ?>   
 </head>
