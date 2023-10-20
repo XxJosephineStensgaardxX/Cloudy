@@ -1,77 +1,77 @@
-main{
+main {
   margin-bottom: 60px; /* add gap between footer and main */
   display: flex;
   flex-direction: column;
-  gap: 100px
+  gap: 100px;
 }
-.main__choose-style{
+.main__choose-style {
   font-weight: bold;
-  max-width: 700px; 
+  max-width: 700px;
   margin: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
-.main__sock-types-display{
+.main__sock-types-display {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   gap: 100px;
 }
-.main__sock-display{
+.main__sock-display {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 10px;
 }
-.main__socks-form{
+.main__socks-form {
   height: 20px;
 }
-.main__sock-photo{
+.main__sock-photo {
   display: flex;
   justify-content: center;
-  width: 170px; 
+  width: 170px;
   height: 170px;
-  border-radius: 100%; 
+  border-radius: 100%;
   object-fit: cover;
 }
 .main__sock-photo img {
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
 }
-.form__colors{
+.form__colors {
   display: flex;
-  gap:15px;
+  gap: 15px;
 }
-.form__container{
+.form__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-.form__colors-size{
+.form__colors-size {
   height: 25px;
-  width:  25px;
+  width: 25px;
   border-radius: 50%;
 }
 
-.form__color-blue{
+.form__color-blue {
   background-color: #1e407a;
 }
-.form__color-green{
+.form__color-green {
   background-color: #51b2a2;
 }
-.form__color-pink{
+.form__color-pink {
   background-color: #e990b9;
 }
-.form__color-red{
-  background-color: #F15B39;
+.form__color-red {
+  background-color: #f15b39;
 }
-.form__color-yellow{
-  background-color: #FECD3E;
+.form__color-yellow {
+  background-color: #fecd3e;
 }
-.form__buy-button{
+.form__buy-button {
   background-color: #51b2a2;
   color: #1e407a;
   width: 55px;
@@ -79,29 +79,28 @@ main{
   border-radius: 30px;
   border-width: 0px;
 }
-.main__about-us{
+.main__about-us {
   font-weight: bold;
-  max-width: 700px; 
+  max-width: 700px;
   margin: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  
 }
-.main__about-us-info{
+.main__about-us-info {
   display: flex;
   flex-direction: column;
-  gap: 20px
+  gap: 20px;
 }
 
-.main__our-vision{
-  max-width: 400px; 
+.main__our-vision {
+  max-width: 400px;
   margin-right: auto;
   margin-left: auto;
 }
 /* Deri: this piece of code belongs to me. I only need to work on very detailed items if there are some comments on it.*/
-.choose__wrapper{
+.choose__wrapper {
   background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -110,106 +109,115 @@ main{
   grid-row-gap: 10px;
   justify-items: center;
   max-width: 750px;
-  margin:auto;
+  margin: auto;
   font-family: "Nexa-Bold";
-  }
-  .choose__row{
-      background-color: white;
-      text-align: center;
-      color: rgb(30, 64, 122)
-  }
-  .choose__row1{
-      grid-area: 1 / 1 / 2 / 3;  
-  }
-  .choose__row2-1{
-      grid-area: 2 / 1 / 3 / 2;
-      height: fit-content;
-      padding: 20px;
-  }
-  .choose__row2-2{
-      grid-area: 2 / 2 / 3 / 3;
-      height: fit-content;
-      padding: 20px;
-  }
-  .choose__row3-1{
-      grid-area: 3 / 1 / 4 / 2;
-  }
-  .choose__row3-2{
-      grid-area: 3 / 2 / 4 / 3;
-  }
-  .choose__row4-1{
-      grid-area: 4 / 1 / 5 / 2;
-  }
-  .choose__row4-2{
-      grid-area: 4 / 2 / 5 / 3;
-  }
-  .choose__row5-1{
-      grid-area: 5 / 1 / 6 / 2; 
-  }
-  .choose__row5-2{
-      grid-area: 5 / 2 / 6 / 3;
-  }
-  .main__unicolor-socks{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .main__stripped-socks{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .choose__size{
-    font-size: 50px;
-  }
-  .map__row{
-    background-color: white;
-    text-align: center;
-    color: rgb(30, 64, 122);
-    justify-items: center;
-    margin:auto;
-    font-family: "Nexa-Bold";
-    
-  }
-  .map {
-    display: grid;
-    grid-template-columns: 5fr;
-    grid-template-rows: repeat(2, 1fr) 5fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    .map__row1 { 
-      grid-area: 1 / 1 / 2 / 2; 
-      font-size: 50px;
-      text-decoration: underline;
+}
 
-    }
-    .map__row2 { 
-      grid-area: 2 / 1 / 3 / 2;
-      font-size: 30px;
-      padding: 20px;
-     }
-    .map__row3 { 
-      grid-area: 3 / 1 / 4 / 2; 
-      width: 440px;
-      height: 440px;
-      object-fit: cover;
-     align-items: center;
-    }
-    button{
-      background-color: #51b2a2;
-      padding: 10px 30px;
-      border:none;
-      border-radius: 20px;
-      color: #1e407a;
-      cursor: pointer;
-    }
-    .circle {
-      width: 25px; 
-      height: 25px; 
-      border-radius: 50%; 
-      margin: 7px; 
-      display: inline-block; 
-    }
+.choose__row {
+  background-color: white;
+  text-align: center;
+  color: rgb(30, 64, 122);
+}
+.choose__row1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.choose__row2-1 {
+  grid-area: 2 / 1 / 3 / 2;
+  height: fit-content;
+  padding: 20px;
+}
+.choose__row2-2 {
+  grid-area: 2 / 2 / 3 / 3;
+  height: fit-content;
+  padding: 20px;
+}
+.choose__row3-1 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.choose__row3-2 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.choose__row4-1 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+.choose__row4-2 {
+  grid-area: 4 / 2 / 5 / 3;
+}
+.choose__row5-1 {
+  grid-area: 5 / 1 / 6 / 2;
+}
+.choose__row5-2 {
+  grid-area: 5 / 2 / 6 / 3;
+}
+.main__unicolor-socks {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.main__stripped-socks {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.choose__size {
+  font-size: 50px;
+}
+.map__row {
+  background-color: white;
+  text-align: center;
+  color: rgb(30, 64, 122);
+  justify-items: center;
+  margin: auto;
+  font-family: "Nexa-Bold";
+}
+.map {
+  display: grid;
+  grid-template-columns: 5fr;
+  grid-template-rows: repeat(2, 1fr) 5fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.map__row1 {
+  grid-area: 1 / 1 / 2 / 2;
+  font-size: 50px;
+  text-decoration: underline;
+}
+.map__row2 {
+  grid-area: 2 / 1 / 3 / 2;
+  font-size: 30px;
+  padding: 20px;
+}
+.map__row3 {
+  grid-area: 3 / 1 / 4 / 2;
+  width: 440px;
+  height: 440px;
+  object-fit: cover;
+  align-items: center;
+}
+button {
+  background-color: #51b2a2;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  color: #1e407a;
+  cursor: pointer;
+}
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 7px;
+  display: inline-block;
+}
+
+@media (min-width: 576px) {
+  .choose__wrapper {
+    background: #f15b39;
+    display: none !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 2fr) 5fr repeat(2, 2fr) repeat(2, 2fr) 5fr repeat(2, 2fr);
+
+  }
+}

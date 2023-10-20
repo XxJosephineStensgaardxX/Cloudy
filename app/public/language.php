@@ -129,7 +129,7 @@
         // 
         "CONTACT US" => array(
             "EN" => "CONTACT US",
-            "NL" => "CONTACT ONS",
+            "NL" => "CONTACT",
         ),
         "SUBMIT" => array(
             "EN" => "SUBMIT",
