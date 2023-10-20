@@ -9,18 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="stylesheet" href="./style/style.css">
-	<link rel="stylesheet" href="./style/style_lang.css">
+    <link rel="stylesheet" href="./style/style_lang.css">
     <link rel="stylesheet" href="./style/productPage.css">
     <?php
-        $lang = "EN";
+    $lang = "EN";
 
-        if($_SERVER["REQUEST_METHOD"] == "GET"){
-            $lang = filter_input(INPUT_GET, "submit");
-            if($lang == ""){
-                $lang = "EN";
-            }
-        }   
-    ?>   
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        $lang = filter_input(INPUT_GET, "submit");
+        if ($lang == "") {
+            $lang = "EN";
+        }
+    }
+    ?>
 </head>
 
 <body>
@@ -30,9 +30,8 @@
             <div class="maincontainer-flex container">
                 <div class="container-layout">
                     <div>
-                        <img class="chosenPicture"
-                            src="<?php echo isset($_POST['selected_image']) ? $_POST['selected_image'] : './img/socksPhotos/Sunny_socks_uni_red.jpg'; ?>"
-                            alt="Selected Image">
+                        <img class="chosenPicture" <?php isset($_POST['selected_image']) ? $selected_image = $_POST['selected_image'] : $selected_image = './img/socksPhotos/Sunny_socks_uni_red.jpg'; ?>
+                            src="<?php echo $selected_image; ?>" alt="Selected Image">
                     </div>
                     <div class="othersocks-flex">
 
@@ -44,6 +43,11 @@
                             "./img/socksPhotos/Sunny_socks_uni_blue.jpg",
                         );
 
+
+                        if ($index = array_search($selected_image, $images)) {
+                            $images[$index] = './img/socksPhotos/Sunny_socks_uni_red.jpg';
+                        }
+
                         foreach ($images as $image) {
                             echo "<div>
                                 <input type='radio' name='selected_image' value='$image' id='$image' onclick='this.form.submit()'>
@@ -52,15 +56,16 @@
                                 </label>
                             </div>";
                         }
+
                         ?>
                     </div>
                 </div>
                 <div class="information-container-flex">
                     <h3 class="font-bold product-name-header">
                         <b>
-                        <?php
-                            echo $language["CLASSIC UNI SOCK - ORANGE"][$lang]
-                        ?>
+                            <?php
+                            echo $language["CLASSIC UNI SOCK - ORANGE"][$lang];
+                            ?>
                         </b>
                     </h3>
                     <div class="container-sizes-flex">
@@ -92,6 +97,7 @@
                             "#f15b39",
                             "#fecd3e",
                         ];
+
                         foreach ($colors as $color) {
                             echo "
                               <input type='radio' name='color' id='$color'>
@@ -102,11 +108,11 @@
                     <div class="border-container">
                         <p>
                             <?php
-                                echo $language["Made from 100% organic cotton"][$lang]
+                            echo $language["Made from 100% organic cotton"][$lang];
                             ?>
-                            <br> 
+                            <br>
                             <?php
-                                echo $language["Produced in Portugal"][$lang]
+                            echo $language["Produced in Portugal"][$lang];
                             ?>
                         </p>
                     </div>
