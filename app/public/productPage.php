@@ -85,6 +85,16 @@
                         }
                         ?>
                     </div>
+                    <div class="sizes-for-sizes-for-phone border-container">
+                        <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown">
+                            <option value="" disabled selected>Choose your size</option>
+                            <option value="25-31">25-31</option>
+                            <option value="32-36">32-36</option>
+                            <option value="36-40">36-40</option>
+                            <option value="40-45">40-45</option>
+                            <option value="47+">47+</option>
+                        </select>
+                    </div>
                     <div class="color-picker-flex border-container">
 
                         <?php
@@ -95,9 +105,6 @@
                             "#f15b39",
                             "#fecd3e",
                         ];
-
-
-
 
                         // $selected_color = isset($_POST['colors']) ? $_POST['colors'] : "#fecd3e"; // Default color
                         // if ($indexColor = array_search($selected_color, $colors)) {
@@ -119,7 +126,6 @@
                         //     $selected_image = "./img/socksPhotos/Sunny_socks_uni_blue.jpg";
                         // }
                         
-
                         foreach ($colors as $color) {
                             echo "
                               <input type='radio' name='color' id='$color'>

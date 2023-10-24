@@ -38,6 +38,14 @@
     .color-picker-flex {
         visibility: visible;
     }
+
+    .container-sizes-flex {
+        visibility: visible;
+    }
+
+    .sizes-for-sizes-for-phone {
+        visibility: hidden;
+    }
 }
 
 @media (max-width: 820px) {
@@ -90,13 +98,11 @@
 
 }
 
-
 @media (max-width: 550px) {
+
     .color-picker-flex {
-        flex-direction: row;
-        gap: 0.5vw;
-        flex-wrap: nowrap;
         visibility: hidden;
+        margin-bottom: -55px;
     }
 
     .color-text-menu-for-phone {
@@ -111,8 +117,22 @@
     .color-dropdown-menu {
         color: #1E407A;
         border: none;
+        margin-top: 5px;
     }
 
+    .sizes-for-sizes-for-phone {
+        visibility: visible;
+    }
+
+    .sizes-in-dropdown {
+        color: #1E407A;
+        border: none;
+        margin-top: 5px;
+    }
+
+    .container-sizes-flex {
+        visibility: hidden;
+    }
 
 
 }
