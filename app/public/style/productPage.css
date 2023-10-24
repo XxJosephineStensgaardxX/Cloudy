@@ -29,6 +29,17 @@
     gap: 10px;
 }
 
+@media (min-width: 550px) and (max-width: 2000px) {
+
+    .color-text-menu-for-phone {
+        visibility: hidden;
+    }
+
+    .color-picker-flex {
+        visibility: visible;
+    }
+}
+
 @media (max-width: 820px) {
     .othersocks-flex {
         display: flex;
@@ -76,6 +87,7 @@
         padding-top: 5px;
         padding-bottom: 5px;
     }
+
 }
 
 
@@ -87,16 +99,38 @@
         visibility: hidden;
     }
 
+    .color-text-menu-for-phone {
+        visibility: visible;
+    }
+
     .product-name-header {
         font-size: 10px;
         margin-bottom: 20px;
     }
+
+    .color-dropdown-menu {
+        color: #1E407A;
+        border: none;
+    }
+
+
+
 }
 
-@media (max-width > 840) {
+@media (max-width: 840px) {
     .product-name-header {
         margin-bottom: 270px;
     }
+
+    /* 
+    .color-picker-flex {
+        visibility: hidden;
+    }
+
+    .color-text-menu-for-phone {
+        visibility: visible;
+    } */
+
 }
 
 

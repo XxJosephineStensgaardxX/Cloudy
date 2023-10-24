@@ -43,7 +43,6 @@
                             "./img/socksPhotos/Sunny_socks_uni_blue.jpg",
                         );
 
-
                         if ($index = array_search($selected_image, $images)) {
                             $images[$index] = './img/socksPhotos/Sunny_socks_uni_red.jpg';
                         }
@@ -56,7 +55,6 @@
                                 </label>
                             </div>";
                         }
-
                         ?>
                     </div>
                 </div>
@@ -87,8 +85,8 @@
                         }
                         ?>
                     </div>
-
                     <div class="color-picker-flex border-container">
+
                         <?php
                         $colors = [
                             "#1e407a",
@@ -98,12 +96,48 @@
                             "#fecd3e",
                         ];
 
+
+
+
+                        // $selected_color = isset($_POST['colors']) ? $_POST['colors'] : "#fecd3e"; // Default color
+                        // if ($indexColor = array_search($selected_color, $colors)) {
+                        //     $colors[$indexColor] = './img/socksPhotos/Sunny_socks_uni_red.jpg';
+                        // }
+                        // $selected_color = $colors['indexColor'];
+                        
+                        // var_dump($selected_color);
+                        
+                        // if ($selected_color === "#fecd3e") {
+                        //     $colors[$indexColorPicker] = './img/socksPhotos/Sunny_socks_uni_red.jpg';
+                        // } elseif ($selected_color === "#1e407a") {
+                        //     $selected_image = "./img/socksPhotos/Sunny_socks_uni_pink.jpg";
+                        // } elseif ($selected_color === "#51b2a2") {
+                        //     $selected_image = "./img/socksPhotos/Sunny_socks_uni_yellow.jpg";
+                        // } elseif ($selected_color === "#e990b9") {
+                        //     $chosenImageURL = "./img/socksPhotos/Sunny_socks_uni_green.jpg";
+                        // } elseif ($selected_color === "#f15b39") {
+                        //     $selected_image = "./img/socksPhotos/Sunny_socks_uni_blue.jpg";
+                        // }
+                        
+
                         foreach ($colors as $color) {
                             echo "
                               <input type='radio' name='color' id='$color'>
-                              <label for='$color' class='button-design' style='background-color: $color;'><span></span></label>";
+                              <label for='$color' class='button-design' style='background-color: $color;' onClick='this.form.submit()'><span></span></label>";
                         }
                         ?>
+                    </div>
+
+                    <div class="color-text-menu-for-phone border-container">
+                        <!-- <label for="colors-in-text"></label> -->
+                        <select name="colors-in-text" id="colors-in-text" class="color-dropdown-menu">
+                            <option value="" disabled selected>Choose a color</option>
+                            <option value="Green">Green</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Pink">Pink</option>
+                            <option value="orange">Orange</option>
+                            <option value="Yellow">Yellow</option>
+                        </select>
                     </div>
                     <div class="border-container">
                         <p>
