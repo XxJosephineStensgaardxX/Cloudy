@@ -66,7 +66,8 @@
                             ?>
                         </b>
                     </h3>
-                    <div class="container-sizes-flex">
+
+                    <div class="container-sizes-flex border-container">
 
                         <?php $sizes = [
                             "25-31",
@@ -145,6 +146,11 @@
                             <option value="Yellow">Yellow</option>
                         </select>
                     </div>
+                    <div class="border-container">
+                        <input type="number" name="amount-picker" id="amount-picker" max="20" class="amount-picker"
+                            placeholder="Amount">
+                    </div>
+
                     <div class="border-container">
                         <p>
                             <?php
