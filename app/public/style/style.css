@@ -51,6 +51,14 @@ body {
 	text-transform: uppercase;
 	font-size: 24px;
 }
+.header__submit-lang {
+    display: none;
+}
+.header__form{
+	display: flex;
+	gap: 5px;
+}
+
 .footer {
 	position: relative;
 	background-color: #1e407a;
