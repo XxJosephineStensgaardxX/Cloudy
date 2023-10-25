@@ -1,5 +1,11 @@
-main {
-	margin-bottom: 60px; /* add gap between footer and main */
+.navigator {
+}
+.navigator__inner {
+	display: grid;
+	place-items: center;
+}
+.main {
+	margin-bottom: 60px;
 	display: flex;
 	flex-direction: column;
 	gap: 100px;
@@ -211,7 +217,7 @@ button {
 	margin: 7px;
 	display: inline-block;
 }
-
+/* 
 @media (min-width: 576px) {
 	.choose__wrapper {
 		background: #f15b39;
@@ -222,4 +228,4 @@ button {
 				2fr
 			);
 	}
-}
+} */

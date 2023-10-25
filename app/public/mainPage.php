@@ -50,6 +50,13 @@
                 </div>
             </div>
         </section>
+        <section class="navigator">
+            <div class="container">
+                <div class="navigator__inner">
+                    <a href="#choose"><img src="./img/arrow_down.svg" alt="GO!!"></a>
+                </div>
+            </div>
+        </section>
         <section class="Map">
             <div class="container">
                 <div class="map__row map__row1">
@@ -71,7 +78,7 @@
                 </div>
             </div>
         </section>
-        <section class="choose">
+        <section id="choose" class="choose">
             <div class="container">
 
                 <!--Deri: This is my piece of code. I only need to work on very detailed items if there are some comments on it.-->

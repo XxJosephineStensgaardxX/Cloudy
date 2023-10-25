@@ -3,7 +3,7 @@
 .slider__inner {
 }
 .slider__item {
-	width: 750px !important;
+	width: 650px !important;
 	aspect-ratio: 1/1;
 	transition: all 250ms;
 }
