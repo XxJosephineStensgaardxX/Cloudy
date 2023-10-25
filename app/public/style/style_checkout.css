@@ -20,12 +20,17 @@
 	width: unset;
 	background: none;
 }
+.checkout__button-wrapper ~ .checkout__button {
+	margin-top: 1.5rem;
+}
 .checkout__button-wrapper img {
 	object-fit: contain;
 	height: 3.5rem;
 }
 
 .checkout__button {
+	display: inline-block;
+	text-align: center;
 	border: 0;
 	width: 100%;
 	margin-top: 5rem;
@@ -33,6 +38,7 @@
 .checkout__result {
 	margin-top: 4rem;
 	display: flex;
+	gap: 7.5rem;
 	font-family: Nexa-Bold;
 	text-align: center;
 }
