@@ -125,7 +125,7 @@
         </section>
         <!--Timofei: This is my version of Choose style socks-->
         <section class="main__choose-style">
-            <h1 style="font-size: 50px;">
+            <h1 class="main__head-text">
                 <?php
                 echo $language["CHOOSE YOUR STYLE"][$lang]
                 ?>
@@ -151,7 +151,7 @@
                 <div class="main__sock-display">
                     <h3>STRIPED</h3>
                     <img class="main__sock-photo" src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="Blue unicolor socks">
-                    <form action="productPage.html">
+                    <form action="productPage.php">
                         <div class="form__container">
                             <div class="form__colors">
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
@@ -171,7 +171,7 @@
         <section class="main__about-us">
             <!--Timofei: This is my part of main page. this is "about us" page that will talk about the company-->
             <div class="main__about-us-info">
-                <h1 style="font-size: 50px;">
+                <h1 class="main__head-text">
                     <?php
                     echo $language["ABOUT US"][$lang]
                     ?>

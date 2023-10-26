@@ -20,11 +20,12 @@
 	gap: 60px;
 }
 .main__sock-types-display {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	gap: 100px;
 }
+
 .main__sock-display {
 	display: flex;
 	align-items: center;
@@ -57,10 +58,42 @@
 	gap: 20px;
 }
 .form__colors-size {
-	height: 25px;
-	width: 25px;
-	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	border-radius: 100%;
 }
+
+.form__buy-button {
+	background-color: #51b2a2;
+	color: #1e407a;
+	width: 70px;
+	height: 35px;
+	border-radius: 30px;
+	border-width: 0px;
+}
+
+@media (max-width: 600px) {
+	.main__sock-types-display {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 100px;
+	}
+	.main__sock-photo {
+		display: flex;
+		justify-content: center;
+		width: 340px;
+		height: 340px;
+		border-radius: 100%;
+		object-fit: cover;
+	}
+	.form__colors-size {
+		height: 50px;
+		width: 50px;
+		border-radius: 100%;
+	}
+  }
+
 
 .form__color-blue {
 	background-color: #1e407a;
@@ -77,16 +110,11 @@
 .form__color-yellow {
 	background-color: #fecd3e;
 }
-.form__buy-button {
-	background-color: #51b2a2;
-	color: #1e407a;
-	width: 55px;
-	height: 25px;
-	border-radius: 30px;
-	border-width: 0px;
-}
+
 .main__about-us {
 	font-weight: bold;
+	padding-left: 10px;
+	padding-right: 10px;
 	max-width: 700px;
 	margin: auto;
 	text-align: center;
@@ -94,6 +122,10 @@
 	flex-direction: column;
 	gap: 40px;
 }
+.main__head-text{
+	font-size: 50px;
+}
+
 .main__about-us-info {
 	display: flex;
 	flex-direction: column;
