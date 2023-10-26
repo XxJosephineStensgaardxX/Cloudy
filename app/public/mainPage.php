@@ -29,6 +29,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
     <script src="./js/slider.js" defer></script>
+    <script src="./js/changeImage.js" defer></script>
 
 </head>
 
@@ -133,16 +134,16 @@
             <div class="main__sock-types-display">
                 <div class="main__sock-display">
                     <h3>UNI</h3>
-                    <img class="main__sock-photo" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="Blue unicolor socks">
+                    <img class="main__sock-photo" id="sockImageUni" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="unicolor socks">
                     <form action="productPage.php">
                         <div class="form__container">
                             <div class="form__colors">
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
-                                <div class="form__colors-size form__color-blue"></div>
-                                <div class="form__colors-size form__color-green"></div>
-                                <div class="form__colors-size form__color-pink"></div>
-                                <div class="form__colors-size form__color-red"></div>
-                                <div class="form__colors-size form__color-yellow"></div>
+                                <div class="form__colores-uni form__colors-size form__color-blue active__choose-style" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_blue.jpg', '.form__colores-uni', this)"></div>
+                                <div class="form__colores-uni form__colors-size form__color-green" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_green.jpg', '.form__colores-uni', this)"></div>
+                                <div class="form__colores-uni form__colors-size form__color-pink" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_pink.jpg', '.form__colores-uni', this)"></div>
+                                <div class="form__colores-uni form__colors-size form__color-red" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_red.jpg', '.form__colores-uni', this)"></div>
+                                <div class="form__colores-uni form__colors-size form__color-yellow" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_yellow.jpg', '.form__colores-uni', this)"></div>
                             </div>
                             <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang] ?>">
                         </div>
@@ -150,16 +151,16 @@
                 </div>
                 <div class="main__sock-display">
                     <h3>STRIPED</h3>
-                    <img class="main__sock-photo" src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="Blue unicolor socks">
+                    <img class="main__sock-photo" id="sockImageStr" src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="unicolor socks">
                     <form action="productPage.php">
                         <div class="form__container">
                             <div class="form__colors">
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
-                                <div class="form__colors-size form__color-blue"></div>
-                                <div class="form__colors-size form__color-green"></div>
-                                <div class="form__colors-size form__color-pink"></div>
-                                <div class="form__colors-size form__color-red"></div>
-                                <div class="form__colors-size form__color-yellow"></div>
+                                <div class="form__colores-striped form__colors-size form__color-blue active__choose-style" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_blue.jpg', '.form__colores-striped', this)"></div>
+                                <div class="form__colores-striped form__colors-size form__color-green" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_green.jpg', '.form__colores-striped', this)"></div>
+                                <div class="form__colores-striped form__colors-size form__color-pink" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_pink_01.jpg', '.form__colores-striped', this)"></div>
+                                <div class="form__colores-striped form__colors-size form__color-red" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_red.jpg', '.form__colores-striped', this)"></div>
+                                <div class="form__colores-striped form__colors-size form__color-yellow" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_yellow.jpg', '.form__colores-striped', this)"></div>
                             </div>
                             <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang] ?>">
                         </div>
