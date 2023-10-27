@@ -1,3 +1,6 @@
+<?php
+    session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'templates.php' ?>
@@ -12,14 +15,16 @@
     <link rel="stylesheet" href="style/style_checkout.css">
     <link rel="stylesheet" href="style/style_contact_page.css">
     <?php
-        $lang = "EN";
-
-        if($_SERVER["REQUEST_METHOD"] == "GET"){
-            $lang = filter_input(INPUT_GET, "submit");
-            if($lang == ""){
-                $lang = "EN";
-            }
-        }   
+    $lang = $_SESSION["LANG"];
+ 
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        $lang = filter_input(INPUT_GET, "submit");
+        if (empty($lang)) {
+            $lang =  $_SESSION["LANG"];
+        }
+        
+        $_SESSION["LANG"] = $lang;
+    }
     ?>   
 
 </head>
