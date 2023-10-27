@@ -11,3 +11,23 @@ main{
     font-family: Nexa-Bold;
     font-size: 96px;
 }
+@media (max-width: 1790px){
+    .success{
+        margin: 145px;
+    }
+}
+@media (max-width: 1080px){
+    .success>h1{
+        font-size: 70px;
+    }
+}
+@media (max-width: 760px){
+    .success>h1{
+        font-size: 55px;
+    }
+}
+@media (max-width: 655px){
+    .success>h1{
+        font-size: 45px;
+    }
+}
