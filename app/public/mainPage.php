@@ -1,7 +1,7 @@
 <?php
-    $_SESSION["CART"] = array();
-    $_SESSION["LANG"] = "EN";
-    session_start(); 
+session_start();
+$_SESSION["CART"] = array();
+$_SESSION["LANG"] = "EN";
 
 ?>
 
@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="./style/style_mainpage.css">
     <?php
     $lang = $_SESSION["LANG"];
- 
+
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $lang = filter_input(INPUT_GET, "submit");
         if (empty($lang)) {
             $lang =  $_SESSION["LANG"];
         }
-        
+
         $_SESSION["LANG"] = $lang;
     }
     ?>
