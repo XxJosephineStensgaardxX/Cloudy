@@ -18,3 +18,19 @@
 	height: 100%;
 	object-fit: cover;
 }
+
+@media screen and (max-width: 1024px) {
+	.slider__item {
+		width: 550px !important;
+	}
+}
+@media screen and (max-width: 768px) {
+	.slider__item {
+		width: 450px !important;
+	}
+}
+@media screen and (max-width: 480px) {
+	.slider__item {
+		width: 350px !important;
+	}
+}
