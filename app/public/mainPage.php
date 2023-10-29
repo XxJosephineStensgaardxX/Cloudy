@@ -1,3 +1,10 @@
+<?php
+session_start();
+$_SESSION["CART"] = array();
+$_SESSION["LANG"] = "EN";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'templates.php' ?>
@@ -10,13 +17,15 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/style_mainpage.css">
     <?php
-    $lang = "EN";
+    $lang = $_SESSION["LANG"];
 
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $lang = filter_input(INPUT_GET, "submit");
-        if ($lang == "") {
-            $lang = "EN";
+        if (empty($lang)) {
+            $lang =  $_SESSION["LANG"];
         }
+
+        $_SESSION["LANG"] = $lang;
     }
     ?>
     <!--

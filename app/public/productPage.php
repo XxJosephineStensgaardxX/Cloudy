@@ -1,3 +1,6 @@
+<?php
+    session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,13 +15,15 @@
     <link rel="stylesheet" href="./style/style_lang.css">
     <link rel="stylesheet" href="./style/productPage.css">
     <?php
-    $lang = "EN";
-
+    $lang = $_SESSION["LANG"];
+ 
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $lang = filter_input(INPUT_GET, "submit");
-        if ($lang == "") {
-            $lang = "EN";
+        if (empty($lang)) {
+            $lang =  $_SESSION["LANG"];
         }
+        
+        $_SESSION["LANG"] = $lang;
     }
     ?>
 </head>

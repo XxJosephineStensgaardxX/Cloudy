@@ -113,3 +113,15 @@
 	color: #1e407a;
 	align-self: self-end;
 }
+
+@media screen and (max-width: 1024px) {
+	.checkout__inner {
+		flex-direction: column-reverse;
+		gap: 5rem;
+	}
+	.checkout__form {
+		border-right: none;
+		padding-right: 0;
+		margin-right: 0;
+	}
+}
