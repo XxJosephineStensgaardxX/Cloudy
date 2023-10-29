@@ -8,7 +8,6 @@
 
 html {
 	scroll-behavior: smooth;
-
 }
 
 li {
@@ -29,10 +28,9 @@ body {
 	align-items: center;
 }
 .header__image-flag {
-	
 	border-radius: 100%;
 }
-.header__image{
+.header__image {
 	width: 44px;
 	height: 44px;
 	object-fit: cover;
@@ -43,18 +41,18 @@ body {
 .header__list {
 	display: flex;
 	gap: 18px;
-	align-items: center;	
+	align-items: center;
 }
 .header__list a {
-	font-family: "Nexa-Bold" ;
+	font-family: 'Nexa-Bold';
 	color: #1e407a;
 	text-transform: uppercase;
 	font-size: 24px;
 }
 .header__submit-lang {
-    display: none;
+	display: none;
 }
-.header__form{
+.header__form {
 	display: flex;
 	gap: 5px;
 }
@@ -95,7 +93,7 @@ body {
 }
 
 .footer__square-name {
-	font-family: "Nexa-Bold";
+	font-family: 'Nexa-Bold';
 }
 
 .footer__square-pink {
@@ -107,7 +105,7 @@ body {
 }
 
 .footer__title {
-	font-family: "Nexa-Bold";
+	font-family: 'Nexa-Bold';
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 2rem;
@@ -127,7 +125,7 @@ body {
 	background: #51b2a2;
 	border: 0;
 	color: #1e407a;
-	font-family: "Nexa-Bold";
+	font-family: 'Nexa-Bold';
 	border-radius: 3rem;
 }
 
@@ -140,7 +138,7 @@ body {
 }
 .input::placeholder {
 	text-align: center;
-	font-family: "Nexa-Bold";
+	font-family: 'Nexa-Bold';
 	color: #0000005c;
 }
 .input__wrapper {
@@ -159,3 +157,13 @@ body {
 	margin-top: 2.75rem;
 }
 
+@media screen and (max-width: 640px) {
+	.input__wrapper-double {
+		grid-template-columns: unset;
+		gap: 0.875rem;
+	}
+	.input__wrapper-double .input {
+		font-size: 1.25rem;
+		padding: 0.625rem;
+	}
+}

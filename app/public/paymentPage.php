@@ -1,5 +1,5 @@
 <?php
-    session_start(); 
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,16 +14,16 @@
 	<link rel="stylesheet" href="./style/style_lang.css">
 	<link rel="stylesheet" href="./style/style_checkout.css" />
 	<?php
-    $lang = $_SESSION["LANG"];
- 
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        $lang = filter_input(INPUT_GET, "submit");
-        if (empty($lang)) {
-            $lang =  $_SESSION["LANG"];
-        }
-        
-        $_SESSION["LANG"] = $lang;
-    }
+	$lang = $_SESSION["LANG"];
+
+	if ($_SERVER["REQUEST_METHOD"] == "GET") {
+		$lang = filter_input(INPUT_GET, "submit");
+		if (empty($lang)) {
+			$lang =  $_SESSION["LANG"];
+		}
+
+		$_SESSION["LANG"] = $lang;
+	}
 	?>
 </head>
 
@@ -79,12 +79,12 @@
 					<ul class="orders">
 						<li class="order__item">
 							<img src="./img/catalogus_sokken_stripes_red.png" alt="catalogus_sokken_stripes_red" class="order__image" />
+							<h2 class="order__title">
+								<?php
+								echo $language["RED STRIPED SOCKS"][$lang]
+								?>
+							</h2>
 							<div class="order__item-inner">
-								<h2 class="order__title">
-									<?php
-									echo $language["RED STRIPED SOCKS"][$lang]
-									?>
-								</h2>
 								<p class="order__text">
 									<?php
 									echo $language["PRICE:"][$lang]
@@ -113,12 +113,12 @@
 						</li>
 						<li class="order__item">
 							<img src="./img/catalogus_sokken_uni_blue.png" alt="catalogus_sokken_uni_blue" class="order__image" />
+							<h2 class="order__title">
+								<?php
+								echo $language["GREEN UNI SOCKS"][$lang]
+								?>
+							</h2>
 							<div class="order__item-inner">
-								<h2 class="order__title">
-									<?php
-									echo $language["GREEN UNI SOCKS"][$lang]
-									?>
-								</h2>
 								<p class="order__text">
 									<?php
 									echo $language["PRICE:"][$lang]
@@ -146,20 +146,20 @@
 							</button>
 						</li>
 					</ul>
-				</div>
-				<div class="checkout__result">
-					<a href="checkoutPage.php" class="checkout__link">
-						<?php
-						echo $language["NOT CORRECT? GO BACK"][$lang]
-						?>
-					</a>
-					<p class="checkout__total">
-						<?php
-						echo $language["TOTAL:"][$lang]
-						?>
-						<span>50</span>
-						$
-					</p>
+					<div class="checkout__result">
+						<a href="checkoutPage.php" class="checkout__link">
+							<?php
+							echo $language["NOT CORRECT? GO BACK"][$lang]
+							?>
+						</a>
+						<p class="checkout__total">
+							<?php
+							echo $language["TOTAL:"][$lang]
+							?>
+							<span>50</span>
+							$
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>
