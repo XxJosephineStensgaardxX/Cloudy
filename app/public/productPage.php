@@ -136,7 +136,6 @@
                     </div>
 
                     <div class="color-text-menu-for-phone border-container">
-                        <!-- <label for="colors-in-text"></label> -->
                         <select name="colors-in-text" id="colors-in-text" class="color-dropdown-menu">
                             <option value="" disabled selected>Choose a color</option>
                             <option value="Green">Green</option>
@@ -163,8 +162,7 @@
                         </p>
                     </div>
                     <div class="border-container">
-                        <input id="cart-button" type="submit" value="Put in cart" onclick="#"></input>
-                        <!-- <button id="cart-button" type="submit" value="Put in cart" onclick="#"></button> -->
+                        <input id="cart-button" type="submit" value="Put in cart" onClick="#"></input>
                     </div>
                 </div>
             </div>
