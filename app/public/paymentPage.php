@@ -28,7 +28,8 @@ session_start();
 </head>
 
 <body class="wrapper">
-	<?php echo header_template($language, $lang) ?>
+	<?php echo desktop_header_template($language, $lang) ?>
+    <?php echo mobile_header_template($language, $lang) ?>
 	<main class="main">
 		<section class="checkout">
 			<div class="container">

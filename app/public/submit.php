@@ -24,7 +24,8 @@
 </head>
 
 <body>
-    <?php echo header_template($language, $lang) ?>
+    <?php echo desktop_header_template($language, $lang) ?>
+    <?php echo mobile_header_template($language, $lang) ?>
     <?php
             if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $fname = filter_input(INPUT_POST, "Fname");
