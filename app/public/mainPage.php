@@ -43,7 +43,8 @@ $_SESSION["LANG"] = "EN";
 </head>
 
 <body>
-    <?php echo header_template($language, $lang) ?>
+    <?php echo desktop_header_template($language, $lang) ?>
+    <?php echo mobile_header_template($language, $lang) ?>
     <main class="main">
         <section class="slider">
             <div class="container">
@@ -178,7 +179,7 @@ $_SESSION["LANG"] = "EN";
 
             </div>
         </section>
-        <section class="main__about-us">
+        <section class="main__about-us" id="aboutUs">
             <!--Timofei: This is my part of main page. this is "about us" page that will talk about the company-->
             <div class="main__about-us-info">
                 <h1 class="main__head-text">

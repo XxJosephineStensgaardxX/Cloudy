@@ -6,4 +6,13 @@ $('.slider__inner').slick({
 	autoplaySpeed: 10000,
 	arrows: false,
 	pagination: false,
+	responsive: [
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			},
+		},
+	],
 })

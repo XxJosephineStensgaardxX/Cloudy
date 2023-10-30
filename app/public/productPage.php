@@ -29,7 +29,8 @@
 </head>
 
 <body>
-    <?php echo header_template($language, $lang) ?>
+    <?php echo desktop_header_template($language, $lang) ?>
+    <?php echo mobile_header_template($language, $lang) ?>
     <main>
         <form id="form" method="post" action="#">
             <div class="maincontainer-flex container">

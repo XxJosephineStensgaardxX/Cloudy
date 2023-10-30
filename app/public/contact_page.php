@@ -30,7 +30,8 @@
 </head>
 
 <body>
-<?php echo header_template($language, $lang) ?>
+    <?php echo desktop_header_template($language, $lang) ?>
+    <?php echo mobile_header_template($language, $lang) ?>
     <main class="main">
         <section class="content">
             <div class="container">

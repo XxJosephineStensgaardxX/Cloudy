@@ -28,7 +28,8 @@
 </head>
 
 <body>
-    <?php echo header_template($language, $lang) ?>
+    <?php echo desktop_header_template($language, $lang) ?>
+    <?php echo mobile_header_template($language, $lang) ?>
     <section class="space">
         <div class="container">
             <div class="striped_socks">

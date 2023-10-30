@@ -8,7 +8,6 @@
 
 html {
 	scroll-behavior: smooth;
-
 }
 
 li {
@@ -20,41 +19,95 @@ body {
 	font-family: Nexa-Light, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: #1e407a;
 }
+
+.button {
+	padding: 0.75rem 1.5rem;
+	background: #51b2a2;
+	border: 0;
+	color: #1e407a;
+	font-family: 'Nexa-Bold';
+	border-radius: 3rem;
+}
+
+.input {
+	border: 1px solid #1e407a;
+	border-radius: 0.625rem;
+	padding: 0.625rem;
+	font-size: 1.25rem;
+	width: 100%;
+}
+
+.input::placeholder {
+	text-align: center;
+	font-family: 'Nexa-Bold';
+	color: #0000005c;
+}
+
+.input__wrapper {
+	display: grid;
+	margin-bottom: 0.875rem;
+}
+
+.input__wrapper-double {
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.625rem;
+}
+
+.input__wrapper-double .input {
+	font-size: 1rem;
+	padding: 0.5rem;
+}
+
+.input__wrapper-spaced {
+	margin-top: 2.75rem;
+}
+
+#mobile-header {
+	display: none;
+}
+
 .header {
 	padding-block: 50px;
 }
+
 .header__inner {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
+
 .header__image-flag {
-	
 	border-radius: 100%;
 }
-.header__image{
+
+.header__image {
 	width: 44px;
 	height: 44px;
 	object-fit: cover;
 }
+
 .header__image-logo {
 	height: 128px;
 }
+
 .header__list {
 	display: flex;
 	gap: 18px;
-	align-items: center;	
+	align-items: center;
 }
+
 .header__list a {
-	font-family: "Nexa-Bold" ;
+	font-family: 'Nexa-Bold';
 	color: #1e407a;
 	text-transform: uppercase;
 	font-size: 24px;
 }
+
 .header__submit-lang {
-    display: none;
+	display: none;
 }
-.header__form{
+
+.header__form {
 	display: flex;
 	gap: 5px;
 }
@@ -95,7 +148,7 @@ body {
 }
 
 .footer__square-name {
-	font-family: "Nexa-Bold";
+	font-family: 'Nexa-Bold';
 }
 
 .footer__square-pink {
@@ -107,7 +160,7 @@ body {
 }
 
 .footer__title {
-	font-family: "Nexa-Bold";
+	font-family: 'Nexa-Bold';
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 2rem;
@@ -122,13 +175,13 @@ body {
 	margin-top: 0.75rem;
 }
 
-.button {
-	padding: 0.75rem 1.5rem;
-	background: #51b2a2;
-	border: 0;
-	color: #1e407a;
-	font-family: "Nexa-Bold";
-	border-radius: 3rem;
+@media screen and (max-width: 480px) {
+	#desktop-header {
+		display: none;
+	}
+	#mobile-header {
+		display: block;
+	}
 }
 
 .input {
@@ -161,5 +214,16 @@ body {
 @media (max-width:1543px){
 	.footer{
 		padding-inline: 30px;
+	}
+}
+@media screen and (max-width: 640px) {
+	.input__wrapper-double {
+		grid-template-columns: unset;
+		gap: 0.875rem;
+	}
+
+	.input__wrapper-double .input {
+		font-size: 1.25rem;
+		padding: 0.625rem;
 	}
 }
