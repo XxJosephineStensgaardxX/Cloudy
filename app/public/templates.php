@@ -49,6 +49,7 @@ function desktop_header_template($language, $lang)
                     <li>
                     <li class="header__list-item"><a href="checkoutPage.php"><img class="header__image" src="./img\shopping-cart.png" alt="ShopCard"></a></li>
                 </ul>
+                <button id="hamburger-bttn"> <img src=".\img\hamburger-button.png" alt="hamburger" style=""></button>
             </div>
         </div>
     </header>  ';
@@ -58,55 +59,56 @@ function desktop_header_template($language, $lang)
 function mobile_header_template($language, $lang)
 {
     
-    return '         
-    <header class="header" id="mobile-header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="mainPage.php" class="socksLogo">
-                    <img class="header__image-logo" src=".\img\sunny_logos_slogan_blue.png" alt="socksLogo">
-                </a>
-                <div id="hamburger-bttn"> <img src=".\img\hamburger-button.png" alt="hamburger" style=""></div>
-                <ul class="header__list" id="mobile-navbar">
-                <li class="header__list-item">
-                        <a href="catalogue.php">
-                            '.
-                            $language["Catalogue"][$lang]
-                            .'
-                        </a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="mainPage.php#aboutUs">
-                            '.
-                            $language["About us"][$lang]
-                            .'
-                        </a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="contact_page.php">
-                            '.
-                            $language["Contact us"][$lang]
-                            .'
-                        </a>
-                    </li>
-                    <li>
-                        <form name="langForm" class="header__form" action="'. $_SERVER["PHP_SELF"]. '" method="GET">
-                            <label for="submitButtonEN">
-                                <img class="header__image header__image-flag" src=".\img\englishflag.png" alt="ENFlag">
-                            </label>
-                            <input class="header__submit-lang" type="submit" id="submitButtonEN"  name="submit" value="EN">
+    // return '         
+    // <header class="header" id="mobile-header">
+    //     <div class="container">
+    //         <div class="header__inner">
+    //             <a href="mainPage.php" class="socksLogo">
+    //                 <img class="header__image-logo" src=".\img\sunny_logos_slogan_blue.png" alt="socksLogo">
+    //             </a>
+    //             <div id="hamburger-bttn"> <img src=".\img\hamburger-button.png" alt="hamburger" style=""></div>
+    //             <ul class="header__list" id="mobile-navbar">
+    //             <li class="header__list-item">
+    //                     <a href="catalogue.php">
+    //                         '.
+    //                         $language["Catalogue"][$lang]
+    //                         .'
+    //                     </a>
+    //                 </li>
+    //                 <li class="header__list-item">
+    //                     <a href="mainPage.php#aboutUs">
+    //                         '.
+    //                         $language["About us"][$lang]
+    //                         .'
+    //                     </a>
+    //                 </li>
+    //                 <li class="header__list-item">
+    //                     <a href="contact_page.php">
+    //                         '.
+    //                         $language["Contact us"][$lang]
+    //                         .'
+    //                     </a>
+    //                 </li>
+    //                 <li>
+    //                     <form name="langForm" class="header__form" action="'. $_SERVER["PHP_SELF"]. '" method="GET">
+    //                         <label for="submitButtonEN">
+    //                             <img class="header__image header__image-flag" src=".\img\englishflag.png" alt="ENFlag">
+    //                         </label>
+    //                         <input class="header__submit-lang" type="submit" id="submitButtonEN"  name="submit" value="EN">
 
 
-                            <label for="submitButtonNL">
-                                <img class="header__image header__image-flag" src=".\img\vlag-nederland.png" alt="NLFlag">
-                            </label>
-                            <input class="header__submit-lang" type="submit" id="submitButtonNL" name="submit" value="NL">
-                        </form>
-                    <li>
-                    <li class="header__list-item"><a href="checkoutPage.php"><img class="header__image" src="./img\shopping-cart.png" alt="ShopCard"></a></li>
-                </ul>
-            </div>
-        </div>
-    </header>  ';
+    //                         <label for="submitButtonNL">
+    //                             <img class="header__image header__image-flag" src=".\img\vlag-nederland.png" alt="NLFlag">
+    //                         </label>
+    //                         <input class="header__submit-lang" type="submit" id="submitButtonNL" name="submit" value="NL">
+    //                     </form>
+    //                 <li>
+    //                 <li class="header__list-item"><a href="checkoutPage.php"><img class="header__image" src="./img\shopping-cart.png" alt="ShopCard"></a></li>
+    //             </ul>
+    //         </div>
+    //     </div>
+    // </header>  ';
+    return '';
    
 }
 
