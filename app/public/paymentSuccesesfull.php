@@ -1,10 +1,10 @@
+<?php require_once 'templates.php' ?>
+<?php require_once 'language.php' ?>
 <?php
-    session_start(); 
+    init();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php require_once 'templates.php' ?>
-<?php require_once 'language.php' ?>
 
 <head>
 	<meta charset="UTF-8" />

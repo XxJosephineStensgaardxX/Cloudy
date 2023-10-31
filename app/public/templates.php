@@ -170,3 +170,12 @@ function footer_temple()
         </div>
     </footer>';
 }
+
+function init(){
+
+    session_start();
+    $_SESSION["CART"] = array();
+    if(!isset($_SESSION["LANG"])) {
+        $_SESSION["LANG"] = "EN";
+    }
+}
