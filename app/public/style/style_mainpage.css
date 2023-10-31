@@ -62,6 +62,10 @@
 	width: 30px;
 	border-radius: 100%;
 }
+.form__remove-radio-button{
+	display: none;
+}
+
 
 .form__buy-button {
 	background-color: #51b2a2;
