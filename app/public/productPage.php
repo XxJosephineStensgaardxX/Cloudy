@@ -1,5 +1,5 @@
 <?php
-    session_start(); 
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="./style/productPage.css">
     <?php
     $lang = $_SESSION["LANG"];
- 
+
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $lang = filter_input(INPUT_GET, "submit");
         if (empty($lang)) {
-            $lang =  $_SESSION["LANG"];
+            $lang = $_SESSION["LANG"];
         }
-        
+
         $_SESSION["LANG"] = $lang;
     }
     ?>
@@ -31,29 +31,43 @@
 <body>
     <?php echo desktop_header_template($language, $lang) ?>
     <?php echo mobile_header_template($language, $lang) ?>
+    <?php
+    $images = array(
+        "./img/socksPhotos/Sunny_socks_uni_blue.jpg" => "BLUE",
+        "./img/socksPhotos/Sunny_socks_uni_green.jpg" => "GREEN",
+        "./img/socksPhotos/Sunny_socks_uni_pink.jpg" => "PINK",
+        "./img/socksPhotos/Sunny_socks_uni_red.jpg" => "RED",
+        "./img/socksPhotos/Sunny_socks_uni_yellow.jpg" => "YELLOW",
+    );
+
+    ?>
     <main>
         <form id="form" method="post" action="#">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
                     <div>
-                        <img class="chosenPicture" <?php isset($_POST['selected_image']) ? $selected_image = $_POST['selected_image'] : $selected_image = './img/socksPhotos/Sunny_socks_uni_red.jpg'; ?>
+                        <img class="chosenPicture" <?php
+                        isset($_POST['selected_image']) ?
+                            $selected_image = $_POST['selected_image'] :
+                            $selected_image = './img/socksPhotos/Sunny_socks_uni_red.jpg';
+                        ?>
                             src="<?php echo $selected_image; ?>" alt="Selected Image">
                     </div>
                     <div class="othersocks-flex">
 
                         <?php
-                        $images = array(
+                        $images_carousel = array(
                             "./img/socksPhotos/Sunny_socks_uni_pink.jpg",
                             "./img/socksPhotos/Sunny_socks_uni_yellow.jpg",
                             "./img/socksPhotos/Sunny_socks_uni_green.jpg",
                             "./img/socksPhotos/Sunny_socks_uni_blue.jpg",
                         );
 
-                        if ($index = array_search($selected_image, $images)) {
-                            $images[$index] = './img/socksPhotos/Sunny_socks_uni_red.jpg';
+                        if ($index = array_search($selected_image, $images_carousel)) {
+                            $images_carousel[$index] = './img/socksPhotos/Sunny_socks_uni_red.jpg';
                         }
 
-                        foreach ($images as $image) {
+                        foreach ($images_carousel as $image) {
                             echo "<div>
                                 <input type='radio' name='selected_image' value='$image' id='$image' onclick='this.form.submit()'>
                                 <label for='$image'>
@@ -68,7 +82,7 @@
                     <h3 class="font-bold product-name-header">
                         <b>
                             <?php
-                            echo $language["CLASSIC UNI SOCK - ORANGE"][$lang];
+                            echo $language["CLASSIC UNI SOCK - "][$lang] . $images[$selected_image];
                             ?>
                         </b>
                     </h3>
@@ -113,42 +127,24 @@
                             "#fecd3e",
                         ];
 
-                        // $selected_color = isset($_POST['colors']) ? $_POST['colors'] : "#fecd3e"; // Default color
-                        // if ($indexColor = array_search($selected_color, $colors)) {
-                        //     $colors[$indexColor] = './img/socksPhotos/Sunny_socks_uni_red.jpg';
-                        // }
-                        // $selected_color = $colors['indexColor'];
-                        
-                        // var_dump($selected_color);
-                        
-                        // if ($selected_color === "#fecd3e") {
-                        //     $colors[$indexColorPicker] = './img/socksPhotos/Sunny_socks_uni_red.jpg';
-                        // } elseif ($selected_color === "#1e407a") {
-                        //     $selected_image = "./img/socksPhotos/Sunny_socks_uni_pink.jpg";
-                        // } elseif ($selected_color === "#51b2a2") {
-                        //     $selected_image = "./img/socksPhotos/Sunny_socks_uni_yellow.jpg";
-                        // } elseif ($selected_color === "#e990b9") {
-                        //     $chosenImageURL = "./img/socksPhotos/Sunny_socks_uni_green.jpg";
-                        // } elseif ($selected_color === "#f15b39") {
-                        //     $selected_image = "./img/socksPhotos/Sunny_socks_uni_blue.jpg";
-                        // }
-                        
-                        foreach ($colors as $color) {
+
+                        foreach ($colors as $i => $color) {
                             echo "
-                              <input type='radio' name='color' id='$color'>
-                              <label for='$color' class='button-design' style='background-color: $color;' onClick='this.form.submit()'><span></span></label>";
+                              <input type='radio' name='selected_image' id='$color' value='" . array_keys($images)[$i] . "' onclick='this.form.submit()'>
+                              <label for='$color' class='button-design' style='background-color: $color;'><span></span></label>";
                         }
                         ?>
                     </div>
 
                     <div class="color-text-menu-for-phone border-container">
-                        <select name="colors-in-text" id="colors-in-text" class="color-dropdown-menu">
+                        <select name="selected_image" id="colors-in-text" class="color-dropdown-menu"
+                            onchange='this.form.submit()'>
                             <option value="" disabled selected>Choose a color</option>
-                            <option value="Green">Green</option>
-                            <option value="Blue">Blue</option>
-                            <option value="Pink">Pink</option>
-                            <option value="orange">Orange</option>
-                            <option value="Yellow">Yellow</option>
+                            <option value="./img/socksPhotos/Sunny_socks_uni_green.jpg">Green</option>
+                            <option value="./img/socksPhotos/Sunny_socks_uni_blue.jpg">Blue</option>
+                            <option value="./img/socksPhotos/Sunny_socks_uni_pink.jpg">Pink</option>
+                            <option value="./img/socksPhotos/Sunny_socks_uni_red.jpg">Orange</option>
+                            <option value="./img/socksPhotos/Sunny_socks_uni_yellow.jpg">Yellow</option>
                         </select>
                     </div>
                     <div class="border-container">
