@@ -33,13 +33,12 @@ session_start();
     <?php echo mobile_header_template($language, $lang) ?>
     <?php
     $images = array(
-        "./img/socksPhotos/Sunny_socks_uni_blue.jpg" => "BLUE",
+        "./img/socksPhotos/Sunny_sSocks_uni_blue.jpg" => "BLUE",
         "./img/socksPhotos/Sunny_socks_uni_green.jpg" => "GREEN",
         "./img/socksPhotos/Sunny_socks_uni_pink.jpg" => "PINK",
         "./img/socksPhotos/Sunny_socks_uni_red.jpg" => "RED",
         "./img/socksPhotos/Sunny_socks_uni_yellow.jpg" => "YELLOW",
     );
-
     ?>
     <main>
         <form id="form" method="post" action="#">
