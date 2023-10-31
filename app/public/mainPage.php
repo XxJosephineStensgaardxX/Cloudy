@@ -1,14 +1,11 @@
+<?php require_once 'templates.php' ?>
+<?php require_once 'language.php' ?>
 <?php
-session_start();
-$_SESSION["CART"] = array();
-$_SESSION["LANG"] = "EN";
-
+    init();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<?php require_once 'templates.php' ?>
-<?php require_once 'language.php' ?>
 
 <head>
     <meta charset="UTF-8">

@@ -1,12 +1,11 @@
-<?php
-session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
-
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
+<?php
+    init();
+?>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
