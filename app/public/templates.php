@@ -121,16 +121,16 @@ function footer_temple()
                     <h3 class="footer__title">OUR PAYMENT METHODS</h3>
                     <ul class="footer__image-wrapper">
                         <li>
-                            <img class="footer__image" src="img/mastercard.png" alt="visa" />
+                            <img class="footer__image" src="img/VISA.png" alt="visa" />
                         </li>
                         <li>
                             <img class="footer__image" src="img/mastercard.png" alt="mastercard" />
                         </li>
                         <li>
-                            <img class="footer__image" src="img/mastercard.png" alt="paypal" />
+                            <img class="footer__image" src="img/PAYPAL.png" alt="paypal" />
                         </li>
                         <li>
-                            <img class="footer__image" src="img/mastercard.png" alt="ideal" />
+                            <img class="footer__image" src="img/ideal.png" alt="ideal" />
                         </li>
                     </ul>
                 </div>
