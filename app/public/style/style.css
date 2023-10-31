@@ -231,12 +231,12 @@ body {
 		padding: 0.625rem;
 	}
 }
-@media (max-width:1543px){
+@media (max-width:1530px){
 	.footer{
 		padding-inline: 30px;
 	}
 }
-@media (max-width:1203px){
+@media (max-width:1024px){
 	.footer__inner{
 		display: flex;
 		flex-direction: column;
