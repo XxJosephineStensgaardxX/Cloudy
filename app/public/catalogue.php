@@ -34,11 +34,21 @@
         <div class="container">
             <div class="striped_socks">
                 <div class="striped_box">
-                    <img src="img/catalogus_sokken_stripes_pink.png" alt="striped_pink_socks">
-                    <img src="img/catalogus_sokken_stripes_red.png" alt="striped_red_socks">
-                    <img src="img/catalogus_sokken_stripes_green.png" alt="striped_green_socks">
-                    <img src="img/catalogus_sokken_stripes_yellow.png" alt="striped_yellow_socks">
-                    <img src="img/catalogus_sokken_stripes_blue.png" alt="striped_blue_socks">
+                    <div class="striped_pink_sock">
+                        <img src="img/catalogus_sokken_stripes_pink.png" alt="striped_pink_socks">
+                    </div>
+                    <div class="striped_red_sock">
+                        <img src="img/catalogus_sokken_stripes_red.png" alt="striped_red_socks">
+                    </div>
+                    <div class="striped_green_sock">                   
+                        <img src="img/catalogus_sokken_stripes_green.png" alt="striped_green_socks">
+                    </div>
+                    <div class="striped_yellow_sock">
+                        <img src="img/catalogus_sokken_stripes_yellow.png" alt="striped_yellow_socks">
+                    </div>
+                    <div class="striped_blue_sock">
+                        <img src="img/catalogus_sokken_stripes_blue.png" alt="striped_blue_socks">
+                    </div>
                 </div>
                 <button>                            
                     <?php
@@ -48,11 +58,25 @@
             </div>
             <div class="uni_socks">
                 <div class="uni_box">
-                    <img src="img/catalogus_sokken_uni_pink.png" alt="uni_pink_socks">
-                    <img src="img/catalogus_sokken_uni_yellow.png" alt="uni_yellow_socks">
-                    <img src="img/catalogus_sokken_uni_red.png" alt="uni_red_socks">
-                    <img src="img/catalogus_sokken_uni_green.png" alt="uni_green_socks">
-                    <img src="img/catalogus_sokken_uni_blue.png" alt="uni_blue_socks">
+                    <div class="uni_pink_sock">
+                        <img src="img/catalogus_sokken_uni_pink.png" alt="uni_pink_socks">
+                    </div>
+                    <div class="uni_yellow_sock">
+                        <img src="img/catalogus_sokken_uni_yellow.png" alt="uni_yellow_socks">
+                    </div>
+                    <div class="uni_red_sock">
+                        <img src="img/catalogus_sokken_uni_red.png" alt="uni_red_socks">
+                    </div>
+                    <div class="uni_green_sock">                    
+                        <img src="img/catalogus_sokken_uni_green.png" alt="uni_green_socks">
+                    </div>
+                    <div class="uni_blue_sock">
+                        <img src="img/catalogus_sokken_uni_blue.png" alt="uni_blue_socks">
+                    </div>
+                    
+                    
+
+                    
                 </div>
                 <button>                            
                     <?php

@@ -36,6 +36,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
     <script src="./js/slider.js" defer></script>
     <script src="./js/changeImage.js" defer></script>
+    <script src="./js/responsiveNavbar.js" defer></script>
 
 </head>
 
@@ -123,10 +124,10 @@
                         ?>
                     </div>
                     <div class="choose__row choose__row5-1">
-                        <button type="button"> <?php echo $language["BUY"][$lang] ?></button>
+                        <button class='button' type="button"> <?php echo $language["BUY"][$lang] ?></button>
                     </div>
                     <div class="choose__row choose__row5-2">
-                        <button type="button"> <?php echo $language["BUY"][$lang] ?> </button>
+                        <button class='button' type="button"> <?php echo $language["BUY"][$lang] ?> </button>
                     </div>
                 </div>
             </div>

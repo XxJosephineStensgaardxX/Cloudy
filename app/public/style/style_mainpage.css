@@ -236,19 +236,20 @@
 }
 .map__row3 {
 	grid-area: 3 / 1 / 4 / 2;
-	width: 440px;
+	width: 100%;
+	max-width: 600px;
 	height: 440px;
 	object-fit: cover;
 	align-items: center;
 }
-button {
+/* button {
 	background-color: #51b2a2;
 	padding: 10px 30px;
 	border: none;
 	border-radius: 20px;
 	color: #1e407a;
 	cursor: pointer;
-}
+} */
 .circle {
 	width: 25px;
 	height: 25px;
