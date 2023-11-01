@@ -2,7 +2,6 @@
 <?php require_once 'language.php' ?>
 <?php
 init();
-init();
 ?>
 
 <!DOCTYPE html>
@@ -14,34 +13,15 @@ init();
     <title>Sunny socks Main page</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/style_mainpage.css">
-    <<<<<<< HEAD <?php
-    $lang = $_SESSION["LANG"];
+    <link rel="stylesheet" href="./style/slider.css">
 
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        $lang = filter_input(INPUT_GET, "submit");
-        if (empty($lang)) {
-            $lang = $_SESSION["LANG"];
-        }
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
 
-        $_SESSION["LANG"] = $lang;
-    }
-    ?>
-    <!--
-        Timofei:  I linked css for silder. There is a chance that it might affect our page just because it uses some css tags.
-        if you notice any problems with our code remove this part of code. 
-    -->
-        =======
-        >>>>>>> f0119f3f51f472e3a849e3a9c71d993e764c303e
-        <link rel="stylesheet" href="./style/slider.css">
-
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-            defer></script>
-
-        <script src="./js/index.js" defer></script>
+    <script src="./js/index.js" defer></script>
 </head>
 
 <body>
@@ -88,7 +68,7 @@ init();
             <img src=".\img\worldSVG.svg" alt="The world" class="main__world-map">
         </section>
         <!--Timofei: This is my version of Choose style socks-->
-        <section class="main__choose-style">
+        <section id="choose" class="main__choose-style">
             <h1 class="main__head-text">
                 <?php
                 echo $language["CHOOSE YOUR STYLE"][$lang]
@@ -99,7 +79,7 @@ init();
                     <h3>UNI</h3>
                     <img class="main__sock-photo" id="sockImageUni" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg"
                         alt="unicolor socks">
-                    <form action="productPageUniColor.php" method="POST">
+                    <form action="productPage.php" method="POST">
                         <div class="form__container">
                             <div class="form__colors">
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
@@ -138,73 +118,38 @@ init();
                     <h3>STRIPED</h3>
                     <img class="main__sock-photo" id="sockImageStr" src=".\img\socksPhotos\Sunny_socks_blue.jpg"
                         alt="unicolor socks">
-                    <form action="productPageStriped.php">
+                    <form action="productPage.php">
                         <div class="form__container">
                             <div class="form__colors">
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
-                                <<<<<<< HEAD <label for="color-blue"
+                                <label for="color-blue"
                                     class="form__colores-striped form__colors-size form__color-blue active__choose-style"
-                                    onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_blue.jpg', '.form__colores-striped', this)">
-                                    </label>
-                                    <input type="radio" name="colors" id="color-blue" value="blue"
-                                        class="form__remove-radio-button">
+                                    onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_blue.jpg', '.form__colores-striped', this)"></label>
+                                <input type="radio" name="colors" id="color-blue" value="blue"
+                                    class="form__remove-radio-button">
 
 
-                                    <label for="color-green"
-                                        class="form__colores-striped form__colors-size form__color-green"
-                                        onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_green.jpg', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-green" value="green"
-                                        class="form__remove-radio-button">
+                                <label for="color-green"
+                                    class="form__colores-striped form__colors-size form__color-green"
+                                    onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_green.jpg', '.form__colores-striped', this)"></label>
+                                <input type="radio" name="colors" id="color-green" value="green"
+                                    class="form__remove-radio-button">
 
-                                    <label for="color-pink"
-                                        class="form__colores-striped form__colors-size form__color-pink"
-                                        onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_pink_01.jpg', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-pink" value="pink"
-                                        class="form__remove-radio-button">
+                                <label for="color-pink" class="form__colores-striped form__colors-size form__color-pink"
+                                    onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_pink_01.jpg', '.form__colores-striped', this)"></label>
+                                <input type="radio" name="colors" id="color-pink" value="pink"
+                                    class="form__remove-radio-button">
 
-                                    <label for="color-red"
-                                        class="form__colores-striped form__colors-size form__color-red"
-                                        onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_red.jpg', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-red" value="red"
-                                        class="form__remove-radio-button">
+                                <label for="color-red" class="form__colores-striped form__colors-size form__color-red"
+                                    onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_red.jpg', '.form__colores-striped', this)"></label>
+                                <input type="radio" name="colors" id="color-red" value="red"
+                                    class="form__remove-radio-button">
 
-                                    <label for="color-yellow"
-                                        class="form__colores-striped form__colors-size form__color-yellow"
-                                        onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_yellow.jpg', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-yellow" value="yellow"
-                                        class="form__remove-radio-button">
-                                    =======
-                                    <label for="color-blue"
-                                        class="form__colores-striped form__colors-size form__color-blue active__choose-style"
-                                        onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_blue.jpg', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-blue" value="blue"
-                                        class="form__remove-radio-button">
-
-
-                                    <label for="color-green"
-                                        class="form__colores-striped form__colors-size form__color-green"
-                                        onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_green.jpg', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-green" value="green"
-                                        class="form__remove-radio-button">
-
-                                    <label for="color-pink"
-                                        class="form__colores-striped form__colors-size form__color-pink"
-                                        onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_pink_01.jpg', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-pink" value="pink"
-                                        class="form__remove-radio-button">
-
-                                    <label for="color-red"
-                                        class="form__colores-striped form__colors-size form__color-red"
-                                        onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_red.jpg', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-red" value="red"
-                                        class="form__remove-radio-button">
-
-                                    <label for="color-yellow"
-                                        class="form__colores-striped form__colors-size form__color-yellow"
-                                        onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_yellow.jpg', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-yellow" value="yellow"
-                                        class="form__remove-radio-button">
-                                    >>>>>>> f0119f3f51f472e3a849e3a9c71d993e764c303e
+                                <label for="color-yellow"
+                                    class="form__colores-striped form__colors-size form__color-yellow"
+                                    onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_yellow.jpg', '.form__colores-striped', this)"></label>
+                                <input type="radio" name="colors" id="color-yellow" value="yellow"
+                                    class="form__remove-radio-button">
 
                             </div>
                             <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang] ?>">
@@ -246,7 +191,7 @@ init();
         </section>
         <section>
             <div class="textCenterGoBack">
-                <p><a href="javascript:history.back()" class="goBackLink">GO BACK</a>
+                <p><button class="goBackLink" onclick="window.scrollTo(0,0)">GO BACK</button>
             </div>
         </section>
     </main>

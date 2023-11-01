@@ -28,7 +28,7 @@ let burgerList = document.querySelector('.header__list')
 let burgerWrapper = document.querySelector('.header__inner')
 
 burger.addEventListener('click', function () {
-	burgerWrapper.parentElement.appendChild(dropdownbox)
+	burgerWrapper.parentElement.appendChild(burgerList)
 	burgerList.classList.toggle('active')
 
 	if (burgerList.classList.contains('active')) {
