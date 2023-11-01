@@ -78,22 +78,27 @@ $lang = init();
                     <form action="productPageUniColor.php" method="POST">
                         <div class="form__container">
                             <div class="form__colors">
-                                <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
-                                <label for="color-blue" class="form__colores-uni form__colors-size form__color-blue active__choose-style" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_blue.jpg', '.form__colores-uni', this)"></label>
-                                <input type="radio" name="colors" id="color-blue" value="blue" class="form__remove-radio-button" checked>
+                                <?php
+                                $socksPhotosArray = array(
+                                    array("./img/socksPhotos/Sunny_Socks_uni_blue.jpg", "blue"),
+                                    array("./img/socksPhotos/Sunny_socks_uni_green.jpg", "green"),
+                                    array("./img/socksPhotos/Sunny_socks_uni_pink.jpg", "pink"),
+                                    array("./img/socksPhotos/Sunny_socks_uni_red.jpg", "red"),
+                                    array("./img/socksPhotos/Sunny_socks_uni_yellow.jpg", "yellow")
+                                );
 
-                                <label for="color-green" class="form__colores-uni form__colors-size form__color-green" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_green.jpg', '.form__colores-uni', this)"></label>
-                                <input type="radio" name="colors" id="color-green" value="green" class="form__remove-radio-button">
+                                foreach ($socksPhotosArray as $sock) {
+                                    $imagePath = $sock[0];
+                                    $color = $sock[1];
+                                ?>
 
-                                <label for="color-pink" class="form__colores-uni form__colors-size form__color-pink" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_pink.jpg', '.form__colores-uni', this)"></label>
-                                <input type="radio" name="colors" id="color-pink" value="pink" class="form__remove-radio-button">
-
-                                <label for="color-red" class="form__colores-uni form__colors-size form__color-red" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_red.jpg', '.form__colores-uni', this)"></label>
-                                <input type="radio" name="colors" id="color-red" value="red" class="form__remove-radio-button">
-
-                                <label for="color-yellow" class="form__colores-uni form__colors-size form__color-yellow" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_yellow.jpg', '.form__colores-uni', this)"></label>
-                                <input type="radio" name="colors" id="color-yellow" value="yellow" class="form__remove-radio-button">
-
+                                    <label for="color-<?php echo $color; ?>" class="form__colores-uni form__colors-size form__color-<?php echo $color; ?>" onclick="changeImage('sockImageUni', '<?php echo $imagePath; ?>', '.form__colores-uni', this)"></label>
+                                    <input type="radio" name="colors" id="color-<?php echo $color; ?>" value="<?php echo $color; ?>" class="form__remove-radio-button"<?php if ($color === 'blue') echo ' checked'; ?>>
+                                
+                                <?php
+                                }
+                                ?>
+                                
                             </div>
                             <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang] ?>">
                         </div>
@@ -105,22 +110,26 @@ $lang = init();
                     <form action="productPageStriped.php">
                         <div class="form__container">
                             <div class="form__colors">
-                                <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
-                                <label for="color-blue" class="form__colores-striped form__colors-size form__color-blue active__choose-style" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_blue.jpg', '.form__colores-striped', this)"></label>
-                                <input type="radio" name="colors" id="color-blue" value="blue" class="form__remove-radio-button">
+                                <?php
+                                $socksPhotosArray = array(
+                                    array("./img/socksPhotos/Sunny_socks_blue.jpg", "blue"),
+                                    array("./img/socksPhotos/Sunny_socks_green.jpg", "green"),
+                                    array("./img/socksPhotos/Sunny_socks_pink_01.jpg", "pink"),
+                                    array("./img/socksPhotos/Sunny_socks_red.jpg", "red"),
+                                    array("./img/socksPhotos/Sunny_socks_yellow.jpg", "yellow")
+                                );
 
+                                foreach ($socksPhotosArray as $sock) {
+                                    $imagePath = $sock[0];
+                                    $color = $sock[1];
+                                ?>
 
-                                <label for="color-green" class="form__colores-striped form__colors-size form__color-green" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_green.jpg', '.form__colores-striped', this)"></label>
-                                <input type="radio" name="colors" id="color-green" value="green" class="form__remove-radio-button">
-
-                                <label for="color-pink" class="form__colores-striped form__colors-size form__color-pink" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_pink_01.jpg', '.form__colores-striped', this)"></label>
-                                <input type="radio" name="colors" id="color-pink" value="pink" class="form__remove-radio-button">
-
-                                <label for="color-red" class="form__colores-striped form__colors-size form__color-red" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_red.jpg', '.form__colores-striped', this)"></label>
-                                <input type="radio" name="colors" id="color-red" value="red" class="form__remove-radio-button">
-
-                                <label for="color-yellow" class="form__colores-striped form__colors-size form__color-yellow" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_yellow.jpg', '.form__colores-striped', this)"></label>
-                                <input type="radio" name="colors" id="color-yellow" value="yellow" class="form__remove-radio-button">
+                                    <label for="color-<?php echo $color; ?>" class="form__colores-striped form__colors-size form__color-<?php echo $color; ?>" onclick="changeImage('sockImageStr', '<?php echo $imagePath; ?>', '.form__colores-striped', this)"></label>
+                                    <input type="radio" name="colors" id="color-<?php echo $color; ?>" value="<?php echo $color; ?>" class="form__remove-radio-button"<?php if ($color === 'blue') echo ' checked'; ?>>
+                                
+                                <?php
+                                }
+                                ?>
 
                             </div>
                             <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang] ?>">
