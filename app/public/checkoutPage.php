@@ -1,7 +1,7 @@
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
-    init();
+init();
 ?>
 
 <!DOCTYPE html>
@@ -30,8 +30,7 @@
 </head>
 
 <body class="wrapper">
-	<?php echo desktop_header_template($language, $lang) ?>
-    <?php echo mobile_header_template($language, $lang) ?>
+	<?php echo header_template($language, $lang) ?>
 	<main class="main">
 		<section class="checkout">
 			<div class="container">

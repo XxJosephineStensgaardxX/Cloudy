@@ -1,11 +1,12 @@
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
-    init();
+init();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,8 +29,7 @@
 </head>
 
 <body class="wrapper">
-	<?php echo desktop_header_template($language, $lang) ?>
-    <?php echo mobile_header_template($language, $lang) ?>
+	<?php echo header_template($language, $lang) ?>
 	<main class="main">
 		<section class="checkout">
 			<div class="container">

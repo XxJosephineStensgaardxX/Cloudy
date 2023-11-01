@@ -1,7 +1,7 @@
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
-    init();
+init();
 ?>
 
 <!DOCTYPE html>
@@ -41,8 +41,7 @@
 </head>
 
 <body>
-    <?php echo desktop_header_template($language, $lang) ?>
-    <?php echo mobile_header_template($language, $lang) ?>
+    <?php echo header_template($language, $lang) ?>
     <main class="main">
         <section class="slider">
             <div class="container">
@@ -68,21 +67,21 @@
         </section>
         <!-- Deri: This piece of code belongs to me. -->
         <section class="main__international-concept">
-    
-                    <h1 class=" main__news">
-                        <?php
-                        echo $language["NEWS"][$lang]
-                        ?>
-                    </h1>
-                
-                <h3 class=" main__international-now">
-                        <?php
-                        echo $language["WE ARE NOW INTERNATIONAL"][$lang]
-                        ?>
-                    </h3>
-                </div>
-                
-                    <img src=".\img\worldSVG.svg" alt="The world" class="main__world-map">
+
+            <h1 class=" main__news">
+                <?php
+                echo $language["NEWS"][$lang]
+                ?>
+            </h1>
+
+            <h3 class=" main__international-now">
+                <?php
+                echo $language["WE ARE NOW INTERNATIONAL"][$lang]
+                ?>
+            </h3>
+            </div>
+
+            <img src=".\img\worldSVG.svg" alt="The world" class="main__world-map">
         </section>
         <!--Timofei: This is my version of Choose style socks-->
         <section class="main__choose-style">
@@ -101,18 +100,18 @@
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
                                 <label for="color-blue" class="form__colores-uni form__colors-size form__color-blue active__choose-style" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_blue.jpg', '.form__colores-uni', this)"></label>
                                 <input type="radio" name="colors" id="color-blue" value="blue" class="form__remove-radio-button" checked>
-                                
+
                                 <label for="color-green" class="form__colores-uni form__colors-size form__color-green" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_green.jpg', '.form__colores-uni', this)"></label>
-                                <input type="radio" name="colors" id="color-green" value="green"  class="form__remove-radio-button">
-                                
+                                <input type="radio" name="colors" id="color-green" value="green" class="form__remove-radio-button">
+
                                 <label for="color-pink" class="form__colores-uni form__colors-size form__color-pink" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_pink.jpg', '.form__colores-uni', this)"></label>
-                                <input type="radio" name="colors" id="color-pink" value="pink"  class="form__remove-radio-button">
+                                <input type="radio" name="colors" id="color-pink" value="pink" class="form__remove-radio-button">
 
                                 <label for="color-red" class="form__colores-uni form__colors-size form__color-red" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_red.jpg', '.form__colores-uni', this)"></label>
-                                <input type="radio" name="colors" id="color-red" value="red"  class="form__remove-radio-button">
-                                  
+                                <input type="radio" name="colors" id="color-red" value="red" class="form__remove-radio-button">
+
                                 <label for="color-yellow" class="form__colores-uni form__colors-size form__color-yellow" onclick="changeImage('sockImageUni', './img/socksPhotos/Sunny_socks_uni_yellow.jpg', '.form__colores-uni', this)"></label>
-                                <input type="radio" name="colors" id="color-yellow" value="yellow"  class="form__remove-radio-button">
+                                <input type="radio" name="colors" id="color-yellow" value="yellow" class="form__remove-radio-button">
 
                             </div>
                             <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang] ?>">
@@ -128,20 +127,20 @@
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
                                 <label for="color-blue" class="form__colores-striped form__colors-size form__color-blue active__choose-style" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_blue.jpg', '.form__colores-striped', this)"></label>
                                 <input type="radio" name="colors" id="color-blue" value="blue" class="form__remove-radio-button">
-                                
-                                
+
+
                                 <label for="color-green" class="form__colores-striped form__colors-size form__color-green" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_green.jpg', '.form__colores-striped', this)"></label>
                                 <input type="radio" name="colors" id="color-green" value="green" class="form__remove-radio-button">
-                                
+
                                 <label for="color-pink" class="form__colores-striped form__colors-size form__color-pink" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_pink_01.jpg', '.form__colores-striped', this)"></label>
                                 <input type="radio" name="colors" id="color-pink" value="pink" class="form__remove-radio-button">
-                                
+
                                 <label for="color-red" class="form__colores-striped form__colors-size form__color-red" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_red.jpg', '.form__colores-striped', this)"></label>
                                 <input type="radio" name="colors" id="color-red" value="red" class="form__remove-radio-button">
-                                
+
                                 <label for="color-yellow" class="form__colores-striped form__colors-size form__color-yellow" onclick="changeImage('sockImageStr', './img/socksPhotos/Sunny_socks_yellow.jpg', '.form__colores-striped', this)"></label>
                                 <input type="radio" name="colors" id="color-yellow" value="yellow" class="form__remove-radio-button">
-                            
+
                             </div>
                             <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang] ?>">
                         </div>
@@ -182,7 +181,7 @@
         </section>
         <section>
             <div class="textCenterGoBack">
-            <p><a href="javascript:history.back()" class="goBackLink">GO BACK</a>
+                <p><a href="javascript:history.back()" class="goBackLink">GO BACK</a>
             </div>
         </section>
     </main>
