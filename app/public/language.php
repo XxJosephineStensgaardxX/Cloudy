@@ -49,6 +49,11 @@ $language = array(
         "EN" => "ABOUT US",
         "NL" => "OVER ONS",
     ),
+    "Go Back" => array(
+        "EN" => "Go Back",
+        "NL" => "Ga Terug",
+    ),
+
     //Payment succesefull page
     "PAYMENT IS SUCCESFUL" => array(
         "EN" => "PAYMENT IS SUCCESFUL",

@@ -1,7 +1,7 @@
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
-init();
+$lang = init();
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ init();
 </head>
 
 <body>
-    <?php echo header_template($language, $lang) ?>a
+    <?php echo header_template($language, $lang) ?>
     <?php
     $images = array(
         "./img/socksPhotos/Sunny_socks_blue.jpg" => "BLUE",

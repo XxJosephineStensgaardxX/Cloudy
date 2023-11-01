@@ -119,6 +119,8 @@ function init()
 {
     session_start();
     $_SESSION["CART"] = array();
+
+
     if (!isset($_SESSION["LANG"])) {
         $_SESSION["LANG"] = "EN";
     }
@@ -133,4 +135,6 @@ function init()
 
         $_SESSION["LANG"] = $lang;
     }
+
+    return $lang;
 }
