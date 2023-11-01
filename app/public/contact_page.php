@@ -15,19 +15,8 @@ init();
     <link rel="stylesheet" href="./style/style_lang.css">
     <link rel="stylesheet" href="style/style_checkout.css">
     <link rel="stylesheet" href="style/style_contact_page.css">
-    <?php
-    $lang = $_SESSION["LANG"];
 
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        $lang = filter_input(INPUT_GET, "submit");
-        if (empty($lang)) {
-            $lang =  $_SESSION["LANG"];
-        }
-
-        $_SESSION["LANG"] = $lang;
-    }
-    ?>
-
+    <script src="./js/index.js" defer></script>
 </head>
 
 <body>

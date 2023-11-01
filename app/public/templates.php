@@ -117,10 +117,20 @@ function footer_temple()
 
 function init()
 {
-
     session_start();
     $_SESSION["CART"] = array();
     if (!isset($_SESSION["LANG"])) {
         $_SESSION["LANG"] = "EN";
+    }
+
+    $lang = $_SESSION["LANG"];
+
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        $lang = filter_input(INPUT_GET, "submit");
+        if (empty($lang)) {
+            $lang = $_SESSION["LANG"];
+        }
+
+        $_SESSION["LANG"] = $lang;
     }
 }

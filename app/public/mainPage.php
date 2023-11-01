@@ -13,31 +13,13 @@ init();
     <title>Sunny socks Main page</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/style_mainpage.css">
-    <?php
-    $lang = $_SESSION["LANG"];
-
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        $lang = filter_input(INPUT_GET, "submit");
-        if (empty($lang)) {
-            $lang =  $_SESSION["LANG"];
-        }
-
-        $_SESSION["LANG"] = $lang;
-    }
-    ?>
-    <!--
-        Timofei:  I linked css for silder. There is a chance that it might affect our page just because it uses some css tags.
-        if you notice any problems with our code remove this part of code. 
-    -->
     <link rel="stylesheet" href="./style/slider.css">
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
-    <script src="./js/slider.js" defer></script>
-    <script src="./js/changeImage.js" defer></script>
-    <script src="./js/responsiveNavbar.js" defer></script>
 
+    <script src="./js/index.js" defer></script>
 </head>
 
 <body>

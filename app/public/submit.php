@@ -11,16 +11,8 @@
     <link rel="stylesheet" href="style/submit.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="./style/style_lang.css">
-    <?php
-    $lang = "EN";
 
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        $lang = filter_input(INPUT_GET, "submit");
-        if ($lang == "") {
-            $lang = "EN";
-        }
-    }
-    ?>
+    <script src="./js/index.js" defer></script>
 </head>
 
 <body>
