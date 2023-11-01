@@ -1,7 +1,7 @@
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
-    init();
+init();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,36 +13,25 @@
 	<link rel="stylesheet" href="./style/style.css" />
 	<link rel="stylesheet" href="./style/style_lang.css">
 	<link rel="stylesheet" href="./style/style_success.css" />
-	<?php
-    $lang = $_SESSION["LANG"];
- 
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        $lang = filter_input(INPUT_GET, "submit");
-        if (empty($lang)) {
-            $lang =  $_SESSION["LANG"];
-        }
-        
-        $_SESSION["LANG"] = $lang;
-    }
-    ?>   
+
+	<script src="./js/index.js" defer></script>
 </head>
 
 <body class="wrapper">
-	<?php echo desktop_header_template($language, $lang) ?>
-    <?php echo mobile_header_template($language, $lang) ?>
+	<?php echo header_template($language, $lang) ?>
 	<main class="main">
 		<section class="success">
 			<div class="container">
 				<div class="success__inner">
 					<h1 class="success__title">
 						<?php
-                            echo $language["PAYMENT IS SUCCESFUL"][$lang]
-                        ?>
+						echo $language["PAYMENT IS SUCCESFUL"][$lang]
+						?>
 					</h1>
 					<a href="mainPage.php" class="success__link">
 						<?php
-                            echo $language["SHOP MORE"][$lang]
-                        ?>
+						echo $language["SHOP MORE"][$lang]
+						?>
 					</a>
 				</div>
 			</div>

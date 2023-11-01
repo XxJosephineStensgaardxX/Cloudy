@@ -1,11 +1,12 @@
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
-    init();
+init();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,23 +14,12 @@
 	<link rel="stylesheet" href="./style/style.css" />
 	<link rel="stylesheet" href="./style/style_lang.css">
 	<link rel="stylesheet" href="./style/style_checkout.css" />
-	<?php
-	$lang = $_SESSION["LANG"];
 
-	if ($_SERVER["REQUEST_METHOD"] == "GET") {
-		$lang = filter_input(INPUT_GET, "submit");
-		if (empty($lang)) {
-			$lang =  $_SESSION["LANG"];
-		}
-
-		$_SESSION["LANG"] = $lang;
-	}
-	?>
+	<script src="./js/index.js" defer></script>
 </head>
 
 <body class="wrapper">
-	<?php echo desktop_header_template($language, $lang) ?>
-    <?php echo mobile_header_template($language, $lang) ?>
+	<?php echo header_template($language, $lang) ?>
 	<main class="main">
 		<section class="checkout">
 			<div class="container">
