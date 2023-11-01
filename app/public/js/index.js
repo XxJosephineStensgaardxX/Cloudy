@@ -28,7 +28,6 @@ let burgerList = document.querySelector('.header__list')
 let burgerWrapper = document.querySelector('.header__inner')
 
 burger.addEventListener('click', function () {
-	burgerWrapper.parentElement.appendChild(burgerList)
 	burgerList.classList.toggle('active')
 
 	if (burgerList.classList.contains('active')) {
@@ -38,7 +37,19 @@ burger.addEventListener('click', function () {
 	}
 })
 
-const move = ''
+const moveHeaderList = () => {
+	if (window.window > 1024) {
+		burgerWrapper.parentElement.appendChild(burgerList)
+	} else {
+		burgerWrapper.appendChild(burgerList)
+	}
+}
+
+moveHeaderList()
+
+window.addEventListener('resize', () => {
+	moveHeaderList()
+})
 
 const changeImage = (imgId, newSrc, removeClass, clickedColor) => {
 	document.getElementById(imgId).src = newSrc
