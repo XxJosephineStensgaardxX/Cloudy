@@ -180,6 +180,11 @@
                 </p>
             </div>
         </section>
+        <section>
+            <div class="textCenterGoBack">
+            <p><a href="javascript:history.back()" class="goBackLink">GO BACK</a>
+            </div>
+        </section>
     </main>
     <?php echo footer_temple() ?>
 </body>
