@@ -35,10 +35,10 @@ init();
                 <div class="container-layout">
                     <div>
                         <img class="chosenPicture" <?php
-                                                    isset($_POST['selected_image']) ?
-                                                        $selected_image = $_POST['selected_image'] :
-                                                        $selected_image = './img/socksPhotos/Sunny_socks_uni_red.jpg';
-                                                    ?> src="<?php echo $selected_image; ?>" alt="Selected Image">
+                        isset($_POST['selected_image']) ?
+                            $selected_image = $_POST['selected_image'] :
+                            $selected_image = './img/socksPhotos/Sunny_socks_uni_red.jpg';
+                        ?> src="<?php echo $selected_image; ?>" alt="Selected Image">
                     </div>
                     <div class="othersocks-flex">
 
@@ -124,7 +124,8 @@ init();
                     </div>
 
                     <div class="color-text-menu-for-phone border-container">
-                        <select name="selected_image" id="colors-in-text" class="color-dropdown-menu" onchange='this.form.submit()'>
+                        <select name="selected_image" id="colors-in-text" class="color-dropdown-menu"
+                            onchange='this.form.submit()'>
                             <option value="" disabled selected>Choose a color</option>
                             <option value="./img/socksPhotos/Sunny_socks_uni_green.jpg">Green</option>
                             <option value="./img/socksPhotos/Sunny_socks_uni_blue.jpg">Blue</option>
@@ -134,7 +135,8 @@ init();
                         </select>
                     </div>
                     <div class="border-container">
-                        <input type="number" name="amount-picker" id="amount-picker" max="20" class="amount-picker" placeholder="Amount">
+                        <input type="number" name="amount-picker" id="amount-picker" max="20" min="0"
+                            class="amount-picker" placeholder="Amount">
                     </div>
 
                     <div class="border-container">
