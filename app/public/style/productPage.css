@@ -293,3 +293,16 @@ input#amount-picker {
 ::placeholder {
     color: #1E407A;
 }
+
+.amount-picker-validation-negative {
+    border: 1px solid red;
+}
+
+.amount-picker-validation-positive {
+    width: 75px;
+    border: none;
+}
+
+.error-border {
+    border: 1px solid red;
+}

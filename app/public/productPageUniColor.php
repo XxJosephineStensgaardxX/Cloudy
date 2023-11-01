@@ -17,6 +17,7 @@ $lang = init();
 
     <script src="./js/index.js" defer></script>
 
+
     <?php
     $images = array(
         "./img/socksPhotos/Sunny_Socks_uni_blue.jpg" => "BLUE",
@@ -28,59 +29,62 @@ $lang = init();
     $errorFlag = FALSE;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $size = filter_input(INPUT_POST, "size");
-        if(empty($size)){
+        if (empty($size)) {
             $size = filter_input(INPUT_POST, "sizes-in-dropdown");
         }
         $image = filter_input(INPUT_POST, "selected_image");
-        $amount =  filter_input(INPUT_POST, "amount-picker");
+        $amount = filter_input(INPUT_POST, "amount-picker");
         //$sockColor = filter_input(INPUT_POST, "colors-in-text");
+    
+
+        // $errorArray = array();
+        // if (empty($size)) {
+        //     array_push($errorArray, "<p>Please choose size</p>");
+        //     $errorFlag = TRUE;
+        // }
+    
+        // if (empty($image)) {
+        //     array_push($errorArray, "<p>Please choose color</p>");
+        //     $errorFlag = TRUE;
+        // }
+    
+        // if (empty($amount)) {
+        //     array_push($errorArray, "<p>Please choose amount</p>");
+        //     $errorFlag = TRUE;
+        // }
+    
 
 
-        $errorArray = array();
-        if(empty($size)){
-            array_push($errorArray, "<p>Please choose size</p>");
-            $errorFlag = TRUE;
-        }
-
-        if(empty($image)) {            
-            array_push($errorArray,  "<p>Please choose color</p>");
-            $errorFlag = TRUE;
-        }
-
-        if(empty($amount)){
-            array_push($errorArray,  "<p>Please choose amount</p>");
-            $errorFlag = TRUE;
-        }
-
-        
-        if(!$errorFlag){
+        if (!$errorFlag) {
             $color = $images[$image];
             $newOrder = array(
-                "size" => $size, 
-                "amount" => $amount, 
+                "size" => $size,
+                "amount" => $amount,
                 "color" => $color,
             );
-            
+
             $orderExist = FALSE;
-            for($i = 0; $i <  count($_SESSION["CART"]); $i++  ){
-                
-                if($_SESSION["CART"][$i]["size"] ==  $newOrder["size"] && $_SESSION["CART"][$i]["color"] ==  $newOrder["color"]  ){
+            for ($i = 0; $i < count($_SESSION["CART"]); $i++) {
+
+                if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"]) {
                     echo "this";
                     $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
                     $orderExist = TRUE;
                     break;
                 }
             }
-            if(!$orderExist){
-                array_push($_SESSION["CART"], $newOrder);    
+
+            if (!$orderExist) {
+                array_push($_SESSION["CART"], $newOrder);
             }
-            var_dump($_SESSION["CART"]);
-            
-        }
-        
-    }
+
+            // var_dump($_SESSION["CART"]);
     
+        }
+
+    }
     ?>
+
 </head>
 
 <body>
@@ -92,35 +96,35 @@ $lang = init();
                 <div class="container-layout">
                     <img class="chosenPicture" src="./img/socksPhotos/Sunny_Socks_uni_blue.jpg" alt="Selected Image">
                     <div class="othersocks-flex">
-                    <?php
-                        
+                        <?php
+
 
                         foreach (array_keys($images) as $i => $image) {
-                            echo 
-                            "
-                            <input type='radio' name='selected_image' value='$image' id='$image'  onclick=\"changeImageProductPage(this, '".(array_values($images)[$i])."')\">
-                            <label for='$image' style='display: ". ($i === 0 ? 'none' : 'block') . "'>
+                            echo
+                                "
+                            <input type='radio' name='selected_image' value='$image' id='$image'  onclick=\"changeImageProductPage(this, '" . (array_values($images)[$i]) . "')\">
+                            <label for='$image' style='display: " . ($i === 0 ? 'none' : 'block') . "'>
                                 <img class='othersock-item' src='$image' alt='Classic sock'>
                             </label>
                             ";
                         }
                         ?>
 
-                        
-                        
+
+
                     </div>
                 </div>
                 <div class="information-container-flex">
                     <h3 class="font-bold product-name-header">
-                    
+
                         <?php
                         echo "UNI SOCK - BLUE";
                         ?>
-                    
+
                     </h3>
                     <?php
-                    if($errorFlag){
-                        foreach($errorArray as $errors){
+                    if ($errorFlag) {
+                        foreach ($errorArray as $errors) {
                             echo $errors;
                         }
                     }
@@ -136,13 +140,24 @@ $lang = init();
                             "47+",
                         ];
 
+                        //VALIDATION FOR SIZES//
+                        $sizeError = false;
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $size = filter_input(INPUT_POST, "size");
+                            if (empty($size)) {
+                                $sizeError = true;
+                            }
+                        }
+
                         foreach ($sizes as $size) {
+                            $errorClass = $sizeError ? 'error-border' : '';
                             echo "
-                        <input type='radio' name='size' id='$size' value='$size'>
-                        <label for='$size' class='checked-size'><span>$size</span></label>
+                        <input type='radio' name='size' id='$size' value='$size' >
+                        <label for='$size' class='checked-size $errorClass'><span>$size</span></label>
                         ";
                         }
                         ?>
+
                     </div>
                     <div class="sizes-for-sizes-for-phone border-container">
                         <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown">
@@ -168,15 +183,16 @@ $lang = init();
 
                         foreach ($colors as $i => $color) {
                             echo "
-                              <input type='radio' name='selected_image' id='$color' value='" . array_keys($images)[$i] . "' onclick=\"changeImageProductPage(this, '".(array_values($images)[$i])."')\">
+                              <input type='radio' name='selected_image' id='$color' value='" . array_keys($images)[$i] . "' onclick=\"changeImageProductPage(this, '" . (array_values($images)[$i]) . "')\">
                               <label for='$color' class='button-design' style='background-color: $color;'><span></span></label>";
                         }
-                        
+
                         ?>
                     </div>
 
                     <div class="color-text-menu-for-phone border-container">
-                        <select name="selected_image" id="colors-in-text" class="color-dropdown-menu"  onclick="changeImageProductPage(this, '<?php array_values($images)[$i] ?>')">
+                        <select name="selected_image" id="colors-in-text" class="color-dropdown-menu"
+                            onclick="changeImageProductPage(this, '<?php array_values($images)[$i] ?>')">
                             <option value="" disabled selected>Choose a color</option>
                             <option value="./img/socksPhotos/Sunny_socks_uni_green.jpg">Green</option>
                             <option value="./img/socksPhotos/Sunny_socks_uni_blue.jpg">Blue</option>
@@ -186,9 +202,18 @@ $lang = init();
                         </select>
                     </div>
                     <div class="border-container">
-                        <input type="number" name="amount-picker" id="amount-picker" max="20" class="amount-picker" placeholder="Amount">
+                        <?php
+                        //VALIDATION FOR AMOUNT//
+                        $amount = isset($_POST['amount-picker']) ? filter_input(INPUT_POST, "amount-picker") : 1;
+                        if ($amount <= 0) {
+                            echo '<input type="number" name="amount-picker" id="amount-picker" max="20" class="amount-picker" placeholder="Amount" style="border: 1px solid red;" min="0">'
+                            ;
+                        } else {
+                            echo '<input type="number" name="amount-picker" id="amount-picker" max="20" class="amount-picker" placeholder="Amount" min="0">'
+                            ;
+                        }
+                        ?>
                     </div>
-
                     <div class="border-container">
                         <p>
                             <?php

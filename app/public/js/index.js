@@ -73,24 +73,24 @@ const changeImage = (imgId, newSrc, removeClass, clickedColor) => {
 
 
 const changeImageProductPage = (input, color) => {
-	console.log(input);
+	//console.log(input);
 	const title = document.querySelector('.product-name-header')
 	console.log(title);
 
 	const titleArray = title.innerText.split(" ");
-	
+	//why dont we use id's here? 
 	titleArray[titleArray.length - 1] = color;
 	title.innerHTML = titleArray.join(' ')
-	
+
 	document.querySelector('.chosenPicture').src = input.value
 
 	const carousel_images = document.querySelectorAll(".othersock-item")
 
 	carousel_images.forEach((img) => {
 		console.log(img.attributes.src.value, input.value);
-		if(img.attributes.src.value === input.value) {
+		if (img.attributes.src.value === input.value) {
 			img.parentElement.style.display = "none"
-		}else {
+		} else {
 			img.parentElement.style.display = null
 		}
 	})
@@ -98,9 +98,10 @@ const changeImageProductPage = (input, color) => {
 	// Remove the "active" class from all colors
 	// const colors = document.querySelectorAll(removeClass)
 	// colors.forEach(function (label) {
-		// label.classList.remove('active__choose-style')
+	// label.classList.remove('active__choose-style')
 	// })
 
 	// Add the "active" class to the clicked color
 	// clickedColor.classList.add('active__choose-style')
 }
+
