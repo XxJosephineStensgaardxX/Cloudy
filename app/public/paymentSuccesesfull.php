@@ -1,7 +1,7 @@
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
-init();
+$lang = init();
 ?>
 <!DOCTYPE html>
 <html lang="en">
