@@ -79,7 +79,7 @@ function footer_temple()
                     </ul>
                 </div>
                 <div class="footer__item">
-                    <h3 class="footer__title">ABOUT US</h3>
+                    <a href="mainPage.php#aboutUs" style="color:white"><h3 class="footer__title">ABOUT US</h3></a>
                 </div>
                 <div class="footer__item">
                     <h3 class="footer__title">BRANDING</h3>
@@ -114,7 +114,6 @@ function footer_temple()
         </div>
     </footer>';
 }
-
 function init()
 {
     session_start();

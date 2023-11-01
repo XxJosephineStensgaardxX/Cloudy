@@ -41,9 +41,11 @@ $lang = init();
                     </div>
                 </div>
                 <button>
-                    <?php
-                    echo $language["BUY"][$lang]
-                    ?>
+                    <a href="productPageStriped.php" style="color:#1e407a">
+                        <?php
+                        echo $language["BUY"][$lang]
+                        ?>
+                    </a>
                 </button>
             </div>
             <div class="uni_socks">
@@ -69,9 +71,11 @@ $lang = init();
 
                 </div>
                 <button>
-                    <?php
-                    echo $language["BUY"][$lang]
-                    ?>
+                    <a href="productPageUniColor.php" style="color:#1e407a">
+                            <?php
+                            echo $language["BUY"][$lang]
+                            ?>
+                    </a>
                 </button>
             </div>
         </div>
