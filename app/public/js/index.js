@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const slider = document.querySelector('.slider__inner')
 
 	if (slider)
-		slider.slick({
+		$(slider).slick({
 			infinite: true,
 			centerMode: true,
 			variableWidth: true,
@@ -37,6 +37,8 @@ burger.addEventListener('click', function () {
 		document.body.style.overflow = null
 	}
 })
+
+const move = ''
 
 const changeImage = (imgId, newSrc, removeClass, clickedColor) => {
 	document.getElementById(imgId).src = newSrc
