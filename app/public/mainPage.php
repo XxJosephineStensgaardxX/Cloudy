@@ -1,7 +1,7 @@
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
-init();
+$lang = init();
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +49,6 @@ init();
         </section>
         <!-- Deri: This piece of code belongs to me. -->
         <section class="main__international-concept">
-
             <h1 class=" main__news">
                 <?php
                 echo $language["NEWS"][$lang]
@@ -66,7 +65,7 @@ init();
             <img src=".\img\worldSVG.svg" alt="The world" class="main__world-map">
         </section>
         <!--Timofei: This is my version of Choose style socks-->
-        <section class="main__choose-style">
+        <section id="choose" class="main__choose-style">
             <h1 class="main__head-text">
                 <?php
                 echo $language["CHOOSE YOUR STYLE"][$lang]
@@ -76,7 +75,7 @@ init();
                 <div class="main__sock-display">
                     <h3>UNI</h3>
                     <img class="main__sock-photo" id="sockImageUni" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="unicolor socks">
-                    <form action="productPage.php" method="POST">
+                    <form action="productPageUniColor.php" method="POST">
                         <div class="form__container">
                             <div class="form__colors">
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
@@ -103,7 +102,7 @@ init();
                 <div class="main__sock-display" method="POST">
                     <h3>STRIPED</h3>
                     <img class="main__sock-photo" id="sockImageStr" src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="unicolor socks">
-                    <form action="productPage.php">
+                    <form action="productPageStriped.php">
                         <div class="form__container">
                             <div class="form__colors">
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
@@ -163,12 +162,7 @@ init();
         </section>
         <section>
             <div class="textCenterGoBack">
-                <a href="javascript:history.back()" class="goBackLink">
-                <?php
-                    echo $language["Go Back"][$lang]
-                ?>  
-                </a>
-                
+                <p><button class="goBackLink" onclick="window.scrollTo(0,0)">GO BACK</button>
             </div>
         </section>
     </main>

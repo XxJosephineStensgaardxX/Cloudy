@@ -1,15 +1,17 @@
-.navigator {
-}
+.navigator {}
+
 .navigator__inner {
 	display: grid;
 	place-items: center;
 }
+
 .main {
 	margin-bottom: 60px;
 	display: flex;
 	flex-direction: column;
 	gap: 100px;
 }
+
 .main__choose-style {
 	font-weight: bold;
 	max-width: 700px;
@@ -19,6 +21,7 @@
 	flex-direction: column;
 	gap: 60px;
 }
+
 .main__sock-types-display {
 	display: flex;
 	flex-direction: row;
@@ -32,9 +35,11 @@
 	flex-direction: column;
 	gap: 10px;
 }
+
 .main__socks-form {
 	height: 20px;
 }
+
 .main__sock-photo {
 	display: flex;
 	justify-content: center;
@@ -43,26 +48,31 @@
 	border-radius: 100%;
 	object-fit: cover;
 }
+
 .main__sock-photo img {
 	width: 100%;
 	height: auto;
 }
+
 .form__colors {
 	display: flex;
 	gap: 15px;
 }
+
 .form__container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
 }
+
 .form__colors-size {
 	height: 30px;
 	width: 30px;
 	border-radius: 100%;
 }
-.form__remove-radio-button{
+
+.form__remove-radio-button {
 	display: none;
 }
 
@@ -83,6 +93,7 @@
 		justify-content: space-between;
 		gap: 100px;
 	}
+
 	.main__sock-photo {
 		display: flex;
 		justify-content: center;
@@ -91,30 +102,36 @@
 		border-radius: 100%;
 		object-fit: cover;
 	}
+
 	.form__colors-size {
 		height: 50px;
 		width: 50px;
 		border-radius: 100%;
 	}
-  }
+}
 
 
 .form__color-blue {
 	background-color: #1e407a;
 }
+
 .form__color-green {
 	background-color: #51b2a2;
 }
+
 .form__color-pink {
 	background-color: #e990b9;
 }
+
 .form__color-red {
 	background-color: #f15b39;
 }
+
 .form__color-yellow {
 	background-color: #fecd3e;
 }
-.active__choose-style{
+
+.active__choose-style {
 	border: black solid 1px;
 }
 
@@ -129,7 +146,8 @@
 	flex-direction: column;
 	gap: 40px;
 }
-.main__head-text{
+
+.main__head-text {
 	font-size: 50px;
 }
 
@@ -144,39 +162,48 @@
 	margin-right: auto;
 	margin-left: auto;
 }
+
 /* Deri: this piece of code belongs to me. I only need to work on very detailed items if there are some comments on it.*/
 .main__international-concept {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+
 .main__news {
 	font-size: 50px;
 	text-decoration: underline;
 }
+
 .main__international-now {
 	font-size: 30px;
 	padding: 20px;
 	text-align: center;
 }
+
 .main__world-map {
 	width: 440px;
 }
 
-@media (max-width:460px){
+@media (max-width:460px) {
 	.main__world-map {
 		width: 100%;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
 }
-.goBackLink{
+
+.goBackLink {
 	text-decoration: underline;
 	cursor: pointer;
 }
-.textCenterGoBack{
+
+.textCenterGoBack {
 	display: flex;
 	justify-content: center;
-	
+
 }
 
+.goBackLink {
+	all: unset;
+}
