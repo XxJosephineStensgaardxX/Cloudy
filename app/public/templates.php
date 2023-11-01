@@ -20,7 +20,7 @@ function header_template($language, $lang)
                         </a>
                     </li>
                     <li class="header__list-item">
-                        <a href="mainPage.php#aboutUs">
+                        <a href="mainPage.php#aboutUs" onclick="closeBurger()">
                             ' .
         $language["About us"][$lang]
         . '
@@ -49,7 +49,7 @@ function header_template($language, $lang)
                     <li>
                     <li class="header__list-item"><a href="checkoutPage.php"><img class="header__image" src="./img\shopping-cart.png" alt="ShopCard"></a></li>
                 </ul>
-                <button id="hamburger-bttn"> <img src=".\img\hamburger-button.png" alt="hamburger" style=""></button>
+                <button id="hamburger-bttn"> <img src=".\img\burger-menu-svgrepo-com.svg" alt="hamburger" style=""></button>
             </div>
         </div>
     </header>  ';

@@ -37,8 +37,13 @@ burger.addEventListener('click', function () {
 	}
 })
 
+const closeBurger = () => {
+	burgerList.classList.remove('active')
+	document.body.style.overflow = null
+}
+
 const moveHeaderList = () => {
-	if (window.window > 1024) {
+	if (window.innerWidth < 768) {
 		burgerWrapper.parentElement.appendChild(burgerList)
 	} else {
 		burgerWrapper.appendChild(burgerList)
