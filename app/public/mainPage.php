@@ -163,7 +163,12 @@ init();
         </section>
         <section>
             <div class="textCenterGoBack">
-                <p><a href="javascript:history.back()" class="goBackLink">GO BACK</a>
+                <a href="javascript:history.back()" class="goBackLink">
+                <?php
+                    echo $language["Go Back"][$lang]
+                ?>  
+                </a>
+                
             </div>
         </section>
     </main>
