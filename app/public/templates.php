@@ -118,7 +118,11 @@ function footer_temple()
 function init()
 {
     session_start();
-    $_SESSION["CART"] = array();
+    
+    if (!isset($_SESSION["CART"])) {
+        $_SESSION["CART"] = array();
+    }
+   
 
 
     if (!isset($_SESSION["LANG"])) {

@@ -72,9 +72,16 @@ const changeImage = (imgId, newSrc, removeClass, clickedColor) => {
 }
 
 
-const changeImageProductPage = (input) => {
+const changeImageProductPage = (input, color) => {
 	console.log(input);
+	const title = document.querySelector('.product-name-header')
+	console.log(title);
 
+	const titleArray = title.innerText.split(" ");
+	
+	titleArray[titleArray.length - 1] = color;
+	title.innerHTML = titleArray.join(' ')
+	
 	document.querySelector('.chosenPicture').src = input.value
 
 	const carousel_images = document.querySelectorAll(".othersock-item")

@@ -27,12 +27,13 @@ $lang = init();
     );
     $errorFlag = FALSE;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
         $size = filter_input(INPUT_POST, "size");
+        if(empty($size)){
+            $size = filter_input(INPUT_POST, "sizes-in-dropdown");
+        }
+        $image = filter_input(INPUT_POST, "selected_image");
         $amount =  filter_input(INPUT_POST, "amount-picker");
         //$sockColor = filter_input(INPUT_POST, "colors-in-text");
-        $color = $images[filter_input(INPUT_POST, "selected_image")];
-
 
 
         $errorArray = array();
@@ -41,13 +42,19 @@ $lang = init();
             $errorFlag = TRUE;
         }
 
+        if(empty($image)) {            
+            array_push($errorArray,  "<p>Please choose color</p>");
+            $errorFlag = TRUE;
+        }
 
         if(empty($amount)){
             array_push($errorArray,  "<p>Please choose amount</p>");
             $errorFlag = TRUE;
         }
-        if(!$errorFlag){
 
+        
+        if(!$errorFlag){
+            $color = $images[$image];
             $newOrder = array(
                 "size" => $size, 
                 "amount" => $amount, 
@@ -56,7 +63,9 @@ $lang = init();
             
             $orderExist = FALSE;
             for($i = 0; $i <  count($_SESSION["CART"]); $i++  ){
+                
                 if($_SESSION["CART"][$i]["size"] ==  $newOrder["size"] && $_SESSION["CART"][$i]["color"] ==  $newOrder["color"]  ){
+                    echo "this";
                     $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
                     $orderExist = TRUE;
                     break;
@@ -65,7 +74,7 @@ $lang = init();
             if(!$orderExist){
                 array_push($_SESSION["CART"], $newOrder);    
             }
-            print_r($_SESSION["CART"]);
+            var_dump($_SESSION["CART"]);
             
         }
         
@@ -81,24 +90,15 @@ $lang = init();
         <form id="form" method="post" action="productPageUniColor.php">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
-                    <img class="chosenPicture" src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="Selected Image">
+                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_Socks_uni_blue.jpg" alt="Selected Image">
                     <div class="othersocks-flex">
                     <?php
-                        // $images_carousel = array(
-                        //     "./img/socksPhotos/Sunny_socks_pink_01.jpg",
-                        //     "./img/socksPhotos/Sunny_socks_yellow.jpg",
-                        //     "./img/socksPhotos/Sunny_socks_green.jpg",
-                        //     "./img/socksPhotos/Sunny_socks_blue.jpg",
-                        // );
-
-                        // if ($index = array_search($selected_image, $images_carousel)) {
-                        //     $images_carousel[$index] = './img/socksPhotos/Sunny_socks_red.jpg';
-                        // }
+                        
 
                         foreach (array_keys($images) as $i => $image) {
                             echo 
                             "
-                            <input type='radio' name='selected_image' value='$image' id='$image' onclick='changeImageProductPage(this)'>
+                            <input type='radio' name='selected_image' value='$image' id='$image'  onclick=\"changeImageProductPage(this, '".(array_values($images)[$i])."')\">
                             <label for='$image' style='display: ". ($i === 0 ? 'none' : 'block') . "'>
                                 <img class='othersock-item' src='$image' alt='Classic sock'>
                             </label>
@@ -112,9 +112,11 @@ $lang = init();
                 </div>
                 <div class="information-container-flex">
                     <h3 class="font-bold product-name-header">
-                        <b>
-
-                        </b>
+                    
+                        <?php
+                        echo "UNI SOCK - BLUE";
+                        ?>
+                    
                     </h3>
                     <?php
                     if($errorFlag){
@@ -166,7 +168,7 @@ $lang = init();
 
                         foreach ($colors as $i => $color) {
                             echo "
-                              <input type='radio' name='selected_image' id='$color' value='" . array_keys($images)[$i] . "' onclick='changeImageProductPage(this)'>
+                              <input type='radio' name='selected_image' id='$color' value='" . array_keys($images)[$i] . "' onclick=\"changeImageProductPage(this, '".(array_values($images)[$i])."')\">
                               <label for='$color' class='button-design' style='background-color: $color;'><span></span></label>";
                         }
                         
@@ -174,7 +176,7 @@ $lang = init();
                     </div>
 
                     <div class="color-text-menu-for-phone border-container">
-                        <select name="selected_image" id="colors-in-text" class="color-dropdown-menu" onchange='this.form.submit()'>
+                        <select name="selected_image" id="colors-in-text" class="color-dropdown-menu"  onclick="changeImageProductPage(this, '<?php array_values($images)[$i] ?>')">
                             <option value="" disabled selected>Choose a color</option>
                             <option value="./img/socksPhotos/Sunny_socks_uni_green.jpg">Green</option>
                             <option value="./img/socksPhotos/Sunny_socks_uni_blue.jpg">Blue</option>
