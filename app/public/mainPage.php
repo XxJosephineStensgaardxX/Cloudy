@@ -79,7 +79,7 @@ init();
                     <h3>UNI</h3>
                     <img class="main__sock-photo" id="sockImageUni" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg"
                         alt="unicolor socks">
-                    <form action="productPage.php" method="POST">
+                    <form action="productPageUniColor.php" method="POST">
                         <div class="form__container">
                             <div class="form__colors">
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
@@ -118,7 +118,7 @@ init();
                     <h3>STRIPED</h3>
                     <img class="main__sock-photo" id="sockImageStr" src=".\img\socksPhotos\Sunny_socks_blue.jpg"
                         alt="unicolor socks">
-                    <form action="productPage.php">
+                    <form action="productPageStriped.php">
                         <div class="form__container">
                             <div class="form__colors">
                                 <!--Timofei: It is supposed to be input radio but I don't know how to change the color of radio bubble -->
