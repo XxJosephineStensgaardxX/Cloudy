@@ -66,71 +66,23 @@
                 </div>
             </div>
         </section>
-        <section class="Map">
-            <div class="container">
-                <div class="map__row map__row1">
-                    <h1>
+        <!-- Deri: This piece of code belongs to me. -->
+        <section class="main__international-concept">
+    
+                    <h1 class=" main__news">
                         <?php
                         echo $language["NEWS"][$lang]
                         ?>
                     </h1>
-                </div>
-                <div class="map__row map__row2">
-                    <h3>
+                
+                <h3 class=" main__international-now">
                         <?php
                         echo $language["WE ARE NOW INTERNATIONAL"][$lang]
                         ?>
                     </h3>
                 </div>
-                <div class="map__row map__row3">
-                    <img src=".\img\worldSVG.svg" alt="The world" class="world-map">
-                </div>
-            </div>
-        </section>
-        <section id="choose" class="choose">
-            <div class="container">
-
-                <!--Deri: This is my piece of code. I only need to work on very detailed items if there are some comments on it.-->
-                <div class="choose__wrapper">
-                    <div class="choose__row choose__row1">
-                        <h1 class="choose__size">
-                            <?php
-                            echo $language["CHOOSE YOUR STYLE"][$lang]
-                            ?>
-                        </h1>
-                    </div>
-                    <div class="choose__row choose__row2-1">UNI</div>
-                    <div class="choose__row choose__row2-2">STRIPED </div>
-                    <div class="choose__row choose__row3-1">
-                        <img src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="Unicolor socks" class="main__unicolor-socks">
-                    </div>
-                    <div class="choose__row choose__row3-2">
-                        <img src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="stripped socks" class="main__stripped-socks">
-                    </div>
-                    <div class="choose__row choose__row4-1">
-                        <?php
-                        $colors = array("#1e407a", "#51b2a2", "#e990b9", "#f15b39", "#fecd3e");
-                        foreach ($colors as $color) {
-                            echo '<div class="circle" style="background-color: ' . $color . ';"></div>';
-                        }
-                        ?>
-                    </div>
-                    <div class="choose__row choose__row4-2">
-                        <?php
-                        $colors = array("#1e407a", "#51b2a2", "#e990b9", "#f15b39", "#fecd3e");
-                        foreach ($colors as $color) {
-                            echo '<div class="circle" style="background-color: ' . $color . ';"></div>';
-                        }
-                        ?>
-                    </div>
-                    <div class="choose__row choose__row5-1">
-                        <button class='button' type="button"> <?php echo $language["BUY"][$lang] ?></button>
-                    </div>
-                    <div class="choose__row choose__row5-2">
-                        <button class='button' type="button"> <?php echo $language["BUY"][$lang] ?> </button>
-                    </div>
-                </div>
-            </div>
+                
+                    <img src=".\img\worldSVG.svg" alt="The world" class="main__world-map">
         </section>
         <!--Timofei: This is my version of Choose style socks-->
         <section class="main__choose-style">

@@ -145,127 +145,29 @@
 	margin-left: auto;
 }
 /* Deri: this piece of code belongs to me. I only need to work on very detailed items if there are some comments on it.*/
-.choose__wrapper {
-	background-color: white;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 2fr) 5fr repeat(2, 2fr);
-	grid-column-gap: 0px;
-	grid-row-gap: 10px;
-	justify-items: center;
-	max-width: 750px;
-	margin: auto;
-	font-family: 'Nexa-Bold';
+.main__international-concept {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-
-.choose__row {
-	background-color: white;
-	text-align: center;
-	color: rgb(30, 64, 122);
-}
-.choose__row1 {
-	grid-area: 1 / 1 / 2 / 3;
-}
-.choose__row2-1 {
-	grid-area: 2 / 1 / 3 / 2;
-	height: fit-content;
-	padding: 20px;
-}
-.choose__row2-2 {
-	grid-area: 2 / 2 / 3 / 3;
-	height: fit-content;
-	padding: 20px;
-}
-.choose__row3-1 {
-	grid-area: 3 / 1 / 4 / 2;
-}
-.choose__row3-2 {
-	grid-area: 3 / 2 / 4 / 3;
-}
-.choose__row4-1 {
-	grid-area: 4 / 1 / 5 / 2;
-}
-.choose__row4-2 {
-	grid-area: 4 / 2 / 5 / 3;
-}
-.choose__row5-1 {
-	grid-area: 5 / 1 / 6 / 2;
-}
-.choose__row5-2 {
-	grid-area: 5 / 2 / 6 / 3;
-}
-.main__unicolor-socks {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	object-fit: cover;
-}
-.main__stripped-socks {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	object-fit: cover;
-}
-.choose__size {
-	font-size: 50px;
-}
-.map__row {
-	background-color: white;
-	text-align: center;
-	color: rgb(30, 64, 122);
-	justify-items: center;
-	margin: auto;
-	font-family: 'Nexa-Bold';
-}
-.map {
-	display: grid;
-	grid-template-columns: 5fr;
-	grid-template-rows: repeat(2, 1fr) 5fr;
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
-}
-.map__row1 {
-	grid-area: 1 / 1 / 2 / 2;
+.main__news {
 	font-size: 50px;
 	text-decoration: underline;
 }
-.map__row2 {
-	grid-area: 2 / 1 / 3 / 2;
+.main__international-now {
 	font-size: 30px;
 	padding: 20px;
+	text-align: center;
 }
-.map__row3 {
-	grid-area: 3 / 1 / 4 / 2;
-	width: 100%;
-	max-width: 600px;
-	height: 440px;
-	object-fit: cover;
-	align-items: center;
+.main__world-map {
+	width: 440px;
 }
-/* button {
-	background-color: #51b2a2;
-	padding: 10px 30px;
-	border: none;
-	border-radius: 20px;
-	color: #1e407a;
-	cursor: pointer;
-} */
-.circle {
-	width: 25px;
-	height: 25px;
-	border-radius: 50%;
-	margin: 7px;
-	display: inline-block;
-}
-/* 
-@media (min-width: 576px) {
-	.choose__wrapper {
-		background: #f15b39;
-		display: none !important;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(2, 2fr) 5fr repeat(2, 2fr) repeat(2, 2fr) 5fr repeat(
-				2,
-				2fr
-			);
+
+@media (max-width:460px){
+	.main__world-map {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
-} */
+}
+
