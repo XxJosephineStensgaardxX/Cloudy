@@ -100,7 +100,7 @@ $lang = init();
                                 ?>
                                 
                             </div>
-                            <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang] ?>">
+                            <button class="form__buy-button" type="submit" ><?php echo $language["BUY"][$lang] ?></button>
                         </div>
                     </form>
                 </div>
@@ -132,7 +132,7 @@ $lang = init();
                                 ?>
 
                             </div>
-                            <input class="form__buy-button" type="submit" value="<?php echo $language["BUY"][$lang] ?>">
+                            <button class="form__buy-button" type="submit" ><?php echo $language["BUY"][$lang] ?></button>
                         </div>
                     </form>
                 </div>
