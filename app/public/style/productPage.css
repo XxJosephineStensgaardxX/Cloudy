@@ -63,7 +63,6 @@ div.sizes-for-sizes-for-phone {
     .othersocks-flex {
         display: flex;
         flex-direction: row;
-        border-radius: 5px;
         justify-content: space-between;
         gap: 1vw;
 
@@ -192,24 +191,6 @@ div.sizes-for-sizes-for-phone {
 
 }
 
-@media (max-width: 840px) {
-    /* .product-name-header {
-        margin-bottom: 270px;
-    } */
-
-    /* 
-    .color-picker-flex {
-        visibility: hidden;
-    }
-
-    .color-text-menu-for-phone {
-        visibility: visible;
-    } */
-
-}
-
-
-
 img.othersock-item {
     width: 110px;
     height: 120px;
@@ -217,13 +198,11 @@ img.othersock-item {
     border-radius: 5px;
 }
 
-
 .information-container-flex {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
 }
-
 
 
 .font-bold {
@@ -284,7 +263,6 @@ img.othersock-item {
 
 input[type="radio"] {
     display: none;
-    /* appearance: none; */
     width: 100%;
     height: 2em;
 

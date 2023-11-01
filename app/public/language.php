@@ -166,6 +166,11 @@ $language = array(
         "EN" => "CLASSIC UNI SOCK - ",
         "NL" => "KLASSIEKE UNI SOK - ",
     ),
+    "STRIPED SOCK - " => array(
+        "EN" => "STRIPED SOCK - ",
+        "NL" => "GESTREEPT SOK - ",
+    ),
+
     "Made from 100% organic cotton" => array(
         "EN" => "Made from 100% organic cotton",
         "NL" => "Gemaakt van 100% biologisch katoen",
