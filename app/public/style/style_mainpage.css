@@ -214,14 +214,10 @@
 	}
 }
 
-.goBackLink {
-	text-decoration: underline;
-	cursor: pointer;
-}
-
 .textCenterGoBack {
 	display: flex;
 	justify-content: center;
+	cursor: pointer;
 
 }
 

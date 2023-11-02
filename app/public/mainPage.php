@@ -171,7 +171,11 @@ $lang = init();
         </section>
         <section>
             <div class="textCenterGoBack">
-                <p><button class="goBackLink" onclick="window.scrollTo(0,0)">GO BACK</button>
+                <p><button class="goBackLink" onclick="window.scrollTo(0,0)">
+                <?php
+                    echo $language["Go Back"][$lang]
+                    ?>
+                </button>
             </div>
         </section>
     </main>
