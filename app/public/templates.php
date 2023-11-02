@@ -55,14 +55,16 @@ function header_template($language, $lang)
     </header>  ';
 }
 
-function footer_temple()
+function footer_temple($language, $lang)
 {
     return
         '<footer class="footer">
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__item">
-                    <h3 class="footer__title">OUR PAYMENT METHODS</h3>
+                    <h3 class="footer__title">'.
+                        $language["OUR PAYMENT METHODS"][$lang]
+                    .'</h3>
                     <ul class="footer__image-wrapper">
                         <li>
                             <img class="footer__image" src="img/VISA.png" alt="visa" />
@@ -79,10 +81,14 @@ function footer_temple()
                     </ul>
                 </div>
                 <div class="footer__item">
-                    <a href="mainPage.php#aboutUs" style="color:white"><h3 class="footer__title">ABOUT US</h3></a>
+                    <a href="mainPage.php#aboutUs" style="color:white">
+                        <h3 class="footer__title">'.
+                            $language["ABOUT US"][$lang].
+                        '</h3>
+                    </a>
                 </div>
                 <div class="footer__item">
-                    <h3 class="footer__title">BRANDING</h3>
+                    <h3 class="footer__title">'. $language["BRANDING"][$lang]. '</h3>
                 </div>
                 <div class="footer__item">
                     <ul class="footer__square-wrapper">

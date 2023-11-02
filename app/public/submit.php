@@ -60,10 +60,11 @@ $lang = init();
 
 
         if ($errorFlag == true) {
-            echo '<main style="font-size:25px"> ';
+            echo '<main class="error_main"">';
             foreach ($errors as $error) {
                 echo "" . $error . "<br>";
             }
+            echo '<button class="error_button"><a href="contact_page.php" style="color:#1e407a">BACK</a></button>';
             echo '</main>';
         } else {
             echo '
@@ -78,7 +79,7 @@ $lang = init();
         }
     }
     ?>
-    <?php echo footer_temple() ?>
+    <?php echo footer_temple($language, $lang) ?>
 </body>
 
 </html>
