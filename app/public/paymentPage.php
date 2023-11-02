@@ -167,7 +167,9 @@ $lang = init();
 							<?php endforeach ?>
 						</ul>
 					<?php else : ?>
-						<p>Your card is empty</p>
+						<section class="checkout__empty">
+							<h3>Your card is empty</h3>
+						</section>
 					<?php endif ?>
 					<div class="checkout__result">
 						<a href="checkoutPage.php" class="checkout__link">

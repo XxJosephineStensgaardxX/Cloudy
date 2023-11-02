@@ -192,8 +192,11 @@
 	}
 }
 @media screen and (max-width: 640px) {
+	.checkout__title {
+		font-size: 2.5rem;
+	}
 	.checkout__button {
-		margin-top: 2rem;
+		margin-top: 1.5rem;
 	}
 }
 @media screen and (max-width: 480px) {
