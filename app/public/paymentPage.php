@@ -91,7 +91,7 @@ $lang = init();
 											<?php
 											echo $language["PRICE:"][$lang]
 											?>
-											<span>20</span>
+											<span><?php echo $cart_item["price"]?></span>
 											$
 										</p>
 										<p class="order__text">
@@ -128,14 +128,14 @@ $lang = init();
 							<?php
 							echo $language["TOTAL:"][$lang]
 							?>
-							<span><?php if (count($cart) !== 0) {
-											$sum = 0;
+							<span><?php $sum = 0;
+										if (count($cart) !== 0) {
 											foreach ($cart as $cart_item) {
-												$sum += $cart_item["price"];
+												$sum += $cart_item["price"] * $cart_item["amount"];
 											}
-										} else {
-											echo 0;
-										} ?></span>
+										} 
+										echo $sum;
+										?></span>
 							$
 						</p>
 					</div>

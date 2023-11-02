@@ -36,19 +36,14 @@ $lang = init();
 
     $image = filter_input(INPUT_POST, "selected_image");
     $amount = filter_input(INPUT_POST, "amount-picker");
-    $type = filter_input(INPUT_POST, "type");
 
 
-    if (empty($image)) {
+    if (empty($image) || empty($sizeSock) || empty($amount)) {
         $errorFlag = TRUE;
     }
 
-    if (empty($amount)) {
+    if ($amount <= 0) {
         $errorFlag = TRUE;
-    }
-
-    if ($amount < 0) {
-        $amount = 0;
     }
 
 
@@ -59,14 +54,15 @@ $lang = init();
             "size" => $sizeSock,
             "amount" => $amount,
             "color" => $color,
-            "type" => $type,
+            "type" => "uni",
+            "price" => 3,
         );
 
 
         $orderExist = FALSE;
         for ($i = 0; $i < count($_SESSION["CART"]); $i++) {
 
-            if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"]) {
+                if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"] && $_SESSION["CART"][$i]["type"] == "uni") {
 
                 $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
                 $orderExist = TRUE;
@@ -211,7 +207,7 @@ $lang = init();
                         </p>
                     </div>
                     <div class="border-container">
-                        <button class="button" id="cart-button" name='type' type="submit" value="uni">Put in cart</button>
+                        <input class="button" id="cart-button" type="submit" value="Put in cart"></input>
                     </div>
                 </div>
             </div>

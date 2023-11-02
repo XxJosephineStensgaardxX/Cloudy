@@ -36,18 +36,14 @@ $lang = init();
 
 
 
-        if (empty($image)) {
+        if (empty($image) || empty($size) || empty($amount)) {
             $errorFlag = TRUE;
         }
+    
 
-        if (empty($amount)) {
+        if ($amount <= 0) {
             $errorFlag = TRUE;
         }
-
-        if ($amount < 0) {
-            $amount = 0;
-        }
-
 
         if (!$errorFlag) {
             $color = $images[$image];
@@ -55,15 +51,16 @@ $lang = init();
                 "size" => $size,
                 "amount" => $amount,
                 "color" => $color,
+                "type" => "stripes",
+                "price" => 4,
             );
 
 
             $orderExist = FALSE;
             for ($i = 0; $i < count($_SESSION["CART"]); $i++) {
 
-                if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"]) {
+                if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"] && $_SESSION["CART"][$i]["type"] == "stripes") {
 
-                    echo $newOrder["amount"];
                     $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
                     $orderExist = TRUE;
                     break;
