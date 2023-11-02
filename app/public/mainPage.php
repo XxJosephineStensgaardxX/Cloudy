@@ -93,14 +93,14 @@ $lang = init();
                                 ?>
 
                                     <label for="color-<?php echo $color; ?>" class="form__colores-uni form__colors-size form__color-<?php echo $color; ?>" onclick="changeImage('sockImageUni', '<?php echo $imagePath; ?>', '.form__colores-uni', this)"></label>
-                                    <input type="radio" name="colors" id="color-<?php echo $color; ?>" value="<?php echo $color; ?>" class="form__remove-radio-button"<?php if ($color === 'blue') echo ' checked'; ?>>
-                                
+                                    <input type="radio" name="colors" id="color-<?php echo $color; ?>" value="<?php echo $color; ?>" class="form__remove-radio-button" <?php if ($color === 'blue') echo ' checked'; ?>>
+
                                 <?php
                                 }
                                 ?>
-                                
+
                             </div>
-                            <button class="form__buy-button" type="submit" ><?php echo $language["BUY"][$lang] ?></button>
+                            <button class="form__buy-button" type="submit"><?php echo $language["BUY"][$lang] ?></button>
                         </div>
                     </form>
                 </div>
@@ -125,14 +125,14 @@ $lang = init();
                                 ?>
 
                                     <label for="color-<?php echo $color; ?>" class="form__colores-striped form__colors-size form__color-<?php echo $color; ?>" onclick="changeImage('sockImageStr', '<?php echo $imagePath; ?>', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-<?php echo $color; ?>" value="<?php echo $color; ?>" class="form__remove-radio-button"<?php if ($color === 'blue') echo ' checked'; ?>>
-                                
+                                    <input type="radio" name="colors" id="color-<?php echo $color; ?>" value="<?php echo $color; ?>" class="form__remove-radio-button" <?php if ($color === 'blue') echo ' checked'; ?>>
+
                                 <?php
                                 }
                                 ?>
 
                             </div>
-                            <button class="form__buy-button" type="submit" ><?php echo $language["BUY"][$lang] ?></button>
+                            <button class="form__buy-button" type="submit"><?php echo $language["BUY"][$lang] ?></button>
                         </div>
                     </form>
                 </div>
@@ -172,10 +172,10 @@ $lang = init();
         <section>
             <div class="textCenterGoBack">
                 <p><button class="goBackLink" onclick="window.scrollTo(0,0)">
-                <?php
-                    echo $language["Go Back"][$lang]
-                    ?>
-                </button>
+                        <?php
+                        echo $language["Go Back"][$lang]
+                        ?>
+                    </button>
             </div>
         </section>
     </main>

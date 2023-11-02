@@ -9,7 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			autoplay: true,
 			autoplaySpeed: 10000,
 			arrows: false,
-			pagination: false,
+			dots: true,
+			customPaging: () => "<div class='slider__dot'></div>",
 			responsive: [
 				{
 					breakpoint: 480,
@@ -71,25 +72,24 @@ const changeImage = (imgId, newSrc, removeClass, clickedColor) => {
 	clickedColor.classList.add('active__choose-style')
 }
 
-
 const changeImageProductPage = (input, color) => {
 	//console.log(input);
 	const title = document.querySelector('.product-name-header')
-	console.log(title);
+	console.log(title)
 
-	const titleArray = title.innerText.split(" ");
-	//why dont we use id's here? 
-	titleArray[titleArray.length - 1] = color;
+	const titleArray = title.innerText.split(' ')
+	//why dont we use id's here?
+	titleArray[titleArray.length - 1] = color
 	title.innerHTML = titleArray.join(' ')
 
 	document.querySelector('.chosenPicture').src = input.value
 
-	const carousel_images = document.querySelectorAll(".othersock-item")
+	const carousel_images = document.querySelectorAll('.othersock-item')
 
-	carousel_images.forEach((img) => {
-		console.log(img.attributes.src.value, input.value);
+	carousel_images.forEach(img => {
+		console.log(img.attributes.src.value, input.value)
 		if (img.attributes.src.value === input.value) {
-			img.parentElement.style.display = "none"
+			img.parentElement.style.display = 'none'
 		} else {
 			img.parentElement.style.display = null
 		}
@@ -104,4 +104,3 @@ const changeImageProductPage = (input, color) => {
 	// Add the "active" class to the clicked color
 	// clickedColor.classList.add('active__choose-style')
 }
-
