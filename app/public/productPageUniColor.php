@@ -18,7 +18,7 @@ $lang = init();
 
     <?php
     $images = array(
-        "./img/socksPhotos/Sunny_Socks_uni_blue.jpg" => "BLUE",
+        "./img/socksPhotos/Sunny_socks_uni_blue.jpg" => "BLUE",
         "./img/socksPhotos/Sunny_socks_uni_green.jpg" => "GREEN",
         "./img/socksPhotos/Sunny_socks_uni_pink.jpg" => "PINK",
         "./img/socksPhotos/Sunny_socks_uni_red.jpg" => "RED",
@@ -97,7 +97,7 @@ $lang = init();
         <form id="form" method="post" action="productPageUniColor.php">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
-                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_Socks_uni_blue.jpg" alt="Selected Image">
+                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_uni_blue.jpg" alt="Selected Image">
                     <div class="othersocks-flex">
                         <?php
 
@@ -186,19 +186,6 @@ $lang = init();
                               <label for='$colorRadio' class='button-design $errorClass' style='background-color: $colorRadio;'><span></span></label>";
                         }
                         ?>
-                    </div>
-                    <div class="color-text-menu-for-phone border-container">
-                        <select name="selected_image" id="colors-in-text" class="color-dropdown-menu <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($color)) {
-                            echo 'error-text';
-                        } ?>"
-                            onchange="changeImageProductPage(this, '<?php array_values($images)[$i] ?>'); this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
-                            <option value="" disabled selected>Choose a color</option>
-                            <option value="./img/socksPhotos/Sunny_socks_uni_green.jpg">Green</option>
-                            <option value="./img/socksPhotos/Sunny_socks_uni_blue.jpg">Blue</option>
-                            <option value="./img/socksPhotos/Sunny_socks_uni_pink.jpg">Pink</option>
-                            <option value="./img/socksPhotos/Sunny_socks_uni_red.jpg">Orange</option>
-                            <option value="./img/socksPhotos/Sunny_socks_uni_yellow.jpg">Yellow</option>
-                        </select>
                     </div>
 
                     <div class="border-container">
