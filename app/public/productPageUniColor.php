@@ -43,17 +43,17 @@ $lang = init();
         //     $errorFlag = TRUE;
         // }
     
-        // if (empty($image)) {
-        //     array_push($errorArray, "<p>Please choose color</p>");
-        //     $errorFlag = TRUE;
-        // }
-    
-        // if (empty($amount)) {
-        //     array_push($errorArray, "<p>Please choose amount</p>");
-        //     $errorFlag = TRUE;
-        // }
-    
+        if (empty($image)) {
+            $errorFlag = TRUE;
+        }
 
+        if (empty($amount)) {
+            $errorFlag = TRUE;
+        }
+
+        if ($amount < 0) {
+            $amount = 0;
+        }
 
         if (!$errorFlag) {
             $color = $images[$image];
@@ -78,8 +78,8 @@ $lang = init();
                 array_push($_SESSION["CART"], $newOrder);
             }
 
-            // var_dump($_SESSION["CART"]);
-    
+            var_dump($_SESSION["CART"]);
+
         }
 
     }
@@ -109,9 +109,6 @@ $lang = init();
                             ";
                         }
                         ?>
-
-
-
                     </div>
                 </div>
                 <div class="information-container-flex">
@@ -123,11 +120,11 @@ $lang = init();
 
                     </h3>
                     <?php
-                    if ($errorFlag) {
-                        foreach ($errorArray as $errors) {
-                            echo $errors;
-                        }
-                    }
+                    // if ($errorFlag) {
+                    //     foreach ($errorArray as $errors) {
+                    //         echo $errors;
+                    //     }
+                    // }
                     ?>
                     <div class="container-sizes-flex border-container">
 
@@ -146,6 +143,7 @@ $lang = init();
                             $size = filter_input(INPUT_POST, "size");
                             if (empty($size)) {
                                 $sizeError = true;
+
                             }
                         }
 
@@ -160,7 +158,12 @@ $lang = init();
 
                     </div>
                     <div class="sizes-for-sizes-for-phone border-container">
-                        <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown">
+                        <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($selectedSizeDropdown)) {
+                            echo 'error-text';
+                        }
+                        if (!empty($selectedSizeDropdown)) {
+                            echo 'style="color=blue;"';
+                        } ?>">
                             <option value="" disabled selected>Choose your size</option>
                             <option value="25-31">25-31</option>
                             <option value="32-36">32-36</option>
@@ -169,6 +172,7 @@ $lang = init();
                             <option value="47+">47+</option>
                         </select>
                     </div>
+
                     <div class="color-picker-flex border-container">
 
                         <?php

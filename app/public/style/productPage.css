@@ -157,11 +157,6 @@ div.sizes-for-sizes-for-phone {
         visibility: visible;
     }
 
-    .sizes-in-dropdown {
-        color: #1E407A;
-        border: none;
-        margin-top: 5px;
-    }
 
     .container-sizes-flex {
         visibility: hidden;
@@ -188,6 +183,18 @@ div.sizes-for-sizes-for-phone {
     div.color-text-menu-for-phone.border-container {
         margin-bottom: 0px;
     }
+
+    .error-text {
+        color: red;
+        border: none;
+    }
+
+    .sizes-in-dropdown {
+        color: #1E407A;
+        border: none;
+        margin-top: 5px;
+    }
+
 
 }
 
