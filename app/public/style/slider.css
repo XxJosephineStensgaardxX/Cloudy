@@ -18,6 +18,22 @@
 	height: 100%;
 	object-fit: cover;
 }
+.slick-dots {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+.slick-active {
+	background: #1e407a;
+	border-radius: 100%;
+}
+.slider__dot {
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid #1e407a;
+	border-radius: 100%;
+}
 
 @media screen and (max-width: 1024px) {
 	.slider__item {
