@@ -13,15 +13,74 @@ $lang = init();
     <title>Contact Page</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="./style/style_lang.css">
+    <link rel="stylesheet" href="style/submit.css">
     <link rel="stylesheet" href="style/style_checkout.css">
     <link rel="stylesheet" href="style/style_contact_page.css">
 
     <script src="./js/index.js" defer></script>
+    
 </head>
 
 <body>
     <?php echo header_template($language, $lang) ?>
     <main class="main">
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $fname = filter_input(INPUT_POST, "Fname");
+        $lname = filter_input(INPUT_POST, "Lname");
+        $street = filter_input(INPUT_POST, "street");
+        $email = filter_input(INPUT_POST, "email");
+        $postcode = filter_input(INPUT_POST, "postcode");
+        $phone = filter_input(INPUT_POST, "phone");
+
+        $errorFlag = false;
+        $errors = array();
+
+        if (empty($fname)) {
+            $errorFlag = true;
+            array_push($errors, "Invalid first name");
+        };
+        if (empty($lname)) {
+            $errorFlag = true;
+            array_push($errors, "Invalid last name");
+        };
+        if (empty($street)) {
+            $errorFlag = true;
+            array_push($errors, "Invalid street");
+        };
+        if (empty($email)) {
+            $errorFlag = true;
+            array_push($errors, "Invalid email");
+        };
+        if (empty($postcode)) {
+            $errorFlag = true;
+            array_push($errors, "Invalid postcode");
+        };
+        if (empty($phone)) {
+            $errorFlag = true;
+            array_push($errors, "Invalid phone");
+        };
+
+
+        if ($errorFlag == true) {
+            echo '<main class="error_main">';
+            foreach ($errors as $error) {
+                echo "<p>" . $error . "</p>";
+            }
+            echo '<button class="error_button"><a href="contact_page.php" style="color:#1e407a">BACK</a></button>';
+            echo '</main>';
+        } else {
+            echo '
+                    <div class="success">
+                        <h1>                    
+                            YOUR MESSAGE IS SUCCEFULY SEND
+                        </h1>
+                    </div>
+                    ';
+        }
+    }
+    else{
+    ?>
         <section class="content">
             <div class="container">
 
@@ -30,7 +89,7 @@ $lang = init();
                     echo $language["CONTACT US"][$lang]
                     ?>
                 </h1>
-                <form action="submit.php" method="POST">
+                <form action="contact_page.php" method="POST">
                     <!--Change GET to Post later-->
                     <div class="input__wrapper">
                         <input type="text" class="input" placeholder="<?php echo $language["INSERT NAME"][$lang] ?>" id="Fname" name="Fname" />
@@ -61,6 +120,9 @@ $lang = init();
             </div>
         </section>
     </main>
+    <?php
+    }
+    ?>
     <?php echo footer_temple($language, $lang) ?>
 </body>
 
