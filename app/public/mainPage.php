@@ -75,7 +75,7 @@ $lang = init();
                 <div class="main__sock-display">
                     <h3>UNI</h3>
                     <img class="main__sock-photo" id="sockImageUni" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="unicolor socks">
-                    <form action="productPageUniColor.php" method="POST">
+                    <form action="productPageUniColor.php">
                         <div class="form__container">
                             <div class="form__colors">
                                 <?php

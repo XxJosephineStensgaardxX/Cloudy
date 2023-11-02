@@ -64,24 +64,24 @@ $lang = init();
 						</a>
 					</form>
 					<?php
-					$images = array(
-						"BLUE" => "./img/catalogus_sokken_uni_blue.png",
-						"GREEN" => "./img/catalogus_sokken_uni_green.png",
-						"PINK" => "./img/catalogus_sokken_uni_pink.png",
-						"RED" => "./img/catalogus_sokken_uni_red.png",
-						"YELLOW" => "./img/catalogus_sokken_uni_yellow.png",
-					);
-
 					$cart = $_SESSION["CART"];
 					if (count($cart) !== 0) : ?>
 						<ul class="orders">
 							<?php
 							foreach ($cart as $cart_item) :
+
+								$images = array(
+									"BLUE" => "./img/catalogus_sokken_" . $cart_item["type"] . "_blue.png",
+									"GREEN" => "./img/catalogus_sokken_" . $cart_item["type"] . "_green.png",
+									"PINK" => "./img/catalogus_sokken_" . $cart_item["type"] . "_pink.png",
+									"RED" => "./img/catalogus_sokken_" . $cart_item["type"] . "_red.png",
+									"YELLOW" => "./img/catalogus_sokken_" . $cart_item["type"] . "_yellow.png",
+								);
 							?>
 								<li class="order__item">
 									<img src="<?php echo $images[$cart_item['color']] ?>" alt="<?php echo $images[$cart_item['color']] ?>" class="order__image" />
 									<h2 class="order__title">
-										<?php echo $cart_item['color'] . " STRIPED SOCKS" ?>
+										<?php echo $cart_item['color'] . " " . strtoupper($cart_item["type"]) . " SOCKS" ?>
 									</h2>
 									<div class="order__item-inner">
 										<p class="order__text">
