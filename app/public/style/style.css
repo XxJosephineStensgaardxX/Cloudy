@@ -78,6 +78,7 @@ body {
 
 .header__image-flag {
 	border-radius: 100%;
+	cursor: pointer;
 }
 
 .header__image {
