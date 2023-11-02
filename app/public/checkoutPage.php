@@ -63,81 +63,63 @@ $lang = init();
 							?>
 						</a>
 					</form>
-					<ul class="orders">
-						<li class="order__item">
-							<img src="./img/catalogus_sokken_stripes_red.png" alt="catalogus_sokken_stripes_red" class="order__image" />
-							<h2 class="order__title">
-								<?php
-								echo $language["RED STRIPED SOCKS"][$lang]
-								?>
-							</h2>
-							<div class="order__item-inner">
-								<p class="order__text">
-									<?php
-									echo $language["PRICE:"][$lang]
-									?>
-									<span>20</span>
-									$
-								</p>
-								<p class="order__text">
-									<?php
-									echo $language["SIZE:"][$lang]
-									?>
-									<span>45-47</span>
-								</p>
-								<p class="order__text">
-									<?php
-									echo $language["AMOUNT:"][$lang]
-									?>
-									<span>1</span>
-								</p>
-							</div>
-							<button class="order__button">
-								<?php
-								echo $language["REMOVE ITEM"][$lang]
-								?>
-							</button>
-						</li>
-						<li class="order__item">
-							<img src="./img/catalogus_sokken_uni_blue.png" alt="catalogus_sokken_uni_blue" class="order__image" />
-							<h2 class="order__title">
-								<?php
-								echo $language["GREEN UNI SOCKS"][$lang]
-								?>
-							</h2>
-							<div class="order__item-inner">
-								<p class="order__text">
-									<?php
-									echo $language["PRICE:"][$lang]
-									?>
-									<span>20</span>
-									$
-								</p>
-								<p class="order__text">
-									<?php
-									echo $language["SIZE:"][$lang]
-									?>
-									<span>36-40</span>
-								</p>
-								<p class="order__text">
-									<?php
-									echo $language["AMOUNT:"][$lang]
-									?>
-									<span>1</span>
-								</p>
-							</div>
-							<button class="order__button">
-								<?php
-								echo $language["REMOVE ITEM"][$lang]
-								?>
-							</button>
-						</li>
-					</ul>
+					<?php
+					$images = array(
+						"BLUE" => "./img/catalogus_sokken_uni_blue.png",
+						"GREEN" => "./img/catalogus_sokken_uni_green.png",
+						"PINK" => "./img/catalogus_sokken_uni_pink.png",
+						"RED" => "./img/catalogus_sokken_uni_red.png",
+						"YELLOW" => "./img/catalogus_sokken_uni_yellow.png",
+					);
+
+					$cart = $_SESSION["CART"];
+					if (count($cart) !== 0) : ?>
+						<ul class="orders">
+							<?php
+							foreach ($cart as $cart_item) :
+							?>
+								<li class="order__item">
+									<img src="<?php echo $images[$cart_item['color']] ?>" alt="<?php echo $images[$cart_item['color']] ?>" class="order__image" />
+									<h2 class="order__title">
+										<?php echo $cart_item['color'] . " STRIPED SOCKS" ?>
+									</h2>
+									<div class="order__item-inner">
+										<p class="order__text">
+											<?php
+											echo $language["PRICE:"][$lang]
+											?>
+											<span><?php echo $cart_item['price'] ?></span>
+											$
+										</p>
+										<p class="order__text">
+											<?php
+											echo $language["SIZE:"][$lang]
+											?>
+											<span><?php echo $cart_item['size'] ?></span>
+										</p>
+										<p class="order__text">
+											<?php
+											echo $language["AMOUNT:"][$lang]
+											?>
+											<span><?php echo $cart_item['amount'] ?></span>
+										</p>
+									</div>
+									<button class="order__button">
+										<?php
+										echo $language["REMOVE ITEM"][$lang]
+										?>
+									</button>
+								</li>
+							<?php endforeach ?>
+						</ul>
+					<?php else : ?>
+						<p>Your card is empty</p>
+					<?php endif ?>
 				</div>
 			</div>
 		</section>
 	</main>
-	<?php echo footer_temple() ?>
+	<?php echo footer_temple($language, $lang) ?>
 </body>
 
 </html>
