@@ -119,8 +119,9 @@ $lang = init();
                     <h3 class="font-bold product-name-header">
 
                         <?php
-                        echo " CLASSIC UNI SOCK - BLUE";
+                        echo "UNI SOCK - " . strtoupper(isset($_GET['color']) ? $_GET['color'] : 'blue');
                         ?>
+
 
                     </h3>
                     <div class="container-sizes-flex border-container">

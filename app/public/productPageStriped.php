@@ -18,7 +18,7 @@ $lang = init();
 
     <?php
     $images = array(
-        "./img/socksPhotos/Sunny_Socks_blue.jpg" => "BLUE",
+        "./img/socksPhotos/Sunny_socks_blue.jpg" => "BLUE",
         "./img/socksPhotos/Sunny_socks_green.jpg" => "GREEN",
         "./img/socksPhotos/Sunny_socks_pink_01.jpg" => "PINK",
         "./img/socksPhotos/Sunny_socks_red.jpg" => "RED",
@@ -85,14 +85,14 @@ $lang = init();
         <form id="form" method="post" action="productPageStriped.php">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
-                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_Socks_<?php if (isset($_GET['color'])) echo $_GET['color']; ?>.jpg" alt="Selected Image">
+                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_<?php echo isset($_GET['color']) ? $_GET['color'] : 'blue' ?>.jpg" alt="Selected Image">
                     <div class="othersocks-flex">
                         <?php
 
 
                         foreach (array_keys($images) as $i => $image) {
                             echo
-                                "
+                            "
                             <input type='radio' name='selected_image' value='$image' id='$image'  onclick=\"changeImageProductPage(this, '" . (array_values($images)[$i]) . "')\">
                             <label for='$image' style='display: " . ($i === 0 ? 'none' : 'block') . "'>
                                 <img class='othersock-item' src='$image' alt='Classic sock'>
@@ -106,7 +106,7 @@ $lang = init();
                     <h3 class="font-bold product-name-header">
 
                         <?php
-                        echo "STRIPED SOCK - BLUE";
+                        echo "STRIPED SOCK - " . strtoupper(isset($_GET['color']) ? $_GET['color'] : 'blue');
                         ?>
 
                     </h3>
@@ -142,10 +142,9 @@ $lang = init();
                     </div>
                     <div class="sizes-for-sizes-for-phone border-container">
                         <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($size)) {
-                            echo 'error-text';
-                        }
-                        ?>"
-                            onchange="this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
+                                                                                                                echo 'error-text';
+                                                                                                            }
+                                                                                                            ?>" onchange="this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
                             <option value="" disabled selected>Choose your size</option>
                             <option value="25-31">25-31</option>
                             <option value="32-36">32-36</option>
@@ -176,9 +175,8 @@ $lang = init();
                     </div>
                     <div class="color-text-menu-for-phone border-container">
                         <select name="selected_image" id="colors-in-text" class="color-dropdown-menu <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($color)) {
-                            echo 'error-text';
-                        } ?>"
-                            onchange="changeImageProductPage(this, '<?php array_values($images)[$i] ?>'); this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
+                                                                                                            echo 'error-text';
+                                                                                                        } ?>" onchange="changeImageProductPage(this, '<?php array_values($images)[$i] ?>'); this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
                             <option value="" disabled selected>Choose a color</option>
                             <option value="./img/socksPhotos/Sunny_socks_green.jpg">Green</option>
                             <option value="./img/socksPhotos/Sunny_socks_blue.jpg">Blue</option>
