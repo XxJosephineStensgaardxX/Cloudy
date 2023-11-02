@@ -93,7 +93,7 @@ $lang = init();
         <form id="form" method="post" action="productPageUniColor.php">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
-                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_Socks_blue.jpg" alt="Selected Image">
+                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_Socks_<?php if (isset($_GET['color'])) echo $_GET['color']; ?>.jpg" alt="Selected Image">
                     <div class="othersocks-flex">
                         <?php
 
@@ -217,7 +217,7 @@ $lang = init();
                         </p>
                     </div>
                     <div class="border-container">
-                        <input id="cart-button" type="submit" value="Put in cart" onClick="#"></input>
+                        <input class="button" id="cart-button" type="submit" value="Put in cart"></input>
                     </div>
                 </div>
             </div>

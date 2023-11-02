@@ -93,7 +93,7 @@ $lang = init();
                                 ?>
 
                                     <label for="color-<?php echo $color; ?>" class="form__colores-uni form__colors-size form__color-<?php echo $color; ?>" onclick="changeImage('sockImageUni', '<?php echo $imagePath; ?>', '.form__colores-uni', this)"></label>
-                                    <input type="radio" name="colors" id="color-<?php echo $color; ?>" value="<?php echo $color; ?>" class="form__remove-radio-button" <?php if ($color === 'blue') echo ' checked'; ?>>
+                                    <input type="radio" name="color" id="color-<?php echo $color; ?>" value="<?php echo $color; ?>" class="form__remove-radio-button" <?php if ($color === 'blue') echo ' checked'; ?>>
 
                                 <?php
                                 }
@@ -125,7 +125,7 @@ $lang = init();
                                 ?>
 
                                     <label for="color-<?php echo $color; ?>" class="form__colores-striped form__colors-size form__color-<?php echo $color; ?>" onclick="changeImage('sockImageStr', '<?php echo $imagePath; ?>', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="colors" id="color-<?php echo $color; ?>" value="<?php echo $color; ?>" class="form__remove-radio-button" <?php if ($color === 'blue') echo ' checked'; ?>>
+                                    <input type="radio" name="color" id="color-<?php echo $color; ?>" value="<?php echo $color; ?>" class="form__remove-radio-button" <?php if ($color === 'blue') echo ' checked'; ?>>
 
                                 <?php
                                 }
