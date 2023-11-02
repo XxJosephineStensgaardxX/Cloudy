@@ -26,14 +26,14 @@ $lang = init();
     );
     $errorFlag = FALSE;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $size = filter_input(INPUT_POST, "size");
-
-        if (empty($size)) {
-            $size = filter_input(INPUT_POST, "sizes-in-dropdown");
-
+        $sizeSock = filter_input(INPUT_POST, "size");
+        if (empty($sizeSock)) {
+            $sizeSock = filter_input(INPUT_POST, "sizes-in-dropdown");
         }
+
         $image = filter_input(INPUT_POST, "selected_image");
         $amount = filter_input(INPUT_POST, "amount-picker");
+        $type = filter_input(INPUT_POST, "type");
 
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -45,12 +45,16 @@ $lang = init();
             }
         }
 
-
+        
         if (empty($image)) {
             $errorFlag = TRUE;
         }
 
         if (empty($amount)) {
+            $errorFlag = TRUE;
+        }
+
+        if(empty($type)){
             $errorFlag = TRUE;
         }
 
@@ -60,11 +64,13 @@ $lang = init();
 
 
         if (!$errorFlag) {
+
             $color = $images[$image];
             $newOrder = array(
-                "size" => $size,
+                "size" => $sizeSock,
                 "amount" => $amount,
                 "color" => $color,
+                "type" => $type,
             );
 
 
@@ -73,7 +79,6 @@ $lang = init();
 
                 if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"]) {
 
-                    echo $newOrder["amount"];
                     $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
                     $orderExist = TRUE;
                     break;
@@ -85,7 +90,7 @@ $lang = init();
             }
 
         }
-
+        var_dump($_SESSION["CART"]);
     }
     ?>
 </head>
@@ -212,7 +217,7 @@ $lang = init();
                         </p>
                     </div>
                     <div class="border-container">
-                        <input id="cart-button" type="submit" value="Put in cart" onClick="#"></input>
+                        <button id="cart-button" name='type' type="submit" value="uni" onClick="#">Put in cart</button>
                     </div>
                 </div>
             </div>
