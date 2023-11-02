@@ -29,11 +29,14 @@ $lang = init();
     $errorFlag = FALSE;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $size = filter_input(INPUT_POST, "size");
+
         if (empty($size)) {
             $size = filter_input(INPUT_POST, "sizes-in-dropdown");
+
         }
         $image = filter_input(INPUT_POST, "selected_image");
         $amount = filter_input(INPUT_POST, "amount-picker");
+
         //$sockColor = filter_input(INPUT_POST, "colors-in-text");
     
 
@@ -55,6 +58,7 @@ $lang = init();
             $amount = 0;
         }
 
+
         if (!$errorFlag) {
             $color = $images[$image];
             $newOrder = array(
@@ -62,12 +66,14 @@ $lang = init();
                 "amount" => $amount,
                 "color" => $color,
             );
+            var_dump($size);
 
             $orderExist = FALSE;
             for ($i = 0; $i < count($_SESSION["CART"]); $i++) {
 
                 if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"]) {
-                    echo "this";
+
+                    echo $newOrder["amount"];
                     $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
                     $orderExist = TRUE;
                     break;
@@ -78,8 +84,8 @@ $lang = init();
                 array_push($_SESSION["CART"], $newOrder);
             }
 
-            var_dump($_SESSION["CART"]);
-
+            // var_dump($_SESSION["CART"]);
+    
         }
 
     }
@@ -140,30 +146,28 @@ $lang = init();
                         //VALIDATION FOR SIZES//
                         $sizeError = false;
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $size = filter_input(INPUT_POST, "size");
-                            if (empty($size)) {
+                            $sizeDesktop = filter_input(INPUT_POST, "size");
+                            if (empty($sizeDesktop)) {
                                 $sizeError = true;
 
                             }
                         }
 
-                        foreach ($sizes as $size) {
+                        foreach ($sizes as $sizeRadioMobile) {
                             $errorClass = $sizeError ? 'error-border' : '';
                             echo "
-                        <input type='radio' name='size' id='$size' value='$size' >
-                        <label for='$size' class='checked-size $errorClass'><span>$size</span></label>
+                        <input type='radio' name='size' id='$sizeRadioMobile' value='$sizeRadioMobile' >
+                        <label for='$sizeRadioMobile' class='checked-size $errorClass'><span>$sizeRadioMobile</span></label>
                         ";
                         }
                         ?>
 
                     </div>
                     <div class="sizes-for-sizes-for-phone border-container">
-                        <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($selectedSizeDropdown)) {
+                        <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($size)) {
                             echo 'error-text';
                         }
-                        if (!empty($selectedSizeDropdown)) {
-                            echo 'style="color=blue;"';
-                        } ?>">
+                        ?>">
                             <option value="" disabled selected>Choose your size</option>
                             <option value="25-31">25-31</option>
                             <option value="32-36">32-36</option>
@@ -195,8 +199,9 @@ $lang = init();
                     </div>
 
                     <div class="color-text-menu-for-phone border-container">
-                        <select name="selected_image" id="colors-in-text" class="color-dropdown-menu"
-                            onclick="changeImageProductPage(this, '<?php array_values($images)[$i] ?>')">
+                        <select name="selected_image" id="colors-in-text" class="color-dropdown-menu <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($sockColor)) {
+                            echo 'error-text';
+                        } ?>" onclick="changeImageProductPage(this, '<?php array_values($images)[$i] ?>')">
                             <option value="" disabled selected>Choose a color</option>
                             <option value="./img/socksPhotos/Sunny_socks_uni_green.jpg">Green</option>
                             <option value="./img/socksPhotos/Sunny_socks_uni_blue.jpg">Blue</option>

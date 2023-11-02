@@ -313,3 +313,8 @@ input#amount-picker {
 .error-border {
     border: 1px solid red;
 }
+
+.error-text {
+    color: red;
+    border: none;
+}
