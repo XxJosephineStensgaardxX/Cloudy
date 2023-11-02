@@ -18,6 +18,9 @@
 	height: 100%;
 	object-fit: cover;
 }
+.slick-list {
+	overflow: visible !important;
+}
 .slick-dots {
 	margin-top: 2rem;
 	display: flex;
@@ -27,6 +30,9 @@
 .slick-active {
 	background: #1e407a;
 	border-radius: 100%;
+}
+.slick-active:hover {
+	transform: scale(1.05);
 }
 .slider__dot {
 	width: 1rem;
