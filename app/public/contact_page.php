@@ -38,27 +38,27 @@ $lang = init();
 
             if (empty($fname)) {
                 $errorFlag = true;
-                array_push($errors, "Invalid first name");
+                array_push($errors, $language["Invalid first name"][$lang]);
             };
             if (empty($lname)) {
                 $errorFlag = true;
-                array_push($errors, "Invalid last name");
+                array_push($errors, $language["Invalid last name"][$lang]);
             };
             if (empty($street)) {
                 $errorFlag = true;
-                array_push($errors, "Invalid street");
+                array_push($errors, $language["Invalid street"][$lang]);
             };
             if (empty($email)) {
                 $errorFlag = true;
-                array_push($errors, "Invalid email");
+                array_push($errors, $language["Invalid email"][$lang]);
             };
             if (empty($postcode)) {
                 $errorFlag = true;
-                array_push($errors, "Invalid postcode");
+                array_push($errors, $language["Invalid postcode"][$lang]);
             };
             if (empty($phone)) {
                 $errorFlag = true;
-                array_push($errors, "Invalid phone");
+                array_push($errors, $language["Invalid phone"][$lang]);
             };
 
 
@@ -67,16 +67,16 @@ $lang = init();
                 foreach ($errors as $error) {
                     echo "<p>" . $error . "</p>";
                 }
-                echo '<button class="error_button"><a href="contact_page.php" style="color:#1e407a">BACK</a></button>';
+                echo '<button class="error_button"><a href="contact_page.php" style="color:#1e407a">',$language["BACK"][$lang],'</a></button>';
                 echo '</div>';
             } else {
                 echo '
-                        <div class="success">
-                            <h1>                    
-                                YOUR MESSAGE IS SUCCEFULY SEND
-                            </h1>
-                        </div>
-                        ';
+                    <div class="success">
+                    <h1>'                  
+                    , $language["YOUR MESSAGE IS..."][$lang],
+                    '</h1>
+                </div>
+                ';
             }
         }
         else{

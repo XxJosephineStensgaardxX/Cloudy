@@ -63,10 +63,42 @@ $language = array(
         "EN" => "SHOP MORE",
         "NL" => "WINKEL MEER",
     ),
-    //Succesefull page
+    //contact us page
     "Your message is..." => array(
         "EN" => "Your message is successfully send",
         "NL" => "Uw bericht is succesvol verzonden",
+    ),
+    "YOUR MESSAGE IS..." => array(
+        "EN" => "YOUR MESSAGE IS SUCCEFULY SEND",
+        "NL" => "UW BERICHT IS SUCCESVOL VERZONDEN",
+    ),
+    "Invalid first name" => array(
+        "EN" => "Invalid first name",
+        "NL" => "Ongeldige voornaam",
+    ),
+    "Invalid last name" => array(
+        "EN" => "Invalid last name",
+        "NL" => "Ongeldige achternaam",
+    ),
+    "Invalid street" => array(
+        "EN" => "Invalid street",
+        "NL" => "Ongeldige straat",
+    ),
+    "Invalid email" => array(
+        "EN" => "Invalid email",
+        "NL" => "Ongeldig email",
+    ),
+    "Invalid postcode" => array(
+        "EN" => "Invalid postcode",
+        "NL" => "Ongeldige postcode",
+    ),
+    "Invalid phone" => array(
+        "EN" => "Invalid phone",
+        "NL" => "Ongeldige telefoon",
+    ),    
+    "BACK" => array(
+        "EN" => "BACK",
+        "NL" => "TERUG",
     ),
     //Checkout page 
     "INFORMATION" => array(
