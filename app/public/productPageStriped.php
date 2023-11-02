@@ -35,14 +35,6 @@ $lang = init();
         $amount = filter_input(INPUT_POST, "amount-picker");
 
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $size = filter_input(INPUT_POST, "color");
-
-            if (empty($color)) {
-                $color = filter_input(INPUT_POST, "color-dropdown-menu");
-            }
-        }
-
 
         if (empty($image)) {
             $errorFlag = TRUE;
@@ -90,7 +82,7 @@ $lang = init();
     <?php echo header_template($language, $lang) ?>
 
     <main>
-        <form id="form" method="post" action="productPageUniColor.php">
+        <form id="form" method="post" action="productPageStriped.php">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
                     <img class="chosenPicture" src="./img/socksPhotos/Sunny_Socks_<?php if (isset($_GET['color'])) echo $_GET['color']; ?>.jpg" alt="Selected Image">
@@ -100,7 +92,7 @@ $lang = init();
 
                         foreach (array_keys($images) as $i => $image) {
                             echo
-                            "
+                                "
                             <input type='radio' name='selected_image' value='$image' id='$image'  onclick=\"changeImageProductPage(this, '" . (array_values($images)[$i]) . "')\">
                             <label for='$image' style='display: " . ($i === 0 ? 'none' : 'block') . "'>
                                 <img class='othersock-item' src='$image' alt='Classic sock'>
@@ -150,9 +142,10 @@ $lang = init();
                     </div>
                     <div class="sizes-for-sizes-for-phone border-container">
                         <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($size)) {
-                                                                                                                echo 'error-text';
-                                                                                                            }
-                                                                                                            ?>" onchange="this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
+                            echo 'error-text';
+                        }
+                        ?>"
+                            onchange="this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
                             <option value="" disabled selected>Choose your size</option>
                             <option value="25-31">25-31</option>
                             <option value="32-36">32-36</option>
@@ -183,8 +176,9 @@ $lang = init();
                     </div>
                     <div class="color-text-menu-for-phone border-container">
                         <select name="selected_image" id="colors-in-text" class="color-dropdown-menu <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($color)) {
-                                                                                                            echo 'error-text';
-                                                                                                        } ?>" onchange="changeImageProductPage(this, '<?php array_values($images)[$i] ?>'); this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
+                            echo 'error-text';
+                        } ?>"
+                            onchange="changeImageProductPage(this, '<?php array_values($images)[$i] ?>'); this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
                             <option value="" disabled selected>Choose a color</option>
                             <option value="./img/socksPhotos/Sunny_socks_green.jpg">Green</option>
                             <option value="./img/socksPhotos/Sunny_socks_blue.jpg">Blue</option>

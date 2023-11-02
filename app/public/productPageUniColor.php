@@ -25,71 +25,60 @@ $lang = init();
         "./img/socksPhotos/Sunny_socks_uni_red.jpg" => "RED",
         "./img/socksPhotos/Sunny_socks_uni_yellow.jpg" => "YELLOW",
     );
+
     $errorFlag = FALSE;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sizeSock = filter_input(INPUT_POST, "size");
         if (empty($sizeSock)) {
             $sizeSock = filter_input(INPUT_POST, "sizes-in-dropdown");
         }
+    }
 
-        $image = filter_input(INPUT_POST, "selected_image");
-        $amount = filter_input(INPUT_POST, "amount-picker");
-        $type = filter_input(INPUT_POST, "type");
+    $image = filter_input(INPUT_POST, "selected_image");
+    $amount = filter_input(INPUT_POST, "amount-picker");
+    $type = filter_input(INPUT_POST, "type");
 
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $size = filter_input(INPUT_POST, "color");
+    if (empty($image)) {
+        $errorFlag = TRUE;
+    }
 
-            if (empty($color)) {
-                $color = filter_input(INPUT_POST, "color-dropdown-menu");
+    if (empty($amount)) {
+        $errorFlag = TRUE;
+    }
+
+    if ($amount < 0) {
+        $amount = 0;
+    }
+
+
+    if (!$errorFlag) {
+
+        $color = $images[$image];
+        $newOrder = array(
+            "size" => $sizeSock,
+            "amount" => $amount,
+            "color" => $color,
+            "type" => $type,
+        );
+
+
+        $orderExist = FALSE;
+        for ($i = 0; $i < count($_SESSION["CART"]); $i++) {
+
+            if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"]) {
+
+                $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
+                $orderExist = TRUE;
+                break;
             }
         }
 
-
-        if (empty($image)) {
-            $errorFlag = TRUE;
-        }
-
-        if (empty($amount)) {
-            $errorFlag = TRUE;
-        }
-
-        if (empty($type)) {
-            $errorFlag = TRUE;
-        }
-
-        if ($amount < 0) {
-            $amount = 0;
-        }
-
-
-        if (!$errorFlag) {
-
-            $color = $images[$image];
-            $newOrder = array(
-                "size" => $sizeSock,
-                "amount" => $amount,
-                "color" => $color,
-                "type" => $type,
-            );
-
-
-            $orderExist = FALSE;
-            for ($i = 0; $i < count($_SESSION["CART"]); $i++) {
-
-                if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"]) {
-
-                    $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
-                    $orderExist = TRUE;
-                    break;
-                }
-            }
-
-            if (!$orderExist) {
-                array_push($_SESSION["CART"], $newOrder);
-            }
+        if (!$orderExist) {
+            array_push($_SESSION["CART"], $newOrder);
         }
     }
+
     ?>
 </head>
 
