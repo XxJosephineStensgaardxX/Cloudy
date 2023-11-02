@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
@@ -40,8 +42,8 @@ $lang = init();
                         <img src="img/catalogus_sokken_stripes_blue.png" alt="striped_blue_socks">
                     </div>
                 </div>
-                <button>
-                    <a href="productPageStriped.php" style="color:#1e407a">
+                <button class="button">
+                    <a href="productPageStriped.php">
                         <?php
                         echo $language["BUY"][$lang]
                         ?>
@@ -70,11 +72,11 @@ $lang = init();
 
 
                 </div>
-                <button>
-                    <a href="productPageUniColor.php" style="color:#1e407a">
-                            <?php
-                            echo $language["BUY"][$lang]
-                            ?>
+                <button class="button">
+                    <a href="productPageUniColor.php">
+                        <?php
+                        echo $language["BUY"][$lang]
+                        ?>
                     </a>
                 </button>
             </div>

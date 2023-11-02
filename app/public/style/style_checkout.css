@@ -56,6 +56,12 @@
 	border: 1px solid #1e407a;
 	border-radius: 10px;
 }
+.checkout__empty {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+}
 .orders {
 	max-height: 790px;
 	overflow-y: scroll;
@@ -115,6 +121,7 @@
 	margin-top: 1.5rem;
 }
 .order__button {
+	cursor: pointer;
 	grid-area: button;
 	background: none;
 	border: none;
@@ -158,6 +165,9 @@
 		gap: unset;
 		margin-top: unset;
 	}
+	.checkout__empty {
+		font-size: 2.5rem;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -176,6 +186,9 @@
 	}
 	.order__item:last-child {
 		padding-top: 2.5rem;
+	}
+	.checkout__empty {
+		font-size: 2rem;
 	}
 }
 @media screen and (max-width: 640px) {
@@ -196,5 +209,8 @@
 			'title title'
 			'image body'
 			'image button';
+	}
+	.checkout__empty {
+		font-size: 1.5rem;
 	}
 }

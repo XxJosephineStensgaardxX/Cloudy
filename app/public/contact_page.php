@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
@@ -18,7 +20,7 @@ $lang = init();
     <link rel="stylesheet" href="style/style_contact_page.css">
 
     <script src="./js/index.js" defer></script>
-    
+
 </head>
 
 <body class="wrapper">
@@ -67,19 +69,17 @@ $lang = init();
                 foreach ($errors as $error) {
                     echo "<p>" . $error . "</p>";
                 }
-                echo '<button class="error_button"><a href="contact_page.php" style="color:#1e407a">',$language["BACK"][$lang],'</a></button>';
+                echo '<button class="error_button"><a href="contact_page.php" style="color:#1e407a">', $language["BACK"][$lang], '</a></button>';
                 echo '</div>';
             } else {
                 echo '
                     <div class="success">
-                    <h1>'                  
-                    , $language["YOUR MESSAGE IS..."][$lang],
-                    '</h1>
+                    <h1>', $language["YOUR MESSAGE IS..."][$lang],
+                '</h1>
                 </div>
                 ';
             }
-        }
-        else{
+        } else {
         ?>
             <section class="content">
                 <div class="container">

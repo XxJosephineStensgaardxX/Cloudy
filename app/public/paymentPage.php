@@ -1,3 +1,55 @@
+<?
+session_start();
+
+$name_err = $card_number_err = $expiry_date_err = $cvv_err = "";
+$name = $card_number = $expiry_date = $cvv = "";
+$error_flag = FALSE;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if (empty($_POST["name"])) {
+		$name_err = "* name is required";
+		$error_flag = TRUE;
+	} else {
+		$name = test_input($_POST["name"]);
+	}
+
+	if (empty($_POST["card_number"])) {
+		$card_number_err = "* card number is required";
+		$error_flag = TRUE;
+	} else {
+		$card_number = test_input($_POST["card_number"]);
+	}
+
+	if (empty($_POST["expiry_date"])) {
+		$expiry_date_err = "* expiry_date is required";
+		$error_flag = TRUE;
+	} else {
+		$expiry_date = test_input($_POST["expiry_date"]);
+	}
+
+	if (empty($_POST["cvv"])) {
+		$cvv_err = "* cvv is required";
+		$error_flag = TRUE;
+	} else {
+		$cvv = test_input($_POST["cvv"]);
+	}
+
+	if (!$error_flag) {
+		header("Location: paymentSuccessfulPage.php");
+		exit;
+	}
+}
+
+
+function test_input($data)
+{
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+?>
+
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
@@ -32,14 +84,18 @@ $lang = init();
 						</h1>
 
 						<div class="input__wrapper">
-							<input type="text" class="input" placeholder="<?php echo $language["INSERT NAME"][$lang] ?>" />
+							<input type="text" class="input" name="name" placeholder="<?php echo $language["INSERT NAME"][$lang] ?>" />
+							<span class="input__error"><?php echo $name_err; ?></span>
 						</div>
 						<div class="input__wrapper input__wrapper-spaced">
-							<input type="text" class="input" placeholder="<?php echo $language["CARD NUMBER"][$lang] ?>" />
+							<input type="text" class="input" name="card_number" placeholder="<?php echo $language["CARD NUMBER"][$lang] ?>" />
+							<span class="input__error"><?php echo $card_number_err; ?></span>
 						</div>
 						<div class="input__wrapper input__wrapper-double">
-							<input type="text" class="input" placeholder="<?php echo $language["EXPIRATION DATE"][$lang] ?>" />
-							<input type="text" class="input" placeholder="CVV" />
+							<input type="text" class="input" name="expiry_date" placeholder="<?php echo $language["EXPIRATION DATE"][$lang] ?>" />
+							<span class="input__error"><?php echo $expiry_date_err; ?></span>
+							<input type="text" class="input" name="cvv" placeholder="CVV" />
+							<span class="input__error"><?php echo $cvv_err; ?></span>
 						</div>
 
 						<div class="checkout__button-wrapper">
@@ -56,16 +112,11 @@ $lang = init();
 								<img src="./img/mastercard.png" alt="Paypal" />
 							</button>
 						</div>
-						<!-- <button type="submit" class="checkout__button button">
-							<?php
-							// echo $language["PAY"][$lang]
-							?>
-						</button> -->
-						<a href="paymentSuccesesfull.php" class="checkout__button button">
+						<button type="submit" class="checkout__button button">
 							<?php
 							echo $language["PAY"][$lang]
 							?>
-						</a>
+						</button>
 					</form><?php
 									$images = array(
 										"BLUE" => "./img/catalogus_sokken_uni_blue.png",
@@ -91,7 +142,7 @@ $lang = init();
 											<?php
 											echo $language["PRICE:"][$lang]
 											?>
-											<span><?php echo $cart_item["price"]?></span>
+											<span><?php echo $cart_item["price"] ?></span>
 											$
 										</p>
 										<p class="order__text">
@@ -133,7 +184,7 @@ $lang = init();
 											foreach ($cart as $cart_item) {
 												$sum += $cart_item["price"] * $cart_item["amount"];
 											}
-										} 
+										}
 										echo $sum;
 										?></span>
 							$

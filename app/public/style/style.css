@@ -110,7 +110,7 @@ body {
 
 .header__form {
 	display: flex;
-	gap: 5px;
+	gap: 0.5rem;
 }
 
 .footer {
@@ -171,14 +171,14 @@ body {
 	width: 50px;
 }
 
-.footer__image-wrapper{
+.footer__image-wrapper {
 	display: flex;
 	margin-top: 0.75rem;
 	align-items: center;
 	justify-content: flex-start;
 }
 
-.footer__image-wrapper>li{
+.footer__image-wrapper > li {
 	margin-right: 11px;
 }
 #hamburger-bttn {
@@ -188,7 +188,6 @@ body {
 }
 #hamburger-bttn img {
 	height: 48px;
-
 }
 @media screen and (max-width: 768px) {
 	#hamburger-bttn {
@@ -223,7 +222,7 @@ body {
 }
 .input::placeholder {
 	text-align: center;
-	font-family: "Nexa-Bold";
+	font-family: 'Nexa-Bold';
 	color: #0000005c;
 }
 .input__wrapper {
@@ -234,6 +233,15 @@ body {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 0.625rem;
 }
+.input__error {
+	margin-top: 0.5rem;
+	color: red;
+	grid-row: 2/3;
+	font-size: 1.15rem;
+}
+.input__error:empty {
+	display: none;
+}
 .input__wrapper-double .input {
 	font-size: 1rem;
 	padding: 0.5rem;
@@ -241,7 +249,7 @@ body {
 .input__wrapper-spaced {
 	margin-top: 2.75rem;
 }
-.center_text{
+.center_text {
 	text-align: center;
 }
 @media screen and (max-width: 640px) {
@@ -255,13 +263,12 @@ body {
 		padding: 0.625rem;
 	}
 }
-@media (max-width:1530px){
-	.footer{
+@media (max-width: 1530px) {
+	.footer {
 		padding-inline: 30px;
 	}
 }
-@media (max-width:1024px){
-	
+@media (max-width: 1024px) {
 	.header__list a {
 		font-size: 20px;
 	}
@@ -269,22 +276,22 @@ body {
 		width: 32px;
 		height: 32px;
 	}
-	.footer__inner{
+	.footer__inner {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
-	.footer__item{
+	.footer__item {
 		align-items: center;
 		justify-content: center;
 		margin-block: 20px;
 	}
-	.footer__image-wrapper{
+	.footer__image-wrapper {
 		display: flex;
 		justify-content: space-evenly;
 	}
-	.footer__title{
+	.footer__title {
 		text-align: center;
 	}
 }

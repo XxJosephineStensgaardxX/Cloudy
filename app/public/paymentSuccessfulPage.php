@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php

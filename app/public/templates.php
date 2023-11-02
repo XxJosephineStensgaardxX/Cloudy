@@ -62,9 +62,9 @@ function footer_temple($language, $lang)
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__item">
-                    <h3 class="footer__title">'.
-                        $language["OUR PAYMENT METHODS"][$lang]
-                    .'</h3>
+                    <h3 class="footer__title">' .
+        $language["OUR PAYMENT METHODS"][$lang]
+        . '</h3>
                     <ul class="footer__image-wrapper">
                         <li>
                             <img class="footer__image" src="img/VISA.png" alt="visa" />
@@ -82,13 +82,13 @@ function footer_temple($language, $lang)
                 </div>
                 <div class="footer__item">
                     <a href="mainPage.php#aboutUs" style="color:white">
-                        <h3 class="footer__title">'.
-                            $language["ABOUT US"][$lang].
-                        '</h3>
+                        <h3 class="footer__title">' .
+        $language["ABOUT US"][$lang] .
+        '</h3>
                     </a>
                 </div>
                 <div class="footer__item">
-                    <h3 class="footer__title">'. $language["BRANDING"][$lang]. '</h3>
+                    <h3 class="footer__title">' . $language["BRANDING"][$lang] . '</h3>
                 </div>
                 <div class="footer__item">
                     <ul class="footer__square-wrapper">
@@ -122,12 +122,10 @@ function footer_temple($language, $lang)
 }
 function init()
 {
-    session_start();
-    
     if (!isset($_SESSION["CART"])) {
         $_SESSION["CART"] = array();
     }
-   
+
 
 
     if (!isset($_SESSION["LANG"])) {

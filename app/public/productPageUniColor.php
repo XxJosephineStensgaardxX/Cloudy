@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
@@ -62,7 +64,7 @@ $lang = init();
         $orderExist = FALSE;
         for ($i = 0; $i < count($_SESSION["CART"]); $i++) {
 
-                if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"] && $_SESSION["CART"][$i]["type"] == "uni") {
+            if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"] && $_SESSION["CART"][$i]["type"] == "uni") {
 
                 $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
                 $orderExist = TRUE;

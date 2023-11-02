@@ -3,6 +3,7 @@
 	flex-direction: row;
 	gap: 5vw;
 	flex-wrap: nowrap;
+	padding-inline: 2rem;
 }
 
 .container-layout {
@@ -30,29 +31,21 @@
 	margin-bottom: 140px;
 }
 
-div.color-text-menu-for-phone.border-container {
-	margin-bottom: -40px;
-}
-
-div.sizes-for-sizes-for-phone {
-	margin-bottom: -45px;
-}
-
 @media (min-width: 550px) and (max-width: 2000px) {
 	.color-text-menu-for-phone {
-		visibility: hidden;
+		display: none;
 	}
 
 	.color-picker-flex {
-		visibility: visible;
+		display: block;
 	}
 
 	.container-sizes-flex {
-		visibility: visible;
+		display: block;
 	}
 
 	.sizes-for-sizes-for-phone {
-		visibility: hidden;
+		display: none;
 	}
 }
 
@@ -101,14 +94,6 @@ div.sizes-for-sizes-for-phone {
 		padding-top: 5px;
 		padding-bottom: 5px;
 	}
-
-	div.color-text-menu-for-phone.border-container {
-		margin-bottom: -50px;
-	}
-
-	.product-name-header {
-		margin-bottom: 30px;
-	}
 }
 
 @media (max-width: 550px) {
@@ -141,11 +126,11 @@ div.sizes-for-sizes-for-phone {
 	}
 
 	.sizes-for-sizes-for-phone {
-		visibility: visible;
+		display: block;
 	}
 
 	.container-sizes-flex {
-		visibility: hidden;
+		display: none;
 	}
 
 	#cart-button {
@@ -180,8 +165,8 @@ div.sizes-for-sizes-for-phone {
 
 img.othersock-item {
 	width: 110px;
-	height: 120px;
 	object-fit: cover;
+	aspect-ratio: 1/1;
 	border-radius: 5px;
 }
 
@@ -241,10 +226,10 @@ input[type='radio'] {
 	display: none;
 	width: 100%;
 	height: 2em;
+}
 
-	&:checked + label {
-		border: solid 1px #1e407a;
-	}
+input[type='radio']:checked + label {
+	border: solid 1px #1e407a;
 }
 
 label {
@@ -264,7 +249,7 @@ input#amount-picker {
 	border: none;
 }
 
-::placeholder {
+input::placeholder {
 	color: #1e407a;
 }
 

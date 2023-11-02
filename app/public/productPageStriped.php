@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php require_once 'templates.php' ?>
 <?php require_once 'language.php' ?>
 <?php
@@ -39,7 +41,7 @@ $lang = init();
         if (empty($image) || empty($size) || empty($amount)) {
             $errorFlag = TRUE;
         }
-    
+
 
         if ($amount <= 0) {
             $errorFlag = TRUE;
