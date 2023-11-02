@@ -30,7 +30,6 @@ $lang = init();
 
         if (empty($size)) {
             $size = filter_input(INPUT_POST, "sizes-in-dropdown");
-
         }
         $image = filter_input(INPUT_POST, "selected_image");
         $amount = filter_input(INPUT_POST, "amount-picker");
@@ -41,7 +40,6 @@ $lang = init();
 
             if (empty($color)) {
                 $color = filter_input(INPUT_POST, "color-dropdown-menu");
-
             }
         }
 
@@ -83,9 +81,7 @@ $lang = init();
             if (!$orderExist) {
                 array_push($_SESSION["CART"], $newOrder);
             }
-
         }
-
     }
     ?>
 </head>
@@ -104,7 +100,7 @@ $lang = init();
 
                         foreach (array_keys($images) as $i => $image) {
                             echo
-                                "
+                            "
                             <input type='radio' name='selected_image' value='$image' id='$image'  onclick=\"changeImageProductPage(this, '" . (array_values($images)[$i]) . "')\">
                             <label for='$image' style='display: " . ($i === 0 ? 'none' : 'block') . "'>
                                 <img class='othersock-item' src='$image' alt='Classic sock'>
@@ -139,7 +135,6 @@ $lang = init();
                             $sizeDesktop = filter_input(INPUT_POST, "size");
                             if (empty($sizeDesktop)) {
                                 $sizeError = true;
-
                             }
                         }
 
@@ -155,10 +150,9 @@ $lang = init();
                     </div>
                     <div class="sizes-for-sizes-for-phone border-container">
                         <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($size)) {
-                            echo 'error-text';
-                        }
-                        ?>"
-                            onchange="this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
+                                                                                                                echo 'error-text';
+                                                                                                            }
+                                                                                                            ?>" onchange="this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
                             <option value="" disabled selected>Choose your size</option>
                             <option value="25-31">25-31</option>
                             <option value="32-36">32-36</option>
@@ -189,9 +183,8 @@ $lang = init();
                     </div>
                     <div class="color-text-menu-for-phone border-container">
                         <select name="selected_image" id="colors-in-text" class="color-dropdown-menu <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($color)) {
-                            echo 'error-text';
-                        } ?>"
-                            onchange="changeImageProductPage(this, '<?php array_values($images)[$i] ?>'); this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
+                                                                                                            echo 'error-text';
+                                                                                                        } ?>" onchange="changeImageProductPage(this, '<?php array_values($images)[$i] ?>'); this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
                             <option value="" disabled selected>Choose a color</option>
                             <option value="./img/socksPhotos/Sunny_socks_green.jpg">Green</option>
                             <option value="./img/socksPhotos/Sunny_socks_blue.jpg">Blue</option>
@@ -206,8 +199,7 @@ $lang = init();
                         //VALIDATION FOR AMOUNT//
                         $amount = isset($_POST['amount-picker']) ? filter_input(INPUT_POST, "amount-picker") : 1;
                         if ($amount <= 0) {
-                            echo '<input type="number" name="amount-picker" id="amount-picker" max="20" class="amount-picker" placeholder="Amount" style="border: 1px solid red;" min="0">'
-                            ;
+                            echo '<input type="number" name="amount-picker" id="amount-picker" max="20" class="amount-picker" placeholder="Amount" style="border: 1px solid red;" min="0">';
                         } else {
                             echo '<input type="number" name="amount-picker" id="amount-picker" max="20" class="amount-picker" placeholder="Amount" min="0">';
                         }
