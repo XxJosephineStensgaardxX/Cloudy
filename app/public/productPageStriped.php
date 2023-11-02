@@ -231,7 +231,7 @@ $lang = init();
             </div>
         </form>
     </main>
-    <?php echo footer_temple() ?>
+    <?php echo footer_temple($language, $lang) ?>
 </body>
 
 </html>
