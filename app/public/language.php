@@ -184,4 +184,14 @@ $language = array(
         "EN" => "Produced in Portugal",
         "NL" => "Geproduceerd in Portugal",
     ),
+
+    // footer
+    "OUR PAYMENT METHODS" => array(
+        "EN" => "OUR PAYMENT METHODS",
+        "NL" => "ONZE BETAALMETHODEN",
+    ),
+    "BRANDING" => array(
+        "EN" => "BRANDING",
+        "NL" => "BRANDING",
+    ),
 );

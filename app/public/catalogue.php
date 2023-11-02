@@ -80,7 +80,7 @@ $lang = init();
             </div>
         </div>
     </section>
-    <?php echo footer_temple() ?>
+    <?php echo footer_temple($language, $lang) ?>
 </body>
 
 </html>
