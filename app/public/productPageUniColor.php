@@ -117,7 +117,7 @@ $lang = init();
                     <h3 class="font-bold product-name-header">
 
                         <?php
-                        echo "UNI SOCK - " . strtoupper(isset($_GET['color']) ? $_GET['color'] : 'blue');
+                        echo $language["CLASSIC UNI SOCK - "][$lang] . strtoupper(isset($_GET['color']) ? $_GET['color'] : 'blue');
                         ?>
 
 
@@ -209,7 +209,7 @@ $lang = init();
                         </p>
                     </div>
                     <div class="border-container">
-                        <input class="button" id="cart-button" type="submit" value="Put in cart"></input>
+                        <input class="button" id="cart-button" type="submit" value="<?php echo $language["Put in cart"][$lang]?>"></input>
                     </div>
                 </div>
             </div>

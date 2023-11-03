@@ -1,6 +1,40 @@
 <?php
 $lang = "EN";
 $language = array(
+    //Colors 
+    "BLUE" => array(
+        "EN" => "BLUE",
+        "NL" => "BLAUW",
+    ),
+    "GREEN" => array(
+        "EN" => "GREEN",
+        "NL" => "GROENTE",
+    ),
+    "PINK" => array(
+        "EN" => "PINK",
+        "NL" => "ROZE",
+    ),
+    "RED" => array(
+        "EN" => "RED",
+        "NL" => "ROOD",
+    ),
+    "YELLOW" => array(
+        "EN" => "YELLOW",
+        "NL" => "GEEL",
+    ),
+    // types
+    "STRIPES" => array(
+        "EN" => "STRIPES",
+        "NL" => "STREPEN",
+    ),
+    "UNI" => array(
+        "EN" => "UNI",
+        "NL" => "UNI",
+    ),
+    "SOCKS" => array(
+        "EN" => "SOCKS",
+        "NL" => "SOKKEN",
+    ),
     //Header
     "Catalogue" => array(
         "EN" => "Catalogue",
@@ -215,6 +249,10 @@ $language = array(
     "Produced in Portugal" => array(
         "EN" => "Produced in Portugal",
         "NL" => "Geproduceerd in Portugal",
+    ),
+    "Put in cart" => array(
+        "EN" => "Put in cart",
+        "NL" => "In winkelwagen plaatsen",
     ),
 
     // footer
