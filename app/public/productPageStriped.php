@@ -92,7 +92,7 @@ $lang = init();
                             if (isset($_GET['color'])) {
                                 $display = str_contains($image, $_GET['color']) ? 'none' : 'block';
                             } else {
-                                $display =  $i === 0 ? 'none' : 'block';
+                                $display = $i === 0 ? 'none' : 'block';
                             }
 
                             echo
@@ -110,11 +110,11 @@ $lang = init();
                     <h3 class="font-bold product-name-header">
 
                         <?php
-                        echo  $language["STRIPED SOCK - "][$lang] . strtoupper(isset($_GET['color']) ? $_GET['color'] : 'blue');
+                        echo $language["STRIPED SOCK - "][$lang] . strtoupper(isset($_GET['color']) ? $_GET['color'] : 'blue');
                         ?>
 
                     </h3>
-                    <div class="container-sizes-flex border-container">
+                    <div class="container-sizes-flex border-for-sizes">
 
                         <?php $sizes = [
                             "25-31",

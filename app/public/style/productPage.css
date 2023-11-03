@@ -233,7 +233,7 @@ input[type='radio'] {
 	height: 2em;
 }
 
-input[type='radio']:checked + label {
+input[type='radio']:checked+label {
 	border: solid 1px #1e407a;
 }
 
@@ -265,6 +265,12 @@ input::placeholder {
 .amount-picker-validation-positive {
 	width: 75px;
 	border: none;
+}
+
+.border-for-sizes {
+	border: 1px solid #1e407a;
+	border-radius: 12.52px;
+	padding: 10px;
 }
 
 .error-border {
