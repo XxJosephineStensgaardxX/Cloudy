@@ -3,7 +3,7 @@
 .slider__inner {
 }
 .slider__item {
-	width: 650px !important;
+	width: 600px !important;
 	aspect-ratio: 1/1;
 	transition: all 250ms;
 }
@@ -40,7 +40,7 @@
 
 @media screen and (max-width: 1024px) {
 	.slider__item {
-		width: 550px !important;
+		width: 500px !important;
 	}
 }
 @media screen and (max-width: 768px) {
