@@ -68,7 +68,7 @@ $lang = init();
         </section>
         <!--Timofei: This is my version of Choose style socks-->
         <section id="choose" class="main__choose-style">
-            <h1 class="main__head-text">
+            <h1 class="main__head-title">
                 <?php
                 echo $language["CHOOSE YOUR STYLE"][$lang]
                 ?>
