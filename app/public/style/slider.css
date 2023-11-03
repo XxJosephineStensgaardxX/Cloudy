@@ -19,7 +19,7 @@
 	object-fit: cover;
 }
 .slick-list {
-	overflow: visible !important;
+	overflow-x: visible !important;
 }
 .slick-dots {
 	margin-top: 2rem;
