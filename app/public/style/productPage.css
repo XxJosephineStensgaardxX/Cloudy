@@ -276,3 +276,9 @@ input::placeholder {
 	color: red;
 	border: none;
 }
+
+.border-for-sizes {
+	border: 1px solid #1e407a;
+	border-radius: 12.52px;
+	padding: 10px;
+}

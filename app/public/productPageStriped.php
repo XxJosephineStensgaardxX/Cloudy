@@ -80,7 +80,9 @@ $lang = init();
         <form id="form" method="post" action="productPageStriped.php">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
-                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_<?php echo isset($_GET['color']) ? $_GET['color'] : 'blue' ?>.jpg" alt="Selected Image">
+                    <img class="chosenPicture"
+                        src="./img/socksPhotos/Sunny_socks_<?php echo isset($_GET['color']) ? $_GET['color'] : 'blue' ?>.jpg"
+                        alt="Selected Image">
                     <div class="othersocks-flex">
                         <?php
 
@@ -91,11 +93,11 @@ $lang = init();
                             if (isset($_GET['color'])) {
                                 $display = str_contains($image, $_GET['color']) ? 'none' : 'block';
                             } else {
-                                $display =  $i === 0 ? 'none' : 'block';
+                                $display = $i === 0 ? 'none' : 'block';
                             }
 
                             echo
-                            "
+                                "
                             <input type='radio' name='selected_image' value='$image' id='$image'  onclick=\"changeImageProductPage(this, '" . (array_values($images)[$i]) . "')\">
                             <label for='$image' style='display: $display'>
                                 <img class='othersock-item' src='$image' alt='Classic sock'>
@@ -109,11 +111,11 @@ $lang = init();
                     <h3 class="font-bold product-name-header">
 
                         <?php
-                        echo  $language["STRIPED SOCK - "][$lang] . strtoupper(isset($_GET['color']) ? $_GET['color'] : 'blue');
+                        echo $language["STRIPED SOCK - "][$lang] . strtoupper(isset($_GET['color']) ? $_GET['color'] : 'blue');
                         ?>
 
                     </h3>
-                    <div class="container-sizes-flex border-container">
+                    <div class="container-sizes-flex border-for-sizes">
 
                         <?php $sizes = [
                             "25-31",
@@ -185,7 +187,8 @@ $lang = init();
                         </p>
                     </div>
                     <div class="border-container">
-                        <input class="button" id="cart-button" type="submit" value="<?php echo $language["Put in cart"][$lang]?>"></input>
+                        <input class="button" id="cart-button" type="submit"
+                            value="<?php echo $language["Put in cart"][$lang] ?>"></input>
                     </div>
                 </div>
             </div>
