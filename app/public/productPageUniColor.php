@@ -191,12 +191,7 @@ $lang = init();
                         </p>
                     </div>
                     <div class="border-container">
-<<<<<<< HEAD
-                        <input class="button" id="cart-button" type="submit"
-                            value="<?php echo $language["Put in cart"][$lang] ?>"></input>
-=======
                         <input class="button" id="cart-button" type="submit" value="<?php echo $language["Put in cart"][$lang] ?>"></input>
->>>>>>> 78451c19faa55bf753a1fda2156c2d745de9491a
                     </div>
                 </div>
             </div>
