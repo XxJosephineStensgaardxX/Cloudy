@@ -22,7 +22,7 @@ $lang = init();
     $images = array(
         "./img/socksPhotos/Sunny_socks_blue.jpg" => "BLUE",
         "./img/socksPhotos/Sunny_socks_green.jpg" => "GREEN",
-        "./img/socksPhotos/Sunny_socks_pink_01.jpg" => "PINK",
+        "./img/socksPhotos/Sunny_socks_pink.jpg" => "PINK",
         "./img/socksPhotos/Sunny_socks_red.jpg" => "RED",
         "./img/socksPhotos/Sunny_socks_yellow.jpg" => "YELLOW",
     );
@@ -46,6 +46,7 @@ $lang = init();
         if (!$errorFlag) {
             $color = $images[$image];
             $newOrder = array(
+                "id" => uniqid('_'),
                 "size" => $size,
                 "amount" => $amount,
                 "color" => $color,
@@ -185,7 +186,7 @@ $lang = init();
                         </p>
                     </div>
                     <div class="border-container">
-                        <input class="button" id="cart-button" type="submit" value="<?php echo $language["Put in cart"][$lang]?>"></input>
+                        <input class="button" id="cart-button" type="submit" value="<?php echo $language["Put in cart"][$lang] ?>"></input>
                     </div>
                 </div>
             </div>

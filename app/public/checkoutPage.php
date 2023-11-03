@@ -6,57 +6,69 @@ $name = $surname = $street = $postcode = $email = $phone = $country  = "";
 $error_flag = FALSE;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	if (empty($_POST["name"])) {
-		$name_err = "* name is required";
-		$error_flag = TRUE;
-	} else {
-		$name = test_input($_POST["name"]);
-	}
+	if (isset($_POST['checkout'])) {
 
-	if (empty($_POST["surname"])) {
-		$surname_err = "* surname is required";
-		$error_flag = TRUE;
-	} else {
-		$surname = test_input($_POST["surname"]);
-	}
+		if (empty($_POST["name"])) {
+			$name_err = "* name is required";
+			$error_flag = TRUE;
+		} else {
+			$name = test_input($_POST["name"]);
+		}
 
-	if (empty($_POST["street"])) {
-		$street_err = "* street is required";
-		$error_flag = TRUE;
-	} else {
-		$street = test_input($_POST["street"]);
-	}
+		if (empty($_POST["surname"])) {
+			$surname_err = "* surname is required";
+			$error_flag = TRUE;
+		} else {
+			$surname = test_input($_POST["surname"]);
+		}
 
-	if (empty($_POST["postcode"])) {
-		$postcode_err = "* postcode is required";
-		$error_flag = TRUE;
-	} else {
-		$postcode = test_input($_POST["postcode"]);
-	}
+		if (empty($_POST["street"])) {
+			$street_err = "* street is required";
+			$error_flag = TRUE;
+		} else {
+			$street = test_input($_POST["street"]);
+		}
 
-	if (empty($_POST["email"])) {
-		$email_err = "* email is required";
-		$error_flag = TRUE;
-	} else {
-		$email = test_input($_POST["email"]);
-	}
+		if (empty($_POST["postcode"])) {
+			$postcode_err = "* postcode is required";
+			$error_flag = TRUE;
+		} else {
+			$postcode = test_input($_POST["postcode"]);
+		}
 
-	if (empty($_POST["phone"])) {
-		$phone_err = "* phone is required";
-		$error_flag = TRUE;
-	} else {
-		$phone = test_input($_POST["phone"]);
-	}
+		if (empty($_POST["email"])) {
+			$email_err = "* email is required";
+			$error_flag = TRUE;
+		} else {
+			$email = test_input($_POST["email"]);
+		}
 
-	if (empty($_POST["country"])) {
-		$country_err = "* country is required";
-		$error_flag = TRUE;
-	} else {
-		$country = test_input($_POST["country"]);
-	}
-	if (!$error_flag) {
-		header("Location: paymentPage.php");
-		exit;
+		if (empty($_POST["phone"])) {
+			$phone_err = "* phone is required";
+			$error_flag = TRUE;
+		} else {
+			$phone = test_input($_POST["phone"]);
+		}
+
+		if (empty($_POST["country"])) {
+			$country_err = "* country is required";
+			$error_flag = TRUE;
+		} else {
+			$country = test_input($_POST["country"]);
+		}
+		if (!$error_flag) {
+			header("Location: paymentPage.php");
+			exit;
+		}
+	} elseif (isset($_POST['id'])) {
+		if (!empty($_POST["id"])) {
+
+			foreach ($_SESSION["CART"] as $i => $cart_item) {
+				if ($cart_item['id'] === $_POST["id"]) {
+					unset($_SESSION['CART'][$i]);
+				}
+			}
+		}
 	}
 }
 
@@ -132,7 +144,7 @@ $lang = init();
 							<span class="input__error"><?php echo $country_err; ?></span>
 						</div>
 
-						<button type="submit" class="checkout__button button">
+						<button type="submit" name="checkout" class="checkout__button button">
 							<?php
 							echo $language["CHECK OUT"][$lang]
 							?>
@@ -153,37 +165,39 @@ $lang = init();
 									"YELLOW" => "./img/catalogus_sokken_" . $cart_item["type"] . "_yellow.png",
 								);
 							?>
-								<li class="order__item">
-									<img src="<?php echo $images[$cart_item['color']] ?>" alt="<?php echo $images[$cart_item['color']] ?>" class="order__image" />
-									<h2 class="order__title">
-										<?php echo $language[$cart_item['color']][$lang] . " " . $language[strtoupper($cart_item["type"])][$lang] . " ", $language["SOCKS"][$lang] ?>
-									</h2>
-									<div class="order__item-inner">
-										<p class="order__text">
+								<li>
+									<form class="order__item" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
+										<img src="<?php echo $images[$cart_item['color']] ?>" alt="<?php echo $images[$cart_item['color']] ?>" class="order__image" />
+										<h2 class="order__title">
+											<?php echo $language[$cart_item['color']][$lang] . " " . $language[strtoupper($cart_item["type"])][$lang] . " ", $language["SOCKS"][$lang] ?>
+										</h2>
+										<div class="order__item-inner">
+											<p class="order__text">
+												<?php
+												echo $language["PRICE:"][$lang]
+												?>
+												<span><?php echo $cart_item['price'];  ?></span>
+												$
+											</p>
+											<p class="order__text">
+												<?php
+												echo $language["SIZE:"][$lang]
+												?>
+												<span><?php echo $cart_item['size'] ?></span>
+											</p>
+											<p class="order__text">
+												<?php
+												echo $language["AMOUNT:"][$lang]
+												?>
+												<span><?php echo $cart_item['amount'] ?></span>
+											</p>
+										</div>
+										<button value="<?php echo $cart_item['id'] ?>" name="id" class="order__button">
 											<?php
-											echo $language["PRICE:"][$lang]
+											echo $language["REMOVE ITEM"][$lang]
 											?>
-											<span><?php echo $cart_item['price'];  ?></span>
-											$
-										</p>
-										<p class="order__text">
-											<?php
-											echo $language["SIZE:"][$lang]
-											?>
-											<span><?php echo $cart_item['size'] ?></span>
-										</p>
-										<p class="order__text">
-											<?php
-											echo $language["AMOUNT:"][$lang]
-											?>
-											<span><?php echo $cart_item['amount'] ?></span>
-										</p>
-									</div>
-									<button class="order__button">
-										<?php
-										echo $language["REMOVE ITEM"][$lang]
-										?>
-									</button>
+										</button>
+									</form>
 								</li>
 							<?php endforeach ?>
 						</ul>

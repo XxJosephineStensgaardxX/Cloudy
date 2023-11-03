@@ -48,6 +48,7 @@ $lang = init();
 
             $color = $images[$image];
             $newOrder = array(
+                "id" => uniqid('_'),
                 "size" => $size,
                 "amount" => $amount,
                 "color" => $color,
