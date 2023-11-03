@@ -208,12 +208,11 @@ img.othersock-item {
 #cart-button {
 	width: 100%;
 	background-color: #51b2a2;
+}
 
-	&:hover {
-		cursor: pointer;
-		opacity: 0.50;
-
-	}
+#cart-button:hover {
+	cursor: pointer;
+	opacity: 0.5;
 }
 
 .button-design {
@@ -234,7 +233,7 @@ input[type='radio'] {
 	height: 2em;
 }
 
-input[type='radio']:checked+label {
+input[type='radio']:checked + label {
 	border: solid 1px #1e407a;
 }
 
@@ -276,9 +275,12 @@ input::placeholder {
 	color: red;
 	border: none;
 }
+<<<<<<< HEAD
 
 .border-for-sizes {
 	border: 1px solid #1e407a;
 	border-radius: 12.52px;
 	padding: 10px;
 }
+=======
+>>>>>>> 95845fcd67afff70ab5d60f22484469f71d21d0a
