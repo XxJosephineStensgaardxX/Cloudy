@@ -18,9 +18,7 @@ $lang = init();
     <link rel="stylesheet" href="./style/slider.css">
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
 
     <script src="./js/index.js" defer></script>
@@ -56,13 +54,13 @@ $lang = init();
             <h1 class=" main__news">
                 <?php
                 echo $language["NEWS"][$lang]
-                    ?>
+                ?>
             </h1>
 
             <h3 class=" main__international-now">
                 <?php
                 echo $language["WE ARE NOW INTERNATIONAL"][$lang]
-                    ?>
+                ?>
             </h3>
             </div>
 
@@ -73,14 +71,13 @@ $lang = init();
             <h1 class="main__head-text">
                 <?php
                 echo $language["CHOOSE YOUR STYLE"][$lang]
-                    ?>
+                ?>
             </h1>
             <div class="main__sock-types-display">
                 <div class="main__sock-display">
                     <h3>UNI</h3>
-                    <img class="main__sock-photo" id="sockImageUni" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg"
-                        alt="unicolor socks">
-                    <form action="productPageUniColor.php">
+                    <img class="main__sock-photo" id="sockImageUni" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="unicolor socks">
+                    <form action="productPageUniColor.php" method="GET">
                         <div class="form__container">
                             <div class="form__colors">
                                 <?php
@@ -95,16 +92,11 @@ $lang = init();
                                 foreach ($socksPhotosArray as $sock) {
                                     $imagePath = $sock[0];
                                     $color = $sock[1];
-                                    ?>
+                                ?>
 
-                                    <label for="color-<?php echo $color; ?>"
-                                        class="form__colores-uni form__colors-size form__color-<?php echo $color; ?>"
-                                        onclick="changeImage('sockImageUni', '<?php echo $imagePath; ?>', '.form__colores-uni', this)"></label>
-                                    <input type="radio" name="color" id="color-<?php echo $color; ?>"
-                                        value="<?php echo $color; ?>" class="form__remove-radio-button" <?php if ($color === 'blue')
-                                               echo ' checked'; ?>>
-
-                                    <?php
+                                    <label for="color-<?php echo $color; ?>-uni" class="form__colores-uni form__colors-size form__color-<?php echo $color; ?>" onclick="changeImage('sockImageUni', '<?php echo $imagePath; ?>', '.form__colores-uni', this)"></label>
+                                    <input type="radio" name="color" id="color-<?php echo $color; ?>-uni" value="<?php echo $color; ?>" class="form__remove-radio-button" <?php if ($color === 'blue') echo ' checked'; ?>>
+                                <?php
                                 }
                                 ?>
 
@@ -117,9 +109,8 @@ $lang = init();
                 </div>
                 <div class="main__sock-display" method="POST">
                     <h3>STRIPED</h3>
-                    <img class="main__sock-photo" id="sockImageStr" src=".\img\socksPhotos\Sunny_socks_blue.jpg"
-                        alt="unicolor socks">
-                    <form action="productPageStriped.php">
+                    <img class="main__sock-photo" id="sockImageStr" src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="unicolor socks">
+                    <form action="productPageStriped.php" method="GET">
                         <div class="form__container">
                             <div class="form__colors">
                                 <?php
@@ -134,16 +125,11 @@ $lang = init();
                                 foreach ($socksPhotosArray as $sock) {
                                     $imagePath = $sock[0];
                                     $color = $sock[1];
-                                    ?>
 
-                                    <label for="color-<?php echo $color; ?>"
-                                        class="form__colores-striped form__colors-size form__color-<?php echo $color; ?>"
-                                        onclick="changeImage('sockImageStr', '<?php echo $imagePath; ?>', '.form__colores-striped', this)"></label>
-                                    <input type="radio" name="color" id="color-<?php echo $color; ?>"
-                                        value="<?php echo $color; ?>" class="form__remove-radio-button" <?php if ($color === 'blue')
-                                               echo ' checked'; ?>>
-
-                                    <?php
+                                ?>
+                                    <label for="color-<?php echo $color; ?>-str" class="form__colores-uni form__colors-size form__color-<?php echo $color; ?>" onclick="changeImage('sockImageStr', '<?php echo $imagePath; ?>', '.form__colores-uni', this)"></label>
+                                    <input type="radio" name="color" id="color-<?php echo $color; ?>-str" value="<?php echo $color; ?>" class="form__remove-radio-button" <?php if ($color === 'blue') echo ' checked'; ?>>
+                                <?php
                                 }
                                 ?>
 
@@ -163,12 +149,12 @@ $lang = init();
                 <h1 class="main__head-text">
                     <?php
                     echo $language["ABOUT US"][$lang]
-                        ?>
+                    ?>
                 </h1>
                 <p>
                     <?php
                     echo $language["We like..."][$lang]
-                        ?>
+                    ?>
                 </p>
 
             </div>
@@ -177,13 +163,13 @@ $lang = init();
                     <h3>
                         <?php
                         echo $language["OUR VISION"][$lang]
-                            ?>
+                        ?>
                     </h3>
                 </u>
                 <p>
                     <?php
                     echo $language["Positivity is..."][$lang]
-                        ?>
+                    ?>
                 </p>
             </div>
         </section>
@@ -192,7 +178,7 @@ $lang = init();
                 <p><button class="goBackLink" onclick="window.scrollTo(0,0)">
                         <?php
                         echo $language["Go Back"][$lang]
-                            ?>
+                        ?>
                     </button>
             </div>
         </section>
