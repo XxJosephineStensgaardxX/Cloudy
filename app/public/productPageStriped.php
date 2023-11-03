@@ -22,7 +22,7 @@ $lang = init();
     $images = array(
         "./img/socksPhotos/Sunny_socks_blue.jpg" => "BLUE",
         "./img/socksPhotos/Sunny_socks_green.jpg" => "GREEN",
-        "./img/socksPhotos/Sunny_socks_pink_01.jpg" => "PINK",
+        "./img/socksPhotos/Sunny_socks_pink.jpg" => "PINK",
         "./img/socksPhotos/Sunny_socks_red.jpg" => "RED",
         "./img/socksPhotos/Sunny_socks_yellow.jpg" => "YELLOW",
     );

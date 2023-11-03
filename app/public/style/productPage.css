@@ -233,7 +233,7 @@ input[type='radio'] {
 	height: 2em;
 }
 
-input[type='radio']:checked + label {
+input[type='radio']:checked+label {
 	border: solid 1px #1e407a;
 }
 
@@ -267,6 +267,12 @@ input::placeholder {
 	border: none;
 }
 
+.border-for-sizes {
+	border: 1px solid #1e407a;
+	border-radius: 12.52px;
+	padding: 10px;
+}
+
 .error-border {
 	border: 1px solid red;
 }
@@ -275,12 +281,3 @@ input::placeholder {
 	color: red;
 	border: none;
 }
-<<<<<<< HEAD
-
-.border-for-sizes {
-	border: 1px solid #1e407a;
-	border-radius: 12.52px;
-	padding: 10px;
-}
-=======
->>>>>>> 95845fcd67afff70ab5d60f22484469f71d21d0a
