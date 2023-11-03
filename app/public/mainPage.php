@@ -75,7 +75,7 @@ $lang = init();
             </h1>
             <div class="main__sock-types-display">
                 <div class="main__sock-display">
-                    <h3>UNI</h3>
+                    <h3 class="main__sock-title">UNI</h3>
                     <img class="main__sock-photo" id="sockImageUni" src=".\img\socksPhotos\Sunny_socks_uni_blue.jpg" alt="unicolor socks">
                     <form action="productPageUniColor.php" method="GET">
                         <div class="form__container">
@@ -101,14 +101,14 @@ $lang = init();
                                 ?>
 
                             </div>
-                            <button class="form__buy-button" type="submit">
+                            <button class="button" type="submit">
                                 <?php echo $language["BUY"][$lang] ?>
                             </button>
                         </div>
                     </form>
                 </div>
                 <div class="main__sock-display" method="POST">
-                    <h3>STRIPED</h3>
+                    <h3 class="main__sock-title">STRIPED</h3>
                     <img class="main__sock-photo" id="sockImageStr" src=".\img\socksPhotos\Sunny_socks_blue.jpg" alt="unicolor socks">
                     <form action="productPageStriped.php" method="GET">
                         <div class="form__container">
@@ -134,7 +134,7 @@ $lang = init();
                                 ?>
 
                             </div>
-                            <button class="form__buy-button" type="submit">
+                            <button class="button" type="submit">
                                 <?php echo $language["BUY"][$lang] ?>
                             </button>
                         </div>
@@ -146,12 +146,12 @@ $lang = init();
         <section class="main__about-us" id="aboutUs">
             <!--Timofei: This is my part of main page. this is "about us" page that will talk about the company-->
             <div class="main__about-us-info">
-                <h1 class="main__head-text">
+                <h1 class="main__head-title">
                     <?php
                     echo $language["ABOUT US"][$lang]
                     ?>
                 </h1>
-                <p>
+                <p class="main__head-text">
                     <?php
                     echo $language["We like..."][$lang]
                     ?>
@@ -160,13 +160,13 @@ $lang = init();
             </div>
             <div class="main__our-vision">
                 <u>
-                    <h3>
+                    <h3 class="main__our-vision-title">
                         <?php
                         echo $language["OUR VISION"][$lang]
                         ?>
                     </h3>
                 </u>
-                <p>
+                <p class="main__our-vision-text">
                     <?php
                     echo $language["Positivity is..."][$lang]
                     ?>

@@ -116,31 +116,31 @@ $lang = init();
                     <form class="contact__form" action="contact_page.php" method="POST">
                         <!--Change GET to Post later-->
                         <div class="input__wrapper">
-                            <input type="text" class="input" placeholder="<?php echo $language["INSERT NAME"][$lang] ?>" id="Fname" name="name" />
+                            <input type="text" class="input" placeholder="<?php echo $language["INSERT NAME"][$lang] ?>" id="Fname" name="name" value="<?php echo $name ?>" />
                             <span class="input__error"><?php echo $name_err; ?></span>
                         </div>
                         <div class="input__wrapper">
-                            <input type="text" class="input" placeholder="<?php echo $language["INSERT SURNAME"][$lang] ?>" id="Lname" name="surname" />
+                            <input type="text" class="input" placeholder="<?php echo $language["INSERT SURNAME"][$lang] ?>" id="Lname" name="surname" value="<?php echo $surname ?>" />
                             <span class="input__error"><?php echo $surname_err; ?></span>
                         </div>
                         <div class="input__wrapper input__wrapper-double input__wrapper">
-                            <input type="text" class="input" placeholder="<?php echo $language["STREET NAME"][$lang] ?>" id="street" name="street" />
+                            <input type="text" class="input" placeholder="<?php echo $language["STREET NAME"][$lang] ?>" id="street" name="street" value="<?php echo $street ?>" />
                             <span class="input__error"><?php echo $street_err; ?></span>
-                            <input type="text" class="input" placeholder="<?php echo $language["POST CODE"][$lang] ?>" id="postcode" name="postcode" />
+                            <input type="text" class="input" placeholder="<?php echo $language["POST CODE"][$lang] ?>" id="postcode" name="postcode" value="<?php echo $postcode ?>" />
                             <span class="input__error"><?php echo $postcode_err; ?></span>
                         </div>
                         <div class="input__wrapper">
-                            <input type="email" class="input" placeholder="E-MAIL" id="email" name="email" />
+                            <input type="email" class="input" placeholder="E-MAIL" id="email" name="email" value="<?php echo $name ?>" />
                             <span class="input__error"><?php echo $email_err; ?></span>
                         </div>
                         <div class="input__wrapper input__wrapper-double input__wrapper">
-                            <input type="tel" class="input" placeholder="<?php echo $language["PHONE-NUMBER"][$lang] ?>" id="phone" name="phone" />
+                            <input type="tel" class="input" placeholder="<?php echo $language["PHONE-NUMBER"][$lang] ?>" id="phone" name="phone" value="<?php echo $phone ?>" />
                             <span class="input__error"><?php echo $phone_err; ?></span>
-                            <input type="text" class="input" placeholder="<?php echo $language["COUNTRY"][$lang] ?>" id="country" name="country">
+                            <input type="text" class="input" placeholder="<?php echo $language["COUNTRY"][$lang] ?>" id="country" name="country" value="<?php echo $country ?>" />
                             <span class="input__error"><?php echo $country_err; ?></span>
                         </div>
                         <div class="input__wrapper">
-                            <textarea name="comment" id="comment" cols="40" rows="6" placeholder="<?php echo $language["INSERT TEXT"][$lang] ?>" name="comment" class="input"></textarea>
+                            <textarea name="comment" id="comment" cols="40" rows="6" placeholder="<?php echo $language["INSERT TEXT"][$lang] ?>" name="comment" class="input" value="<?php echo $comment ?>"></textarea>
                             <span class="input__error"><?php echo $comment_err; ?></span>
                         </div>
                         <button type="submit" class="contact__button button">

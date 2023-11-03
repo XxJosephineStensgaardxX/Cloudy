@@ -1,4 +1,5 @@
-.navigator {}
+.navigator {
+}
 
 .navigator__inner {
 	display: grid;
@@ -36,6 +37,10 @@
 	gap: 10px;
 }
 
+.main__sock-title {
+	font-size: 2rem;
+}
+
 .main__socks-form {
 	height: 20px;
 }
@@ -43,8 +48,8 @@
 .main__sock-photo {
 	display: flex;
 	justify-content: center;
-	width: 170px;
-	height: 170px;
+	width: 16rem;
+	height: 16rem;
 	border-radius: 100%;
 	object-fit: cover;
 }
@@ -67,8 +72,8 @@
 }
 
 .form__colors-size {
-	height: 30px;
-	width: 30px;
+	height: 2.5rem;
+	width: 2.5rem;
 	border-radius: 100%;
 }
 .form__colors-size:hover {
@@ -79,18 +84,7 @@
 	display: none;
 }
 
-
-.form__buy-button {
-	background-color: #51b2a2;
-	color: #1e407a;
-	align-self: center;
-	height: 35px;
-	border-radius: 30px;
-	border-width: 0px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-.form__buy-button:hover{
+.form__buy-button:hover {
 	cursor: pointer;
 }
 
@@ -128,9 +122,7 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	
 }
-
 
 .form__color-blue {
 	background-color: #1e407a;
@@ -168,8 +160,13 @@
 	gap: 40px;
 }
 
+.main__head-title {
+	font-size: 3rem;
+}
+
 .main__head-text {
-	font-size: 50px;
+	font-size: 1.25rem;
+	font-family: 'Nexa-Bold';
 }
 
 .main__about-us-info {
@@ -180,8 +177,17 @@
 
 .main__our-vision {
 	max-width: 400px;
-	margin-right: auto;
-	margin-left: auto;
+	margin-inline: auto;
+	font-family: 'Nexa-Bold';
+}
+
+.main__our-vision-title {
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+}
+
+.main__our-vision-text {
+	font-size: 1.25rem;
 }
 
 /* Deri: this piece of code belongs to me. I only need to work on very detailed items if there are some comments on it.*/
@@ -203,14 +209,13 @@
 }
 
 .main__world-map {
-	width: 440px;
+	max-width: 40rem;
+	width: 100%;
 }
 
-@media (max-width:460px) {
+@media (max-width: 640px) {
 	.main__world-map {
-		width: 100%;
-		padding-left: 10px;
-		padding-right: 10px;
+		padding-inline: 1rem;
 	}
 }
 
@@ -218,9 +223,10 @@
 	display: flex;
 	justify-content: center;
 	cursor: pointer;
-
 }
 
 .goBackLink {
 	all: unset;
+	font-size: 1.5rem;
+	font-family: 'Nexa-Bold';
 }
