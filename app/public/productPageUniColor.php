@@ -30,50 +30,46 @@ $lang = init();
 
     $errorFlag = FALSE;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $sizeSock = filter_input(INPUT_POST, "size");
-        if (empty($sizeSock)) {
-            $sizeSock = filter_input(INPUT_POST, "sizes-in-dropdown");
+        $size = filter_input(INPUT_POST, "size");
+        $image = filter_input(INPUT_POST, "selected_image");
+        $amount = filter_input(INPUT_POST, "amount-picker");
+
+
+        if (empty($image) || empty($size) || empty($amount)) {
+            $errorFlag = TRUE;
         }
-    }
 
-    $image = filter_input(INPUT_POST, "selected_image");
-    $amount = filter_input(INPUT_POST, "amount-picker");
-
-
-    if (empty($image) || empty($sizeSock) || empty($amount)) {
-        $errorFlag = TRUE;
-    }
-
-    if ($amount <= 0) {
-        $errorFlag = TRUE;
-    }
+        if ($amount <= 0) {
+            $errorFlag = TRUE;
+        }
 
 
-    if (!$errorFlag) {
+        if (!$errorFlag) {
 
-        $color = $images[$image];
-        $newOrder = array(
-            "size" => $sizeSock,
-            "amount" => $amount,
-            "color" => $color,
-            "type" => "uni",
-            "price" => 3,
-        );
+            $color = $images[$image];
+            $newOrder = array(
+                "size" => $size,
+                "amount" => $amount,
+                "color" => $color,
+                "type" => "uni",
+                "price" => 3,
+            );
 
 
-        $orderExist = FALSE;
-        for ($i = 0; $i < count($_SESSION["CART"]); $i++) {
+            $orderExist = FALSE;
+            for ($i = 0; $i < count($_SESSION["CART"]); $i++) {
 
-            if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"] && $_SESSION["CART"][$i]["type"] == "uni") {
+                if ($_SESSION["CART"][$i]["size"] == $newOrder["size"] && $_SESSION["CART"][$i]["color"] == $newOrder["color"] && $_SESSION["CART"][$i]["type"] == "uni") {
 
-                $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
-                $orderExist = TRUE;
-                break;
+                    $_SESSION["CART"][$i]["amount"] += $newOrder["amount"];
+                    $orderExist = TRUE;
+                    break;
+                }
             }
-        }
 
-        if (!$orderExist) {
-            array_push($_SESSION["CART"], $newOrder);
+            if (!$orderExist) {
+                array_push($_SESSION["CART"], $newOrder);
+            }
         }
     }
 
@@ -151,19 +147,6 @@ $lang = init();
                         }
                         ?>
 
-                    </div>
-                    <div class="sizes-for-sizes-for-phone border-container">
-                        <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($size)) {
-                                                                                                                echo 'error-text';
-                                                                                                            }
-                                                                                                            ?>" onchange="this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
-                            <option value="" disabled selected>Choose your size</option>
-                            <option value="25-31">25-31</option>
-                            <option value="32-36">32-36</option>
-                            <option value="36-40">36-40</option>
-                            <option value="40-45">40-45</option>
-                            <option value="47+">47+</option>
-                        </select>
                     </div>
 
                     <div class="color-picker-flex border-container">
