@@ -208,6 +208,12 @@ img.othersock-item {
 #cart-button {
 	width: 100%;
 	background-color: #51b2a2;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.50;
+
+	}
 }
 
 .button-design {
@@ -228,7 +234,7 @@ input[type='radio'] {
 	height: 2em;
 }
 
-input[type='radio']:checked + label {
+input[type='radio']:checked+label {
 	border: solid 1px #1e407a;
 }
 
