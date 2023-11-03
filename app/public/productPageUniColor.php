@@ -84,9 +84,7 @@ $lang = init();
         <form id="form" method="post" action="productPageUniColor.php">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
-                    <img class="chosenPicture"
-                        src="./img/socksPhotos/Sunny_socks_uni_<?php echo isset($_GET['color']) ? $_GET['color'] : 'blue' ?>.jpg"
-                        alt="Selected Image">
+                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_uni_<?php echo isset($_GET['color']) ? $_GET['color'] : 'blue' ?>.jpg" alt="Selected Image">
                     <div class="othersocks-flex">
                         <?php
 
@@ -102,7 +100,7 @@ $lang = init();
                             }
 
                             echo
-                                "
+                            "
                             <input type='radio' name='selected_image' value='$image' id='$image'  onclick=\"changeImageProductPage(this, '" . (array_values($images)[$i]) . "')\">
                             <label for='$image' style='display: $display'>
                                 <img class='othersock-item' src='$image' alt='Classic sock'>
@@ -194,12 +192,7 @@ $lang = init();
                         </p>
                     </div>
                     <div class="border-container">
-<<<<<<< HEAD
-                        <input class="button" id="cart-button" type="submit"
-                            value="<?php echo $language["Put in cart"][$lang] ?>"></input>
-=======
                         <input class="button" id="cart-button" type="submit" value="<?php echo $language["Put in cart"][$lang] ?>"></input>
->>>>>>> 95845fcd67afff70ab5d60f22484469f71d21d0a
                     </div>
                 </div>
             </div>
