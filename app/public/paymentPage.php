@@ -135,7 +135,7 @@ $lang = init();
 								<li class="order__item">
 									<img src="<?php echo $images[$cart_item['color']] ?>" alt="<?php echo $images[$cart_item['color']] ?>" class="order__image" />
 									<h2 class="order__title">
-										<?php echo $cart_item['color'] . " STRIPED SOCKS" ?>
+										<?php echo $language[$cart_item['color']][$lang] . " " . $language[strtoupper($cart_item["type"])][$lang] . " ", $language["SOCKS"][$lang] ?>
 									</h2>
 									<div class="order__item-inner">
 										<p class="order__text">
