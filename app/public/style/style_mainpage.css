@@ -90,10 +90,7 @@
 
 @media (max-width: 600px) {
 	.main__sock-types-display {
-		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		gap: 100px;
 	}
 
 	.main__sock-photo {

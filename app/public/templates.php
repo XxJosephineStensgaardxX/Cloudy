@@ -5,11 +5,11 @@ function header_template($language, $lang)
 {
 
     return '         
-    <header class="header" id="desktop-header">
+    <header class="header">
         <div class="container">
             <div class="header__inner">
                 <a href="mainPage.php" class="socksLogo">
-                    <img class="header__image-logo" src=".\img\sunny_logos_slogan_blue.png" alt="socksLogo">
+                    <img class="header__image-logo" src="./img/sunny_logo_slogan_blue.svg" alt="socksLogo">
                 </a>
                 <ul class="header__list">
                 <li class="header__list-item">
