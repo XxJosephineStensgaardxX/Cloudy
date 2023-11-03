@@ -77,7 +77,7 @@ $lang = init();
     <?php echo header_template($language, $lang) ?>
 
     <main>
-        <form id="form" method="post" action="productPageStriped.php">
+        <form id="form" method="post" action="checkoutPage.php">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
                     <img class="chosenPicture"
