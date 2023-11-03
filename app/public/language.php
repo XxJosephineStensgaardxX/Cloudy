@@ -129,7 +129,7 @@ $language = array(
     "Invalid phone" => array(
         "EN" => "Invalid phone",
         "NL" => "Ongeldige telefoon",
-    ),    
+    ),
     "BACK" => array(
         "EN" => "BACK",
         "NL" => "TERUG",
@@ -213,7 +213,7 @@ $language = array(
     "INSERT TEXT" => array(
         "EN" => "INSERT TEXT",
         "NL" => "TEKST INVOEGEN",
-    ),    
+    ),
     "surname is required" => array(
         "EN" => "surname is required",
         "NL" => "achternaam is vereist",
@@ -237,6 +237,10 @@ $language = array(
     "country is required" => array(
         "EN" => "country is required",
         "NL" => "land is vereist",
+    ),
+    "comment is required" => array(
+        "EN" => "comment is required",
+        "NL" => "commentaar is vereist"
     ),
     //Payment Information CARD INFORMATION
     "CARD INFORMATION" => array(

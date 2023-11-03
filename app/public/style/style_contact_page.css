@@ -18,6 +18,10 @@
 	margin-top: 20px;
 }
 
+.contact__form {
+	max-width: 600px;
+}
+
 #comment {
 	resize: none;
 }
