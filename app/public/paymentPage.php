@@ -1,5 +1,9 @@
 <?
 session_start();
+require_once 'templates.php';
+require_once 'language.php' ;
+$lang = init();
+
 
 $name_err = $card_number_err = $expiry_date_err = $cvv_err = "";
 $name = $card_number = $expiry_date = $cvv = "";
@@ -7,28 +11,28 @@ $error_flag = FALSE;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (empty($_POST["name"])) {
-		$name_err = "* name is required";
+		$name_err = "* ". $language["name is required"][$lang];
 		$error_flag = TRUE;
 	} else {
 		$name = test_input($_POST["name"]);
 	}
 
 	if (empty($_POST["card_number"])) {
-		$card_number_err = "* card number is required";
+		$card_number_err = "* ". $language["card number is required"][$lang];
 		$error_flag = TRUE;
 	} else {
 		$card_number = test_input($_POST["card_number"]);
 	}
 
 	if (empty($_POST["expiry_date"])) {
-		$expiry_date_err = "* expiry_date is required";
+		$expiry_date_err = "* ". $language["expiry_date is required"][$lang];
 		$error_flag = TRUE;
 	} else {
 		$expiry_date = test_input($_POST["expiry_date"]);
 	}
 
 	if (empty($_POST["cvv"])) {
-		$cvv_err = "* cvv is required";
+		$cvv_err = "* ". $language["cvv is required"][$lang];
 		$error_flag = TRUE;
 	} else {
 		$cvv = test_input($_POST["cvv"]);
@@ -50,11 +54,6 @@ function test_input($data)
 }
 ?>
 
-<?php require_once 'templates.php' ?>
-<?php require_once 'language.php' ?>
-<?php
-$lang = init();
-?>
 
 <!DOCTYPE html>
 <html lang="en">

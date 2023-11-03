@@ -213,6 +213,30 @@ $language = array(
     "INSERT TEXT" => array(
         "EN" => "INSERT TEXT",
         "NL" => "TEKST INVOEGEN",
+    ),    
+    "surname is required" => array(
+        "EN" => "surname is required",
+        "NL" => "achternaam is vereist",
+    ),
+    "street is required" => array(
+        "EN" => "street is required",
+        "NL" => "straat  is vereist",
+    ),
+    "postcode is required" => array(
+        "EN" => "postcode is required",
+        "NL" => "postcode is vereist",
+    ),
+    "email is required" => array(
+        "EN" => "email is required",
+        "NL" => "email is vereist",
+    ),
+    "phone is required" => array(
+        "EN" => "phone is required",
+        "NL" => "telefoon is vereist",
+    ),
+    "country is required" => array(
+        "EN" => "country is required",
+        "NL" => "land is vereist",
     ),
     //Payment Information CARD INFORMATION
     "CARD INFORMATION" => array(
@@ -232,6 +256,23 @@ $language = array(
         "EN" => "NOT CORRECT? GO BACK",
         "NL" => "NIET CORRECT? GA TERUG",
     ),
+    "name is required" => array(
+        "EN" => "name is required",
+        "NL" => "naam is vereist",
+    ),
+    "card number is required" => array(
+        "EN" => "card number is required",
+        "NL" => "kaartnummer is vereist",
+    ),
+    "expiry_date is required" => array(
+        "EN" => "expiry_date is required",
+        "NL" => "vervaldatum is vereist",
+    ),
+    "cvv is required" => array(
+        "EN" => "cvv is required",
+        "NL" => "cvv is vereist",
+    ),
+
     // product page
     "CLASSIC UNI SOCK - " => array(
         "EN" => "CLASSIC UNI SOCK - ",

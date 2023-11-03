@@ -1,5 +1,9 @@
 <?
 session_start();
+require_once 'language.php';
+require_once 'templates.php'; 
+
+$lang = init();
 
 $name_err = $surname_err = $street_err = $postcode_err = $email_err = $phone_err = $country_err = "";
 $name = $surname = $street = $postcode = $email = $phone = $country  = "";
@@ -9,49 +13,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (isset($_POST['checkout'])) {
 
 		if (empty($_POST["name"])) {
-			$name_err = "* name is required";
+			$name_err = "* ". $language["name is required"][$lang];
 			$error_flag = TRUE;
 		} else {
 			$name = test_input($_POST["name"]);
 		}
 
 		if (empty($_POST["surname"])) {
-			$surname_err = "* surname is required";
+			$surname_err = "* ". $language["surname is required"][$lang];
 			$error_flag = TRUE;
 		} else {
 			$surname = test_input($_POST["surname"]);
 		}
 
 		if (empty($_POST["street"])) {
-			$street_err = "* street is required";
+			$street_err = "* ". $language["street is required"][$lang]; 
 			$error_flag = TRUE;
 		} else {
 			$street = test_input($_POST["street"]);
 		}
 
 		if (empty($_POST["postcode"])) {
-			$postcode_err = "* postcode is required";
+			$postcode_err = "* ". $language["postcode is required"][$lang]; 
 			$error_flag = TRUE;
 		} else {
 			$postcode = test_input($_POST["postcode"]);
 		}
 
 		if (empty($_POST["email"])) {
-			$email_err = "* email is required";
+			$email_err = "* ". $language["email is required"][$lang]; 
 			$error_flag = TRUE;
 		} else {
 			$email = test_input($_POST["email"]);
 		}
 
 		if (empty($_POST["phone"])) {
-			$phone_err = "* phone is required";
+			$phone_err = "* ". $language["phone is required"][$lang]; 
 			$error_flag = TRUE;
 		} else {
 			$phone = test_input($_POST["phone"]);
 		}
 
 		if (empty($_POST["country"])) {
-			$country_err = "* country is required";
+			$country_err = "* ". $language["country is required"][$lang]; 
 			$error_flag = TRUE;
 		} else {
 			$country = test_input($_POST["country"]);
@@ -82,12 +86,7 @@ function test_input($data)
 }
 ?>
 
-<?php include 'language.php' ?>
-<?php include 'templates.php' ?>
 
-<?php
-$lang = init();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
