@@ -78,7 +78,7 @@ $lang = init();
     <?php echo header_template($language, $lang) ?>
 
     <main>
-        <form id="form" method="post" action="checkoutPage.php">
+        <form id="form" method="post" action="<?php echo $_SERVER["PHP_SELF"] ?>">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
                     <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_<?php echo isset($_GET['color']) ? $_GET['color'] : 'blue' ?>.jpg" alt="Selected Image">
@@ -175,7 +175,7 @@ $lang = init();
                         ?>
                     </div>
                     <div class="border-container">
-                        <p>
+                        <p class="cart-text">
                             <?php
                             echo $language["Made from 100% organic cotton"][$lang];
                             ?>
