@@ -87,7 +87,9 @@ $lang = init();
         <form id="form" method="post" action="productPageUniColor.php">
             <div class="maincontainer-flex container">
                 <div class="container-layout">
-                    <img class="chosenPicture" src="./img/socksPhotos/Sunny_socks_uni_<?php echo isset($_GET['color']) ? $_GET['color'] : 'blue' ?>.jpg" alt="Selected Image">
+                    <img class="chosenPicture"
+                        src="./img/socksPhotos/Sunny_socks_uni_<?php echo isset($_GET['color']) ? $_GET['color'] : 'blue' ?>.jpg"
+                        alt="Selected Image">
                     <div class="othersocks-flex">
                         <?php
 
@@ -99,11 +101,11 @@ $lang = init();
                             if (isset($_GET['color'])) {
                                 $display = str_contains($image, $_GET['color']) ? 'none' : 'block';
                             } else {
-                                $display =  $i === 0 ? 'none' : 'block';
+                                $display = $i === 0 ? 'none' : 'block';
                             }
 
                             echo
-                            "
+                                "
                             <input type='radio' name='selected_image' value='$image' id='$image'  onclick=\"changeImageProductPage(this, '" . (array_values($images)[$i]) . "')\">
                             <label for='$image' style='display: $display'>
                                 <img class='othersock-item' src='$image' alt='Classic sock'>
@@ -154,9 +156,10 @@ $lang = init();
                     </div>
                     <div class="sizes-for-sizes-for-phone border-container">
                         <select name="sizes-in-dropdown" id="sizes-in-dropdown" class="sizes-in-dropdown <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($size)) {
-                                                                                                                echo 'error-text';
-                                                                                                            }
-                                                                                                            ?>" onchange="this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
+                            echo 'error-text';
+                        }
+                        ?>"
+                            onchange="this.value.length !== '' ? this.classList.remove('error-text') : this.classList.add('error-text')">
                             <option value="" disabled selected>Choose your size</option>
                             <option value="25-31">25-31</option>
                             <option value="32-36">32-36</option>
