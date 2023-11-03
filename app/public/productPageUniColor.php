@@ -15,7 +15,7 @@ $lang = init();
     <title>Product Page</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/style_lang.css">
-    <link rel="stylesheet" href="./style/productPage.css">
+    <link rel="stylesheet" href="./style/style_product.css">
     <script src="./js/index.js" defer></script>
 
     <?php

@@ -189,7 +189,7 @@ body {
 #hamburger-bttn img {
 	height: 48px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 	#hamburger-bttn {
 		display: block;
 		z-index: 6;
@@ -262,6 +262,10 @@ body {
 	.input__wrapper-double .input {
 		font-size: 1.25rem;
 		padding: 0.625rem;
+	}
+	.footer__square-wrapper {
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 @media (max-width: 1530px) {

@@ -32,39 +32,49 @@
 
 .product-name-header {
 	font-size: 1.5rem;
-	margin-bottom: 140px;
+	margin-bottom: 8.5rem;
 }
 
 .checked-size {
 	position: relative;
 }
-.checked-size:not(:first-of-type)::before {
+.checked-size:not(:last-of-type)::after {
 	content: '|';
 	display: inline;
 	position: absolute;
-	left: -0.75rem;
+	right: -0.75rem;
 	color: #1e1e1e5c;
 }
 
-@media (min-width: 550px) and (max-width: 2000px) {
-	.color-text-menu-for-phone {
-		display: none;
-	}
-
-	.color-picker-flex {
-		display: block;
-	}
-
-	.container-sizes-flex {
-		display: block;
-	}
-
-	.sizes-for-sizes-for-phone {
-		display: none;
-	}
+.button-design {
+	border-radius: 100%;
+	height: 2.5rem;
+	min-width: 2.5rem;
 }
 
-@media (max-width: 820px) {
+.container-sizes-flex {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	gap: 1.25rem;
+	font-size: 1.25rem;
+	font-family: 'Nexa-Bold';
+}
+
+img.othersock-item {
+	width: 110px;
+	object-fit: cover;
+	aspect-ratio: 1/1;
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+	.container-layout {
+		min-width: 400px;
+	}
+	.cart-text {
+		font-size: 1.125rem;
+	}
 	.othersocks-flex {
 		display: flex;
 		flex-direction: row;
@@ -76,20 +86,21 @@
 		display: flex;
 		justify-content: flex-start;
 		flex-direction: column;
-		width: 200px;
 	}
 
 	.container-sizes-flex {
-		display: flex;
-		flex-direction: row;
-		list-style: none;
-		gap: 1vw;
-		font-size: 10px;
+		gap: 1rem;
+		font-size: 1.125rem;
 		flex-wrap: wrap;
 	}
 
-	.container-sizes-flex li {
-		font-size: 15px;
+	.checked-size::after {
+		right: -0.55rem;
+	}
+
+	.product-name-header {
+		margin-bottom: 6rem;
+		font-size: 1.25rem;
 	}
 
 	.color-picker-flex {
@@ -99,9 +110,8 @@
 	}
 
 	.button-design {
-		border-radius: 100%;
-		height: 10px;
-		width: 10px;
+		height: 2rem;
+		min-width: 2rem;
 	}
 
 	.border-container {
@@ -111,7 +121,7 @@
 	}
 }
 
-@media (max-width: 550px) {
+@media screen and (max-width: 750px) {
 	.maincontainer-flex {
 		display: flex;
 		flex-direction: column;
@@ -130,22 +140,10 @@
 		width: 100%;
 	}
 
-	.color-text-menu-for-phone {
-		visibility: visible;
-	}
-
 	.color-dropdown-menu {
 		color: #1e407a;
 		border: none;
 		margin-top: 5px;
-	}
-
-	.sizes-for-sizes-for-phone {
-		display: block;
-	}
-
-	.container-sizes-flex {
-		display: none;
 	}
 
 	#cart-button {
@@ -163,18 +161,54 @@
 		border: none;
 	}
 
-	.sizes-in-dropdown {
-		color: #1e407a;
-		border: none;
-		margin-top: 5px;
+	.chosenPicture,
+	img.othersock-item {
+		width: 100%;
+	}
+
+	.container-sizes-flex {
+		font-size: 1.25rem;
+		gap: 1.25rem;
+	}
+
+	.checked-size::after {
+		right: -0.75rem;
+	}
+	.button-design {
+		height: 2.5rem;
+		min-width: 2.5rem;
+	}
+	.cart-text {
+		font-size: 1.5rem;
+	}
+	.container-layout {
+		min-width: unset;
 	}
 }
 
-img.othersock-item {
-	width: 110px;
-	object-fit: cover;
-	aspect-ratio: 1/1;
-	border-radius: 5px;
+@media screen and (max-width: 550px) {
+	.othersocks-flex {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 1.5rem;
+		padding-inline: 5vw;
+	}
+	.cart-text {
+		font-size: 1.125rem;
+	}
+	.container-sizes-flex {
+		gap: 1rem;
+		font-size: 1.125rem;
+		flex-wrap: wrap;
+	}
+	.checked-size::after {
+		right: -0.55rem;
+	}
+	.button-design {
+		height: 2rem;
+		min-width: 2rem;
+	}
 }
 
 .information-container-flex {
@@ -200,28 +234,9 @@ img.othersock-item {
 	width: 30px;
 }
 
-.container-sizes-flex {
-	display: flex;
-	flex-direction: row;
-	list-style: none;
-	gap: 1.25rem;
-	font-size: 1.25rem;
-	font-family: 'Nexa-Bold';
-}
-
-.container-sizes-flex li {
-	white-space: nowrap;
-}
-
 #cart-button {
 	width: 100%;
 	font-size: 1.5rem;
-}
-
-.button-design {
-	border-radius: 100%;
-	height: 2.5rem;
-	width: 2.5rem;
 }
 
 .border-container {
@@ -243,13 +258,6 @@ input[type='radio']:checked + label {
 label {
 	display: inline-block;
 	cursor: pointer;
-}
-
-span {
-	display: block;
-	width: 100%;
-	height: 100%;
-	transition: transform 0.2s;
 }
 
 input.amount-picker {
